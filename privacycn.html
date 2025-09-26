@@ -6,37 +6,244 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隐私政策</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            padding: 20px;
+        /* 基础样式重置和响应式布局 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* 主容器样式 */
+        .privacy-container {
+            background: white;
+            margin: 20px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 标题样式 */
         h1 {
             text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3498db;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #e74c3c;
         }
 
         h2 {
-            margin-top: 30px;
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 50px 0 20px 0;
+            padding: 15px 0;
+            border-bottom: 2px solid #ecf0f1;
+            position: relative;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 60px;
+            height: 2px;
+            background: #3498db;
         }
 
         h3 {
-            margin-top: 20px;
+            color: #34495e;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 30px 0 15px 0;
+            padding-left: 15px;
+            border-left: 4px solid #3498db;
         }
 
+        h4 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 25px 0 15px 0;
+            padding: 10px 15px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 6px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        /* 段落和文本样式 */
         p {
-            margin-bottom: 10px;
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+            color: #555;
+            text-align: justify;
+            line-height: 1.7;
         }
 
+        /* 列表样式 */
         ul {
+            padding-left: 30px;
+            margin: 15px 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        ul li::before {
+            content: '•';
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+            font-size: 1.2rem;
+        }
+
+        /* SDK信息特殊样式 */
+        .sdk-section {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .sdk-section p {
+            margin: 8px 0;
             padding-left: 20px;
+            position: relative;
+        }
+
+        .sdk-section p:first-child {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+
+        .sdk-section p:first-child::before {
+            content: none;
+        }
+
+        .sdk-section p:not(:first-child)::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: #3498db;
+            border-radius: 50%;
+        }
+
+        /* 强调文本样式 */
+        strong {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .privacy-container {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin: 40px 0 15px 0;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-container {
+                margin: 5px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                margin: 0;
+                padding: 0;
+            }
+
+            .privacy-container {
+                margin: 0;
+                padding: 20px;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            h1 {
+                color: black;
+                border-bottom: 2px solid black;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>隐私政策</h1>
-    <h2>一、概述</h2>
+    <div class="privacy-container">
+        <h1>隐私政策</h1>
+        <h2>一、概述</h2>
     <p>本隐私政策由【北京漫宇科技有限公司】于2024年12月1日发布，适用于我们提供的游戏（APP）。我们重视用户隐私，尤其是未成年人的个人信息保护。</p>
     <h2>二、信息收集与使用</h2>
     <h3>（一）用户主动提供的信息</h3>
@@ -56,10 +263,30 @@
     <h4>支付信息</h4>
     <p>a) 通过第三方支付获取虚拟产品时，第三方可能收集充值、消费记录等，我们不获取支付账号和密码等信息。</p>
     <h4>特定SDK信息</h4>
-    <p>a) Firebase SDK</p>
-    <p>i) 用于分析，会获取用户大致位置和设备广告ID来进行数据分析，收集的信息未与用户身份关联。</p>
-    <p>b) Admob SDK</p>
-    <p>i) 用于提供广告，会获取用户大致位置和设备广告ID来提供广告服务，收集的信息未与用户身份关联。</p>
+    <div class="sdk-section">
+        <p>a) <strong>Firebase SDK</strong></p>
+        <p>i) 应用场景：数据分析</p>
+        <p>ii) 可能收集的个人信息的类型：用户大致位置信息、设备广告ID</p>
+        <p>iii) 第三方SDK提供方：Google LLC</p>
+    </div>
+    <div class="sdk-section">
+        <p>b) <strong>Admob SDK</strong></p>
+        <p>i) 应用场景：广告服务</p>
+        <p>ii) 可能收集的个人信息的类型：用户大致位置信息、设备广告ID</p>
+        <p>iii) 第三方SDK提供方：Google LLC</p>
+    </div>
+    <div class="sdk-section">
+        <p>c) <strong>穿山甲广告SDK</strong></p>
+        <p>i) 应用场景：广告投放</p>
+        <p>ii) 可能收集的个人信息的类型：设备信息（设备品牌、设备型号、系统版本、IP地址、MAC地址、Android_id）、应用信息、粗略位置信息、Android设备标识符（如IMEI、OAID、IMSI、设备序列号）、传感器信息、应用安装列表</p>
+        <p>iii) 第三方SDK提供方：北京巨量引擎网络技术有限公司</p>
+    </div>
+    <div class="sdk-section">
+        <p>d) <strong>Unity 3D</strong></p>
+        <p>i) 应用场景：框架</p>
+        <p>ii) 可能收集的个人信息的类型：读取设备信息（设备型号、系统名称、系统版本、MAC地址、IMEI、Android_id）、访问相机、应用安装列表、任务列表、网络状态信息、传感器信息、运营商名称</p>
+        <p>iii) 第三方SDK提供方：Unity Technologies</p>
+    </div>
     <h2>三、特殊情况处理</h2>
     <h3>（一）例外情况</h3>
     <p>涉及国家安全、公共安全、犯罪侦查等特殊情况，无需征求用户授权同意即可收集使用相关个人信息。</p>
@@ -93,6 +320,7 @@
     <p>（三）未成年人监护人如有信息相关疑问，可通过公示联系方式联系我们。</p>
     <h2>十、联系我们</h2>
     <p>若用户对本隐私政策有疑问、意见或建议，可在工作日9:00 - 18:00通过客服邮箱cluo85@foxmail.com联系我们。</p>
+    </div>
 </body>
 
 </html>
