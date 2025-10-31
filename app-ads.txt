@@ -1,4 +1,3 @@
-#google.com, pub-6833796023554314, DIRECT, f08c47fec0942fa0
 google.com, pub-7206049804069761, DIRECT, f08c47fec0942fa0
 #unity ads
 33across.com, 0010b00002MptSLAAZ, RESELLER, bbea06d9c4d2853c
