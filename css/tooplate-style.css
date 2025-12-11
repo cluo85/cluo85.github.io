@@ -91,13 +91,30 @@ p {
     left: 0;
     width: 100%;
     padding: 0;
+    margin: 0;
     z-index: 10000;
     transition: all 0.2s ease-in-out;
-    height: 80px;
+    height: 60px;
     background-color:transparent;  
     
     text-align: center;
     line-height: 40px;
+}
+
+/* Remove default margins and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Ensure cd-hero starts at the very top */
+.cd-hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
@@ -105,7 +122,7 @@ p {
 }
 
 .navbar-brand {
-	line-height: 80px;
+	line-height: 60px;
 	padding: 0px;
 }
 
@@ -115,13 +132,31 @@ p {
 	font-weight: 300;
 	text-transform: uppercase;
 	text-shadow: none;
-	line-height: 80px;
+	line-height: 60px;
 	padding: 0px;
 	letter-spacing: 0.5px;
+	white-space: nowrap;
 }
 
 .navbar-nav>li {
-	margin-left: 45px;
+	margin-left: 25px;
+	white-space: nowrap;
+}
+
+.navbar-collapse {
+    text-align: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.navbar-collapse::-webkit-scrollbar {
+    display: none;
+}
+
+.collapse.in {
+    overflow-y: visible;
 }
 
 .header.active .navbar-nav>li>a {
@@ -139,7 +174,7 @@ p {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 .navbar-brand .logo{
-	margin-top: 22px;
+	margin-top: 10px;
 	background-image: url(../img/white_logo.png);
 	display: inline-block;
 	width: 245px;
@@ -147,7 +182,7 @@ p {
 	background-repeat: no-repeat;
 }
 .header.active .navbar-brand .logo{
-	margin-top: 22px;
+	margin-top: 10px;
 	background-image: url(../img/black_logo.png);
 	display: inline-block;
 	width: 245px;
@@ -241,7 +276,17 @@ bootstrap.min.css:5
 }
 
 ul.cd-hero-slider {
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
 	margin-bottom: 0px!important;
+}
+
+/* Remove default ul styles */
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* WHAT WE DO */
