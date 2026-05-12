@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainrot Friends — Press Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="#" class="navbar-logo">
+          <img src="appicon/AppIcon.png" alt="App Icon" width="36" height="36">
+          <span>Brainrot Friends</span>
+        </a>
+        <div class="navbar-links">
+          <a href="#download">Download</a>
+          <div class="theme-switcher">
+            <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+              <span class="theme-icon-moon">☾</span>
+              <span class="theme-icon-sun">☀</span>
+            </button>
+          </div>
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-switch="en">EN</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" data-switch="zh">中</button>
+          </div>
+        </div>
+        <button class="navbar-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-icon">
+          <img src="appicon/AppIcon.png" alt="Brainrot Friends App Icon" width="160" height="160">
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span data-lang="en">Brainrot Friends</span>
+            <span data-lang="zh" class="lang-hidden">网络梗大乱斗</span>
+          </h1>
+          <p class="hero-tagline">
+            <span data-lang="en">120+ Brainrot Creatures, Auto-Battle Strategy, Anytime Anywhere</span>
+            <span data-lang="zh" class="lang-hidden">120+ 脑洞生物，策略自走棋，随时随地来一局</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights section" id="highlights">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span data-lang="en">Highlights</span>
+        <span data-lang="zh" class="lang-hidden">游戏亮点</span>
+      </h2>
+      <div class="highlights-grid">
+        <div class="highlight-item reveal">
+          <h3>
+            <span data-lang="en">Internet Culture, Reimagined</span>
+            <span data-lang="zh" class="lang-hidden">当代网络文化，全新演绎</span>
+          </h3>
+          <p>
+            <span data-lang="en">Brainrot and meme culture transformed into a core visual language. Every creature is a deliberate nod to the shared vocabulary of a generation.</span>
+            <span data-lang="zh" class="lang-hidden">将全球 Brainrot 与 Meme 文化系统性地转化为游戏视觉语言，每个角色都是当代互联网文化图鉴中的独特符号。</span>
+          </p>
+        </div>
+        <div class="highlight-item reveal">
+          <h3>
+            <span data-lang="en">Near-Infinite Strategic Depth</span>
+            <span data-lang="zh" class="lang-hidden">近乎无限的策略深度</span>
+          </h3>
+          <p>
+            <span data-lang="en">120+ characters and 30+ food items create deep tactical space. No build is unbeatable — victory goes to those who adapt in real time.</span>
+            <span data-lang="zh" class="lang-hidden">超过 120 名角色与 30 余种食物道具构筑深层战术空间。不存在唯一最优解，唯有实时调整方能取胜。</span>
+          </p>
+        </div>
+        <div class="highlight-item reveal">
+          <h3>
+            <span data-lang="en">Truly Global</span>
+            <span data-lang="zh" class="lang-hidden">真正全球化</span>
+          </h3>
+          <p>
+            <span data-lang="en">Fully localized in 13 languages at launch. Built for international audiences from day one.</span>
+            <span data-lang="zh" class="lang-hidden">内置 13 种语言完整本地化，覆盖全球核心市场，确保各地玩家都能无缝沉浸。</span>
+          </p>
+        </div>
+        <div class="highlight-item reveal">
+          <h3>
+            <span data-lang="en">Adaptive PVE & Graded Challenges</span>
+            <span data-lang="zh" class="lang-hidden">自适应 PVE 与分级挑战</span>
+          </h3>
+          <p>
+            <span data-lang="en">Dynamic difficulty ensures no player gets stuck. The B-to-SSS grading system gives veterans a reason to keep perfecting their runs.</span>
+            <span data-lang="zh" class="lang-hidden">动态难度调节确保不卡关，B 到 SSS 的六级评分又为硬核玩家保留不断突破上限的竞技纵深。</span>
+          </p>
+        </div>
+        <div class="highlight-item reveal">
+          <h3>
+            <span data-lang="en">PvP Anywhere</span>
+            <span data-lang="zh" class="lang-hidden">随时随地 PvP</span>
+          </h3>
+          <p>
+            <span data-lang="en">Online matchmaking and local network play. High-intensity competition regardless of where you are.</span>
+            <span data-lang="zh" class="lang-hidden">支持在线全球匹配与局域网本地联机，无论身处何地、网络条件如何，都能随时开启高强度对决。</span>
+          </p>
+        </div>
+        <div class="highlight-item reveal">
+          <h3>
+            <span data-lang="en">Zero-Friction Progression</span>
+            <span data-lang="zh" class="lang-hidden">零负担养成</span>
+          </h3>
+          <p>
+            <span data-lang="en">A progression system designed around radical clarity. No spreadsheets — just straightforward growth so you can focus on the next match.</span>
+            <span data-lang="zh" class="lang-hidden">遵循"一眼即懂"的设计哲学，摒弃复杂多维数值体系。玩家扫一眼便知成长路径，专注战术决策本身。</span>
+          </p>
+        </div>
+        <div class="highlight-item reveal">
+          <h3>
+            <span data-lang="en">Full Replay, Fully Offline</span>
+            <span data-lang="zh" class="lang-hidden">完整回放，完全离线</span>
+          </h3>
+          <p>
+            <span data-lang="en">Every match is recorded in full for review and discovering new skill combinations. As a fully offline title, the game stays accessible anywhere — even in airplane mode.</span>
+            <span data-lang="zh" class="lang-hidden">记录每场战斗的完整过程，便于复盘与发现新的技能组合。纯单机架构无需服务器，飞行模式下也能完整游玩。</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots section" id="screenshots">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span data-lang="en">Screenshots</span>
+        <span data-lang="zh" class="lang-hidden">游戏截图</span>
+      </h2>
+      <div class="screenshots-filters reveal">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter-device="iphone">iPhone</button>
+          <button class="filter-btn" data-filter-device="ipad">iPad</button>
+        </div>
+      </div>
+      <div class="screenshots-gallery" id="screenshotsGallery"></div>
+    </div>
+  </section>
+
+  <section class="promo section" id="promo">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span data-lang="en">Promo Images</span>
+        <span data-lang="zh" class="lang-hidden">宣传图</span>
+      </h2>
+      <div class="promo-grid">
+        <div class="promo-card promo-landscape reveal">
+          <div class="promo-image" data-promo="landscape">
+            <img src="images/1920x1080-1.webp" alt="Landscape Promo 1" loading="lazy">
+          </div>
+          <div class="promo-info">
+            <span class="promo-name">
+              <span data-lang="en">Landscape Promo #1</span>
+              <span data-lang="zh" class="lang-hidden">横版宣传图 #1</span>
+            </span>
+            <span class="promo-label">1920 × 1080</span>
+          </div>
+        </div>
+        <div class="promo-card promo-landscape reveal">
+          <div class="promo-image" data-promo="landscape">
+            <img src="images/1920x1080-2.webp" alt="Landscape Promo 2" loading="lazy">
+          </div>
+          <div class="promo-info">
+            <span class="promo-name">
+              <span data-lang="en">Landscape Promo #2</span>
+              <span data-lang="zh" class="lang-hidden">横版宣传图 #2</span>
+            </span>
+            <span class="promo-label">1920 × 1080</span>
+          </div>
+        </div>
+        <div class="promo-card promo-portrait reveal">
+          <div class="promo-image" data-promo="portrait">
+            <img src="images/1080x1920-1.webp" alt="Portrait Promo 1" loading="lazy">
+          </div>
+          <div class="promo-info">
+            <span class="promo-name">
+              <span data-lang="en">Portrait Promo #1</span>
+              <span data-lang="zh" class="lang-hidden">竖版宣传图 #1</span>
+            </span>
+            <span class="promo-label">1080 × 1920</span>
+          </div>
+        </div>
+        <div class="promo-card promo-portrait reveal">
+          <div class="promo-image" data-promo="portrait">
+            <img src="images/1080x1920-2.webp" alt="Portrait Promo 2" loading="lazy">
+          </div>
+          <div class="promo-info">
+            <span class="promo-name">
+              <span data-lang="en">Portrait Promo #2</span>
+              <span data-lang="zh" class="lang-hidden">竖版宣传图 #2</span>
+            </span>
+            <span class="promo-label">1080 × 1920</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Screenshot">
+      <div class="lightbox-info">
+        <span id="lightboxCounter"></span>
+        <span id="lightboxMeta"></span>
+      </div>
+    </div>
+    <button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button>
+  </div>
+
+  <section class="video-section section" id="video">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span data-lang="en">Gameplay Videos</span>
+        <span data-lang="zh" class="lang-hidden">游戏视频</span>
+      </h2>
+      <div class="video-grid">
+        <div class="video-card reveal">
+          <div class="video-wrapper">
+            <video controls preload="metadata" playsinline webkit-playsinline poster="images/1920x1080-1.webp">
+              <source src="video/video1m.mp4" type="video/mp4">
+              <p>Your browser does not support the video tag.</p>
+            </video>
+          </div>
+          <div class="video-info">
+            <h3>
+              <span data-lang="en">Full Trailer</span>
+              <span data-lang="zh" class="lang-hidden">完整预告片</span>
+            </h3>
+            <span class="video-duration">1:00</span>
+          </div>
+        </div>
+        <div class="video-card reveal">
+          <div class="video-wrapper">
+            <video controls preload="metadata" playsinline webkit-playsinline poster="images/1920x1080-2.webp">
+              <source src="video/video30s.mp4" type="video/mp4">
+              <p>Your browser does not support the video tag.</p>
+            </video>
+          </div>
+          <div class="video-info">
+            <h3>
+              <span data-lang="en">Short Teaser</span>
+              <span data-lang="zh" class="lang-hidden">精华短版</span>
+            </h3>
+            <span class="video-duration">0:30</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gameplay section" id="gameplay">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span data-lang="en">Gameplay</span>
+        <span data-lang="zh" class="lang-hidden">玩法介绍</span>
+      </h2>
+      <div class="gameplay-inner reveal">
+        <div class="gameplay-header">
+          <h2 class="gameplay-title">
+            <span data-lang="en">Not Just Meme Fighters — A Hardcore Auto-Battle with Real Depth</span>
+            <span data-lang="zh" class="lang-hidden">不只是看 Meme 角色打架——这款自走棋卡牌游戏的策略深度，可能会让你重新思考"自动战斗"</span>
+          </h2>
+          <p class="gameplay-subtitle">
+            <span data-lang="en">120+ Brainrot cards, trigger-driven skills, layered buffs — beneath the absurdity lies a genuinely competitive strategy core.</span>
+            <span data-lang="zh" class="lang-hidden">120+ Brainrot 角色卡牌、触发器驱动的技能系统、多层次的 Buff 叠加——在荒诞的外表下，藏着一颗硬核策略的心。</span>
+          </p>
+        </div>
+        <div class="gameplay-body">
+          <p>
+            <span data-lang="en"><em>Brainrot Friends</em> looks like a chaotic internet-character brawl, but don't let the ridiculous names fool you. Once you enter combat, you'll quickly realize this is a game of precision and planning — and "auto-battle" never means "sit back and watch."</span>
+            <span data-lang="zh" class="lang-hidden">《网络梗大乱斗》看起来像是一场无厘头的互联网角色大乱斗，但别被那些喊着奇怪名字的 Brainrot 战士骗了。当你真正进入战斗，很快会发现：这是一场需要精密计算的策略博弈，而"自动战斗"并不意味着你只需要袖手旁观。</span>
+          </p>
+
+          <h3>
+            <span data-lang="en">Two Phases of Combat</span>
+            <span data-lang="zh" class="lang-hidden">战斗怎么打？</span>
+          </h3>
+          <p>
+            <span data-lang="en">Each round has two core phases — <strong>Shop</strong> first, then <strong>Battle</strong>.</span>
+            <span data-lang="zh" class="lang-hidden">每场对局分为两个核心阶段——先<strong>商店</strong>，后<strong>战斗</strong>。</span>
+          </p>
+          <div class="gameplay-phases">
+            <div class="phase-card">
+              <div class="phase-badge">
+                <span data-lang="en">Shop</span>
+                <span data-lang="zh" class="lang-hidden">商店</span>
+              </div>
+              <p>
+                <span data-lang="en">You start every round with a fixed budget of 10 gold. Spend it to buy new cards, upgrade existing units, or pivot your composition. Cards have no "high-cost" or "low-cost" tier; power comes entirely from skill trigger synergy. Stack offensive buffs for an alpha strike, or build a defensive counter-combo? Every shop refresh forces a fresh decision.</span>
+                <span data-lang="zh" class="lang-hidden">每回合你拥有固定的10个金币，用这些资源购买新卡牌、升级已有角色、或调整阵容构成。卡牌没有"高费""低费"之分，强弱完全取决于技能触发器的搭配——是堆砌攻击 Buff 一波带走，还是走防御反击流拖到后期？每次商店刷新都在逼迫你做出当下的最优解。</span>
+              </p>
+            </div>
+            <div class="phase-card">
+              <div class="phase-badge">
+                <span data-lang="en">Battle</span>
+                <span data-lang="zh" class="lang-hidden">战斗</span>
+              </div>
+              <p>
+                <span data-lang="en">Your squad clashes with the enemy automatically. You don't tap every attack — but victory is decided long before the first hit lands. Which cards you picked, how you positioned them, and how their skills chain together — these are the real battle.</span>
+                <span data-lang="zh" class="lang-hidden">你的战队与敌方自动交锋。你不需要手动操作每一次攻击，但胜负早在战斗开始前就已注定：你选择了哪几张卡牌、如何排列站位、技能之间如何触发连携——这些决策才是战斗真正的主体。</span>
+              </p>
+            </div>
+          </div>
+
+          <h3>
+            <span data-lang="en">Where the Depth Comes From: Skill Types</span>
+            <span data-lang="zh" class="lang-hidden">策略深度从哪来？看几种技能类型就懂了</span>
+          </h3>
+          <p>
+            <span data-lang="en">The trigger-driven skill system is the skeleton of the strategy. Each card's ability is not a simple "press to cast" — it's a condition-effect pairing. Reading the rules can feel abstract, but once you see how these skill types play out in practice, the system's appeal becomes immediate.</span>
+            <span data-lang="zh" class="lang-hidden">触发器驱动的技能系统是这款游戏策略内核的骨架。每张卡牌携带的技能并非简单"点击释放"，而是由触发条件和效果组合而成。光看规则可能有点抽象，但当你看到下面这几类技能的实际表现时，立刻就能明白这套系统的乐趣。</span>
+          </p>
+          <div class="skill-grid">
+            <div class="skill-card">
+              <h4>
+                <span data-lang="en">Death-Blessing</span>
+                <span data-lang="zh" class="lang-hidden">死亡时增益型</span>
+              </h4>
+              <div class="skill-meta">
+                <span class="skill-trigger">
+                  <span data-lang="en">Trigger: On Death</span>
+                  <span data-lang="zh" class="lang-hidden">触发：角色阵亡</span>
+                </span>
+                <span class="skill-effect">
+                  <span data-lang="en">Effect: Buff a random ally's ATK &amp; HP</span>
+                  <span data-lang="zh" class="lang-hidden">效果：给随机队友+攻击力和生命值</span>
+                </span>
+              </div>
+              <p>
+                <span data-lang="en">The classic "die so others may live." Place these units on the front line to absorb punishment; when they fall, they bequeath their stats to the carries behind them. Higher levels mean a richer inheritance.</span>
+                <span data-lang="zh" class="lang-hidden">最经典的"死得其所"。把这类角色放在前排吸收伤害，阵亡后把遗产留给身后的核心输出。等级越高，留下的遗产越丰厚。</span>
+              </p>
+            </div>
+            <div class="skill-card">
+              <h4>
+                <span data-lang="en">Opening Strike</span>
+                <span data-lang="zh" class="lang-hidden">开场压制型</span>
+              </h4>
+              <div class="skill-meta">
+                <span class="skill-trigger">
+                  <span data-lang="en">Trigger: Battle Start</span>
+                  <span data-lang="zh" class="lang-hidden">触发：战斗开始时</span>
+                </span>
+                <span class="skill-effect">
+                  <span data-lang="en">Effect: Damage random enemy</span>
+                  <span data-lang="zh" class="lang-hidden">效果：对随机敌人造成伤害</span>
+                </span>
+              </div>
+              <p>
+                <span data-lang="en">They scream their own name and rush out the gate, delivering an opening salvo before the enemy can blink. At higher levels they hit 3 targets instead of 1 — a staple in any rush-down composition.</span>
+                <span data-lang="zh" class="lang-hidden">开局就喊着自己的名字冲出去，给敌方来一波"开场问候"。等级提升后从打1个变成打3个，速攻阵容里的常客。</span>
+              </p>
+            </div>
+            <div class="skill-card">
+              <h4>
+                <span data-lang="en">Kamikaze Core</span>
+                <span data-lang="zh" class="lang-hidden">自爆流核心</span>
+              </h4>
+              <div class="skill-meta">
+                <span class="skill-trigger">
+                  <span data-lang="en">Trigger: On Death</span>
+                  <span data-lang="zh" class="lang-hidden">触发：角色阵亡</span>
+                </span>
+                <span class="skill-effect">
+                  <span data-lang="en">Effect: Damage ALL characters</span>
+                  <span data-lang="zh" class="lang-hidden">效果：对所有角色造成伤害</span>
+                </span>
+              </div>
+              <p>
+                <span data-lang="en">High risk, high reward. When they die, they explode — friend and foe alike. Used well, they're a late-game board clear; used poorly, they're a team-wipe machine. Positioning and timing are everything.</span>
+                <span data-lang="zh" class="lang-hidden">这类角色的风险和回报一样高——阵亡时炸全场，包括自己的队友。用好了是残局清场神器，用砸了是自己团灭发动机。站位和时机，缺一不可。</span>
+              </p>
+            </div>
+            <div class="skill-card">
+              <h4>
+                <span data-lang="en">Pain-to-Power</span>
+                <span data-lang="zh" class="lang-hidden">越战越勇型</span>
+              </h4>
+              <div class="skill-meta">
+                <span class="skill-trigger">
+                  <span data-lang="en">Trigger: On Taking Damage</span>
+                  <span data-lang="zh" class="lang-hidden">触发：受到伤害时</span>
+                </span>
+                <span class="skill-effect">
+                  <span data-lang="en">Effect: Gain ATK</span>
+                  <span data-lang="zh" class="lang-hidden">效果：+攻击力</span>
+                </span>
+              </div>
+              <p>
+                <span data-lang="en">For these fighters, getting hit isn't a setback — it's a charge-up. Park them on the front line and watch their attack multiply over several rounds. Pair with healing and they evolve from "meat shield" to "main carry."</span>
+                <span data-lang="zh" class="lang-hidden">挨打对这类角色来说不是削弱，是充能。放在前排承受攻击，几轮下来攻击力翻几倍。配合治疗角色，能从"肉盾"变成"主C"。</span>
+              </p>
+            </div>
+            <div class="skill-card">
+              <h4>
+                <span data-lang="en">Death-Summon</span>
+                <span data-lang="zh" class="lang-hidden">亡语召唤型</span>
+              </h4>
+              <div class="skill-meta">
+                <span class="skill-trigger">
+                  <span data-lang="en">Trigger: On Death</span>
+                  <span data-lang="zh" class="lang-hidden">触发：角色阵亡</span>
+                </span>
+                <span class="skill-effect">
+                  <span data-lang="en">Effect: Summon a powerful minion</span>
+                  <span data-lang="zh" class="lang-hidden">效果：召唤强力召唤物</span>
+                </span>
+              </div>
+              <p>
+                <span data-lang="en">A seemingly weak card that, on death, spawns a high-ATK, high-HP summon with its own special ability. Many comeback matches begin the moment the opponent thinks they've already won.</span>
+                <span data-lang="zh" class="lang-hidden">表面上是一个属性平平的小角色，但阵亡后会蹦出一个高攻高血还带特殊能力的召唤物。很多翻盘局的起点，就是对手以为已经解决了它。</span>
+              </p>
+            </div>
+          </div>
+          <p>
+            <span data-lang="en">Chain multiple trigger types together and the strategic space explodes: openers soften the line, growth tanks scale into late-game threats, kamikaze units force the board into a bloody endgame, and summoners clean up the scraps. The same mechanic plays completely differently depending on the surrounding roster.</span>
+            <span data-lang="zh" class="lang-hidden">当你把多种触发链条串联起来时，会产生指数级的策略可能性：是让开场角色先压血线，配合成长型前排拖到后期，还是用自爆角色快速进入残局，再让召唤型角色收割？同一类机制，在不同的阵容里完全是两种打法。</span>
+          </p>
+
+          <h3>
+            <span data-lang="en">Buffs Add Another Dimension</span>
+            <span data-lang="zh" class="lang-hidden">Buff 让战局充满变数</span>
+          </h3>
+          <p>
+            <span data-lang="en">The Buff system pushes every strategy above into a higher dimension. You can kit a unit for a one-shot explosion — the Twisted Donut adds +20 damage to its next attack, perfect for assassinating a key target. Or you can play defense — the Frozen Coconut completely ignores a lethal hit, keeping your frontline alive just long enough. Some buffs even rewrite the battlefield — Rocket Chili flings the enemy’s lead unit straight to the back row before combat, letting your damage hit the core. These buffs stack and combine, turning an ordinary card into your roster’s secret weapon.</span>
+            <span data-lang="zh" class="lang-hidden">而 Buff 系统则让上述所有策略再上一个维度。你可以给角色装备一次性爆发手段——扭曲甜甜圈让下一次攻击伤害+20，适合快速斩杀关键目标；也可以走防守路线——冰冻椰子可以完全忽略一次致命攻击，让前排活到你期望它发挥作用的时刻；还有一些 Buff 会改变战场格局——火箭辣椒能在战斗开始前把敌方最前面的角色直接甩到最后面，让你的输出精准命中敌方核心。这些 Buff 可以叠加、组合，把一张普通的卡牌变成你阵容里的秘密武器。</span>
+          </p>
+
+          <h3>
+            <span data-lang="en">PVE Teaches, PVP Tests</span>
+            <span data-lang="zh" class="lang-hidden">PVE 教你思路，PVP 检验真章</span>
+          </h3>
+          <p>
+            <span data-lang="en">The game currently features 120+ Brainrot cards, each with unique skill sets and trigger logic. PVE campaigns are a curated strategy tutorial — every level teaches a new archetype or counter-relationship. One stage floods you with high-attack-speed enemies, teaching you to leverage kamikaze units to thin their numbers quickly. Another features a low-health enemy with a devastating desperation burst, testing whether you can focus-fire the core within three rounds. PVP is the real crucible: you must read opponent formations, predict trigger timing, and adapt to the shifting meta. A team that dominates PVE can be dismantled in seconds by an off-meta counter in ranked play.</span>
+            <span data-lang="zh" class="lang-hidden">游戏目前收录超过 120 张 Brainrot 角色卡牌，每张都有独立的技能组和触发逻辑。PVE 战役更像一场精心设计的策略教学——每一关都在教你一种新的卡组思路或克制关系。比如某一关敌方全是高攻速阵容，就是在教你"用自爆型角色快速削减对方人数"；另一关敌方有强力残血爆发角色，就是在考你"能否在前三回合集火秒掉核心"。PVP 对战则是真正的试炼场。你不仅要理解自己的阵容，还要预判对手的布阵逻辑、针对当前环境调整策略。一套在 PVE 中无往不利的阵容，可能在 PVP 中被某个冷门 Counter 卡组瞬间瓦解。</span>
+          </p>
+
+          <h3>
+            <span data-lang="en">Why "Auto-Battle" ≠ "No Control"</span>
+            <span data-lang="zh" class="lang-hidden">为什么"自动战斗"不等于"没有操作"？</span>
+          </h3>
+          <p>
+            <span data-lang="en">The common misconception is that if you can't micromanage combat, strategy doesn't matter. <em>Brainrot Friends</em> flips that logic: because you <em>cannot</em> adjust mid-fight, every pre-fight decision becomes more important. What triggers does the enemy have? Will your buffs outlast their first burst? Can your key damage dealer survive long enough to activate? There is no answer key. Every match is a new puzzle.</span>
+            <span data-lang="zh" class="lang-hidden">很多玩家对自动战斗游戏的误解是："战斗过程不可控，所以策略性弱。"《网络梗大乱斗》的答案是：战斗的不可控，恰恰让"战前决策"变得更加重要。因为你无法在战斗中临时改变策略，所以每一步预判都要提前算好。敌方阵容可能有哪些触发技能？你的 Buff 覆盖能否撑过对方的第一波爆发？你的核心输出角色是否能活到触发条件满足的那一刻？这些问题没有标准答案。每一局对战，都是一次新的解谜。</span>
+          </p>
+
+          <p class="gameplay-closing">
+            <span data-lang="en">If you're tired of card games that "look complex but only ask you to stack bigger numbers," <em>Brainrot Friends</em> might restore your faith in what strategy games can be — except this time, your commander is a screaming Brainrot warrior with an unpronounceable name.</span>
+            <span data-lang="zh" class="lang-hidden">如果你厌倦了那些"看起来复杂，实际上只需要堆数值"的卡牌游戏，《网络梗大乱斗》可能会让你找回策略游戏应有的深度——只不过这一次，你的指挥官是一群喊着奇怪名字的 Brainrot 战士。</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team section" id="team">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span data-lang="en">Team &amp; Story</span>
+        <span data-lang="zh" class="lang-hidden">团队与故事</span>
+      </h2>
+      <div class="story-inner reveal">
+        <div class="story-header">
+          <h2 class="story-title">
+            <span data-lang="en">We're Two Dragon Ball Kids Who Turned Internet Brainrot into Card-Battle Warriors</span>
+            <span data-lang="zh" class="lang-hidden">我们是两个看《龙珠》长大的开发者，把互联网上的"Brainrot"角色变成了卡牌战士</span>
+          </h2>
+          <p class="story-subtitle">
+            <span data-lang="en">We fused 90s cel-shaded anime aesthetics with the viral meme culture we live in every day. The result? A ridiculous yet genuinely competitive strategy brawl.</span>
+            <span data-lang="zh" class="lang-hidden">我们把从小痴迷的90年代赛璐珞动画美学，和每天浸泡其中的病毒式Meme文化融合到了一起。结果？一场无厘头又热血的策略大乱斗。</span>
+          </p>
+        </div>
+        <div class="story-body">
+          <p>
+            <span data-lang="en">Have you ever stumbled across a comment-thread debate where two completely unrelated internet characters are being discussed as if they were heavyweight fighters? We didn't just see those arguments — we decided to build the arena.</span>
+            <span data-lang="zh" class="lang-hidden">你有没有在短视频评论区看到过这样的争论：两个看似毫无关联的互联网角色，网友却在认真讨论"谁更厉害"？我们不仅看到过，还决定做点什么——我们真的搭了一个擂台。</span>
+          </p>
+          <p>
+            <span data-lang="en">"We grew up on <em>Dragon Ball</em>," we say. "Those hard-edged lines, the saturated cel-shaded colors — they're burned into our brains." Our illustrator can still draw every main and supporting character from memory, no reference needed. So when he first encountered the rising wave of Brainrot characters — those absurd, meme-drenched figures with unpronounceable names — we immediately asked ourselves: what if we reimagined these internet-born creatures through a 90s anime lens, and actually let them fight?</span>
+            <span data-lang="zh" class="lang-hidden">"我们从小看《龙珠》长大，那种线条硬朗、色彩浓烈的赛璐珞风格深深印在脑子里。"我们的插画师甚至可以在不看任何参考图的情况下，画出《龙珠》里的每一位主角和配角。而当他第一次看到互联网上兴起的 Brainrot 角色——那些名字古怪、形象夸张、自带 Meme 光环的存在时，我们立刻问自己：如果用90年代动画的美学重新诠释这些角色，让他们在战场上真正打起来，会怎样？</span>
+          </p>
+          <p>
+            <span data-lang="en">That question became <em>Brainrot Friends</em> — an auto-battle card strategy game where you collect and field 120+ cards across PVE campaigns and real-time PVP. But the detail we want you to remember isn't a mechanic; it's the sound.</span>
+            <span data-lang="zh" class="lang-hidden">这个问题最终变成了《网络梗大乱斗》——一款融合自走棋与卡牌策略的自动战斗游戏。你会收集超过120张卡牌，组建属于自己的战队，在PVE战役中与AI较量策略深度，也可以在PVP模式中与其他玩家一较高下。但我们最希望你记住的，不是某个机制，而是声音。</span>
+          </p>
+          <p>
+            <span data-lang="en">Every character carries an Italian-flavored name, and when they unleash their ultimate ability, they scream it at full volume.</span>
+            <span data-lang="zh" class="lang-hidden">每个角色的名字都带有意大利语风情的读音，而当他们释放技能时，会大声喊出自己的名字。</span>
+          </p>
+          <p class="story-shout">
+            <span data-lang="en">"Tralalero Tralala!"</span>
+            <span data-lang="zh" class="lang-hidden">"Tralalero Tralala！"</span>
+          </p>
+          <p>
+            <span data-lang="en">Hearing those ridiculous, rhythmically infectious shouts echo across the battlefield is almost impossible not to laugh at. It's not a bug. It's the soul of Brainrot: these characters were born from the internet's collective absurdity, and rendering that absurdity through the earnest, high-energy grammar of 90s shonen anime is exactly where we think the game's charm lives.</span>
+            <span data-lang="zh" class="lang-hidden">当你听到战场上此起彼伏地响起这些无厘头又充满节奏感的喊声时，很难不笑出声。这不是配音失误，而是我们刻意保留的"Brainrot灵魂"：这些角色从互联网上诞生，天生就带着一种荒诞的幽默感。而用90年代热血动画的方式去演绎这种荒诞，恰恰是我们觉得最迷人的化学反应。</span>
+          </p>
+          <p>
+            <span data-lang="en">Beneath the surface chaos, we spent a lot of time refining a genuinely deep combat system. Skill combos, trigger windows, buff stacking — every decision rewards precision. The game looks like a meme; it plays like a chess match at 2× speed.</span>
+            <span data-lang="zh" class="lang-hidden">我们花了很多时间打磨战斗系统的策略深度。每张卡牌的技能组合、触发时机、Buff叠加都需要精密计算——表面的无厘头之下，藏着的是硬核的策略对抗。这款游戏看起来像梗，玩起来却像二倍速的国际象棋。</span>
+          </p>
+          <p class="story-closing">
+            <span data-lang="en">Whether you're here for the nostalgic visual language of 90s animation, drawn in by the magnetic weirdness of Brainrot culture, or simply looking for a strategy game that's hilarious to watch and demanding to master — we built <em>Brainrot Friends</em> to be that answer.</span>
+            <span data-lang="zh" class="lang-hidden">无论你是为了重温90年代动画的视觉记忆而来，还是被 Brainrot 文化的荒诞魅力吸引，抑或只是想找一款"看起来搞笑，玩起来烧脑"的策略游戏——我们就是为了做出这样的游戏，才开发了《网络梗大乱斗》。</span>
+          </p>
+          <p class="story-cta">
+            <span data-lang="en">Download <em>Brainrot Friends</em>. Pick the most ridiculous card on the roster. Let it scream its own name — then win the fight.</span>
+            <span data-lang="zh" class="lang-hidden">下载《网络梗大乱斗》，选一张最离谱的卡牌，听它喊出自己名字——然后赢下这场战斗。</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="download section" id="download">
+    <div class="container">
+      <div class="download-inner reveal">
+        <div class="download-icon">📦</div>
+        <h2>
+          <span data-lang="en">Download Press Kit</span>
+          <span data-lang="zh" class="lang-hidden">下载媒体素材包</span>
+        </h2>
+        <p>
+          <span data-lang="en">The Press Kit is split into two parts due to server file-size limits. Download both for the complete package.</span>
+          <span data-lang="zh" class="lang-hidden">由于服务器单文件大小限制，素材包已拆分为两部分。下载两个即可获得完整内容。</span>
+        </p>
+        <div class="download-buttons">
+          <button class="download-btn" id="downloadBtn1">
+            <span data-lang="en">Download Kit 1 — Images (ZIP)</span>
+            <span data-lang="zh" class="lang-hidden">下载素材包 1 — 图片资源 (ZIP)</span>
+            <span class="download-size">~98 MB</span>
+          </button>
+          <button class="download-btn" id="downloadBtn2">
+            <span data-lang="en">Download Kit 2 — Videos (ZIP)</span>
+            <span data-lang="zh" class="lang-hidden">下载素材包 2 — 视频资源 (ZIP)</span>
+            <span class="download-size">~65 MB</span>
+          </button>
+        </div>
+        <div class="download-manifests">
+          <div class="download-manifest">
+            <button class="manifest-toggle" id="manifestToggle1">
+              <span data-lang="en">Show Kit 1 file list</span>
+              <span data-lang="zh" class="lang-hidden">查看素材包 1 文件清单</span>
+              <span class="manifest-arrow">▼</span>
+            </button>
+            <div class="manifest-list" id="manifestList1">
+              <div class="manifest-item">
+                <span>App Icon.png</span>
+                <span>1.2 MB</span>
+              </div>
+              <div class="manifest-item">
+                <span>Promo Images × 4</span>
+                <span>~10 MB</span>
+              </div>
+              <div class="manifest-item">
+                <span>iPhone Screenshots (EN) × 8</span>
+                <span>~19 MB</span>
+              </div>
+              <div class="manifest-item">
+                <span>iPhone Screenshots (CN) × 8</span>
+                <span>~20 MB</span>
+              </div>
+              <div class="manifest-item">
+                <span>iPad Screenshots (EN) × 8</span>
+                <span>~24 MB</span>
+              </div>
+              <div class="manifest-item">
+                <span>iPad Screenshots (CN) × 8</span>
+                <span>~24 MB</span>
+              </div>
+              <div class="manifest-item manifest-total">
+                <span>Total</span>
+                <span>~98 MB</span>
+              </div>
+            </div>
+          </div>
+          <div class="download-manifest">
+            <button class="manifest-toggle" id="manifestToggle2">
+              <span data-lang="en">Show Kit 2 file list</span>
+              <span data-lang="zh" class="lang-hidden">查看素材包 2 文件清单</span>
+              <span class="manifest-arrow">▼</span>
+            </button>
+            <div class="manifest-list" id="manifestList2">
+              <div class="manifest-item">
+                <span>Video 1min.mp4</span>
+                <span>44 MB</span>
+              </div>
+              <div class="manifest-item">
+                <span>Video 30s.mp4</span>
+                <span>21 MB</span>
+              </div>
+              <div class="manifest-item manifest-total">
+                <span>Total</span>
+                <span>~65 MB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-contact">Email: cluo85@foxmail.com</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
