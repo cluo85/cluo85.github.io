@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1230">
+<meta name="description" content="工具侠 · 定制小工具 / 小程序：做表、盯打卡、记账、发通知……把重复工作变成一键完成的小工具。咨询免费，包教包会，不满意不收费。">
+<title>工具侠 · 把重复工作，变成一键工具</title>
+<style>
+/* ============ 基础 ============ */
+:root{
+  --page-max:480px; /* 内容区最大宽度，按屏幕宽度自适应 */
+  --bg:#f6f7fa;
+  --card:#ffffff;
+  --ink:#131a33;
+  --ink2:#5d6579;
+  --ink3:#9aa1b5;
+  --line:rgba(19,26,51,.07);
+  --navy1:#0b1230;
+  --navy2:#141d45;
+  --navy3:#1d2a5e;
+  --gold:#f0c355;
+  --gold2:#e3a92c;
+  --gold-ink:#8a5f0a;
+  --pain-bg:#fff6ec;
+  --pain-line:#f0954a;
+  --sol-bg:#eef8f0;
+  --sol-line:#3aa764;
+  --radius:20px;
+  --shadow:0 1px 2px rgba(19,26,51,.04),0 14px 34px rgba(19,26,51,.06);
+  --ease:cubic-bezier(.22,.7,.28,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:var(--page-max);margin:0 auto;min-height:100vh}
+img{max-width:100%;display:block}
+
+/* ============ 动效基元 ============ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes glowPulse{
+  0%,100%{box-shadow:0 8px 24px rgba(227,169,44,.32)}
+  50%{box-shadow:0 8px 32px rgba(227,169,44,.55)}
+}
+@keyframes rowCycle{
+  0%,34%{opacity:1;transform:translateY(0)}
+  46%,100%{opacity:0;transform:translateY(-8px)}
+}
+@keyframes resCycle{
+  0%,46%{opacity:0;transform:translateY(-50%) scale(.9)}
+  56%,86%{opacity:1;transform:translateY(-50%) scale(1)}
+  94%,100%{opacity:0;transform:translateY(-50%) scale(.9)}
+}
+@keyframes scanLine{0%{top:8%}50%{top:90%}100%{top:8%}}
+
+/* ============ Hero ============ */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(720px 400px at 85% -10%, rgba(240,195,85,.16), transparent 60%),
+    radial-gradient(620px 400px at -10% 110%, rgba(90,118,255,.20), transparent 62%),
+    linear-gradient(165deg,#0a1028 0%,#141d45 55%,#1d2a5e 100%);
+  padding:56px 24px 56px;border-radius:0 0 36px 36px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(420px 320px at 70% 20%,#000,transparent 75%);
+  -webkit-mask-image:radial-gradient(420px 320px at 70% 20%,#000,transparent 75%);
+}
+.up{animation:fadeUp .7s var(--ease) both}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.26s}
+.d4{animation-delay:.38s}.d5{animation-delay:.50s}
+
+.brand{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:20px;font-weight:900;letter-spacing:1.5px;color:#fff;
+}
+.brand i{
+  width:8px;height:8px;border-radius:50%;background:var(--gold);
+  box-shadow:0 0 12px rgba(240,195,85,.9);
+  animation:dotPulse 2.2s ease-in-out infinite;
+}
+.brand span{
+  font-size:12px;font-weight:600;letter-spacing:.5px;color:#93a0c9;
+  padding-left:11px;border-left:1px solid rgba(255,255,255,.16);
+}
+@keyframes dotPulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:31px;line-height:1.42;font-weight:900;margin:22px 0 14px;letter-spacing:.8px}
+.hero h1 .hl{position:relative;color:var(--gold);white-space:nowrap}
+.hero-sub{font-size:15px;color:#bcc6e4;max-width:400px;margin-bottom:26px}
+.hero-sub b{color:#fff;font-weight:700}
+
+/* Hero 内的小动效窗口：多表 → 一键汇总 */
+.mock{
+  position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;padding:14px;margin:0 0 26px;backdrop-filter:blur(8px);
+}
+.mock-head{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#93a0c9;margin-bottom:12px;letter-spacing:.3px}
+.mock-head .dots{display:flex;gap:4px}
+.mock-head .dots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.25)}
+.mock-head .dots i:first-child{background:#ff6b6b}
+.mock-head .dots i:nth-child(2){background:var(--gold)}
+.mock-head .dots i:last-child{background:#51cf66}
+.mock-body{position:relative;display:flex;flex-direction:column;gap:6px}
+.mrow{
+  display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);
+  border-radius:9px;padding:7px 10px;font-size:11.5px;color:#c9d2ef;
+  animation:rowCycle 5.2s infinite;
+}
+.mrow b{width:50px;font-weight:600;white-space:nowrap}
+.mrow i{display:block;height:7px;border-radius:99px;background:linear-gradient(90deg,#4d6bff,#8299ff)}
+.mresult{
+  position:absolute;left:0;right:0;top:50%;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  background:linear-gradient(135deg,#5cd18e,#2e9454);color:#fff;
+  font-weight:800;font-size:12.5px;border-radius:9px;padding:9px 10px;
+  animation:resCycle 5.2s infinite;
+}
+
+/* CTA */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:none;cursor:pointer;font-family:inherit;text-decoration:none;
+  border-radius:999px;font-weight:800;font-size:16px;padding:16px 30px;
+  transition:transform .18s var(--ease),filter .25s;
+}
+.btn:active{transform:scale(.97)}
+.btn-gold{
+  background:linear-gradient(135deg,#f7d073,var(--gold2));color:#3d2a00;
+  width:100%;animation:glowPulse 2.6s ease-in-out infinite;
+}
+.btn-gold:hover{filter:brightness(1.05)}
+.hero-note{margin-top:16px;font-size:12px;color:#7f8cb8;text-align:center;letter-spacing:.3px}
+
+/* ============ 区块通用 ============ */
+section{padding:52px 22px 4px}
+.sec-head{margin-bottom:24px}
+/* 板块标题与下方卡片/内容的间距：去掉内容区顶部 52px，整体约 24px */
+.sec-head + section{padding-top:0}
+.sec-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11.5px;font-weight:800;letter-spacing:2px;color:var(--gold-ink);
+}
+.sec-tag::after{content:"";width:28px;height:1px;background:linear-gradient(90deg,var(--gold2),transparent)}
+.sec-head h2{font-size:23px;font-weight:900;margin:10px 0 4px;letter-spacing:.5px}
+.sec-head p{font-size:13.5px;color:var(--ink3)}
+.sec-price{margin-top:10px;font-size:12.5px;font-weight:700;color:var(--gold-ink)}
+.sec-price b{font-size:17px;font-weight:900}
+
+/* ============ 案例卡片 ============ */
+.case-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:20px;margin-bottom:14px;
+  transition:transform .25s var(--ease),box-shadow .25s;
+}
+.case-card.in:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(19,26,51,.04),0 20px 40px rgba(19,26,51,.10)}
+.case-head{display:flex;align-items:center;gap:11px;margin-bottom:13px}
+.case-avatar{
+  width:42px;height:42px;flex:none;border-radius:13px;font-size:20px;
+  display:flex;align-items:center;justify-content:center;
+  background:#f1f3fa;box-shadow:inset 0 0 0 1px rgba(19,26,51,.05);
+}
+.case-head h3{font-size:15.5px;font-weight:800;letter-spacing:.2px}
+.case-head .price{display:inline-block;font-size:11.5px;color:var(--ink3);margin-top:2px;font-weight:600}
+.pain,.solution{border-radius:12px;padding:10px 13px;font-size:13.5px;color:#3a4256;line-height:1.6}
+.pain{background:var(--pain-bg);border-left:3px solid var(--pain-line);margin-bottom:8px}
+.solution{background:var(--sol-bg);border-left:3px solid var(--sol-line)}
+.pain b,.solution b{font-weight:800;font-size:12px;margin-right:6px}
+.pain b{color:#c2560a}
+.solution b{color:#1e7a34}
+
+/* 时间对比 */
+.time-compare{
+  display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink3);
+  padding:10px 4px 0;font-weight:600;
+}
+.tc-before{text-decoration:line-through;opacity:.55}
+.tc-arrow{color:var(--gold2);font-weight:900}
+.tc-after{font-size:19px;font-weight:900;color:#e89a10;letter-spacing:.5px}
+
+/* ============ 服务与价格 ============ */
+.price-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:22px 20px;margin-bottom:14px;
+  display:flex;align-items:center;gap:16px;
+}
+.price-icon{
+  width:48px;height:48px;flex:none;border-radius:15px;font-size:22px;
+  display:flex;align-items:center;justify-content:center;
+  background:#f1f3fa;box-shadow:inset 0 0 0 1px rgba(19,26,51,.05);
+}
+.price-card h3{font-size:15.5px;font-weight:800;margin-bottom:2px}
+.price-desc{font-size:12.5px;color:var(--ink2);line-height:1.55}
+.price-num{margin-left:auto;flex:none;text-align:right}
+.price-num b{font-size:17px;font-weight:900;color:var(--ink);white-space:nowrap}
+.price-num small{display:block;font-size:11px;font-weight:600;color:var(--ink3)}
+
+/* ============ 合作流程 ============ */
+.steps{display:flex;flex-direction:column;gap:0}
+.step{
+  display:flex;align-items:center;gap:16px;
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  box-shadow:var(--shadow);padding:16px 18px;margin-bottom:10px;
+}
+.step-num{
+  width:38px;height:38px;flex:none;border-radius:50%;
+  background:linear-gradient(135deg,var(--navy3),var(--navy1));color:var(--gold);
+  font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center;
+}
+.step b{font-size:15px;font-weight:800;display:block}
+.step p{font-size:12.5px;color:var(--ink2)}
+
+/* ============ CTA ============ */
+.cta-wrap{padding:52px 22px 34px}
+.cta-panel{
+  position:relative;overflow:hidden;text-align:center;color:#fff;border-radius:28px;
+  background:
+    radial-gradient(560px 300px at 50% -18%, rgba(240,195,85,.18), transparent 62%),
+    radial-gradient(460px 280px at 112% 118%, rgba(90,118,255,.28), transparent 60%),
+    linear-gradient(165deg,#0a1028,#1d2a5e);
+  padding:44px 26px 32px;
+}
+.cta-panel h2{font-size:25px;font-weight:900;letter-spacing:.8px;margin-bottom:10px}
+.cta-panel h2 .hl{color:var(--gold)}
+.cta-panel .cta-sub{font-size:13.5px;color:#bcc6e4;margin-bottom:24px}
+.qr-title{font-size:12.5px;color:#93a0c9;margin:26px 0 10px;letter-spacing:.5px}
+.qr-box{
+  position:relative;width:148px;height:148px;margin:0 auto 12px;
+  background:#fff;border-radius:20px;padding:12px;box-shadow:0 12px 30px rgba(0,0,0,.32);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.qr-box svg{width:100%;height:100%}
+.qr-box .scan{
+  position:absolute;left:10px;right:10px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,#3d8bff,transparent);
+  box-shadow:0 0 10px rgba(61,139,255,.8);
+  animation:scanLine 2.8s ease-in-out infinite;
+}
+.cta-note{font-size:12px;color:#7f8cb8;margin-top:14px;letter-spacing:.3px}
+.qr-hint{font-size:11px;color:#5f6c99;margin-top:6px}
+
+/* ============ 吸底栏 ============ */
+.sticky-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.92);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);box-shadow:0 -10px 28px rgba(19,26,51,.08);
+  transform:translateY(110%);transition:transform .4s var(--ease);
+  max-width:var(--page-max);margin:0 auto;
+}
+.sticky-bar.show{transform:translateY(0)}
+.sticky-bar .sb-text{font-size:13px;font-weight:800;color:var(--ink);line-height:1.4}
+.sticky-bar .sb-text small{display:block;font-size:11px;font-weight:600;color:var(--ink3)}
+.sb-btn{
+  flex:none;border:none;cursor:pointer;font-family:inherit;
+  background:linear-gradient(135deg,#f7d073,var(--gold2));color:#3d2a00;
+  font-weight:800;font-size:14px;border-radius:999px;padding:11px 20px;
+  box-shadow:0 6px 16px rgba(227,169,44,.4);transition:transform .15s;
+}
+.sb-btn:active{transform:scale(.95)}
+
+/* ============ 弹窗 ============ */
+.modal{
+  position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;
+  padding:26px;background:rgba(8,12,30,.55);backdrop-filter:blur(6px);
+  opacity:0;pointer-events:none;transition:opacity .28s;
+}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-card{
+  width:100%;max-width:340px;background:#fff;border-radius:24px;padding:30px 24px 24px;
+  text-align:center;transform:translateY(16px) scale(.95);transition:transform .34s var(--ease);
+  box-shadow:0 24px 60px rgba(8,12,30,.35);
+}
+.modal.open .modal-card{transform:none}
+.modal-icon{
+  width:56px;height:56px;margin:0 auto 14px;border-radius:18px;font-size:26px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--sol-bg);
+}
+.modal-card h3{font-size:19px;font-weight:900;margin-bottom:6px}
+.modal-card .m-sub{font-size:13px;color:var(--ink2);margin-bottom:18px}
+.wx-row{
+  display:flex;align-items:center;gap:10px;background:#f6f7fb;border:1px solid var(--line);
+  border-radius:14px;padding:12px 14px;margin-bottom:12px;
+}
+.wx-row .wx-id{flex:1;text-align:left;overflow:hidden}
+.wx-row .wx-id small{display:block;font-size:11px;color:var(--ink3)}
+.wx-row .wx-id b{font-size:16px;color:var(--ink);word-break:break-all}
+.wx-copy{
+  flex:none;border:none;cursor:pointer;font-family:inherit;
+  background:linear-gradient(135deg,#f7d073,var(--gold2));color:#3d2a00;
+  font-weight:800;font-size:13px;border-radius:999px;padding:9px 15px;
+  transition:transform .15s;
+}
+.wx-copy:active{transform:scale(.94)}
+.m-tip{font-size:12px;color:var(--ink3);line-height:1.7}
+.m-close{
+  margin-top:14px;background:none;border:none;cursor:pointer;font-family:inherit;
+  font-size:12.5px;color:var(--ink3);padding:6px 12px;border-radius:99px;
+}
+.m-close:hover{background:#f2f4fa}
+
+/* ============ 页脚 ============ */
+footer{padding:8px 22px 100px;text-align:center;font-size:12px;color:var(--ink3);letter-spacing:.3px}
+footer b{color:var(--ink2)}
+
+/* ============ 自适应宽度：手机横屏 / 平板横竖屏 ============ */
+/* 三档：<700px 手机竖屏单列 | ≥700px 两列（手机横屏/平板竖屏）| ≥980px 三列（平板横屏/大屏） */
+@media (min-width:700px){
+  :root{--page-max:720px}
+  section{padding:56px 30px 6px}
+  .sec-head + section{padding-top:0}
+  .cta-wrap{padding:56px 30px 40px}
+  footer{padding:8px 30px 108px}
+
+  /* Hero：内容居中收窄，避免整条拉伸过宽 */
+  .hero{padding:64px 32px 56px;text-align:center}
+  .hero h1{font-size:34px;margin:24px auto 16px}
+  .hero-sub{max-width:440px;margin:0 auto 28px}
+  .mock{max-width:440px;margin:0 auto 28px}
+  .hero .btn-gold,.cta-panel .btn-gold{max-width:340px}
+  .hero-note{margin-top:18px}
+  .cta-panel{max-width:680px;margin:0 auto}
+
+  /* 卡片两列排布 */
+  section[aria-label="办公岗位案例"],
+  section[aria-label="教育行业案例"],
+  section[aria-label="开店老板案例"],
+  section[aria-label="服务类别"]{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
+  }
+  .steps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .case-card,.price-card,.step{margin-bottom:0}
+}
+@media (min-width:980px){
+  :root{--page-max:1120px}
+  section{padding:60px 36px 8px}
+  .sec-head + section{padding-top:0}
+  .cta-wrap{padding:60px 36px 44px}
+  footer{padding:8px 36px 118px}
+
+  .hero{padding:76px 40px 64px}
+  .hero h1{font-size:38px}
+  .mock{max-width:480px}
+
+  /* 卡片三列排布 */
+  section[aria-label="办公岗位案例"],
+  section[aria-label="教育行业案例"],
+  section[aria-label="开店老板案例"]{
+    grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  section[aria-label="服务类别"]{grid-template-columns:repeat(3,1fr);gap:20px}
+  .steps{grid-template-columns:repeat(3,1fr);gap:20px}
+  .cta-panel{max-width:760px}
+}
+
+/* ============ 动效偏好 ============ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= Hero ================= -->
+  <header class="hero">
+    <div class="brand up d1"><i></i>工具侠<span>定制小工具 / 小程序</span></div>
+
+    <h1 class="up d2">别人<span class="hl">一键</span>搞定，<br>你还在手动干？</h1>
+
+    <p class="hero-sub up d3">做表、盯打卡、记账、发通知——<br>天天重复的活，都能做成<b>一键完成的小工具</b>。</p>
+
+    <div class="mock up d4">
+      <div class="mock-head"><span class="dots"><i></i><i></i><i></i></span> 一键汇总工具 · 运行中</div>
+      <div class="mock-body">
+        <div class="mrow"><b>部门表 1</b><i style="width:72%"></i></div>
+        <div class="mrow"><b>部门表 2</b><i style="width:55%"></i></div>
+        <div class="mrow"><b>部门表 3</b><i style="width:84%"></i></div>
+        <div class="mresult">✓ 30 张表 → 总表自动生成 · 3小时变10秒</div>
+      </div>
+    </div>
+
+    <button class="btn btn-gold up d5" data-wx>免费聊聊我的需求</button>
+    <p class="hero-note up d5">咨询免费 · 包教会 · 不满意不收费</p>
+  </header>
+
+  <main>
+    <!-- ================= 办公岗位案例 ================= -->
+    <section id="office" class="sec-head">
+      <span class="sec-tag">01 · 办公岗位</span>
+      <h2>这些场景，你熟不熟？</h2>
+      <p>不用懂技术，说清你最烦的事就行</p>
+      <p class="sec-price">小工具参考价 <b>¥499～¥799</b></p>
+    </section>
+
+    <section aria-label="办公岗位案例">
+      <article class="case-card reveal" style="--d:.05s">
+        <div class="case-head">
+          <div class="case-avatar">📊</div>
+          <div>
+            <h3>财务小张 · 月报合并</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>30 个部门的表，复制粘贴一上午。</div>
+        <div class="solution"><b>方案</b>分表一键导入，总表自动出。</div>
+        <div class="time-compare"><span class="tc-before">3小时</span><span class="tc-arrow">→</span><span class="tc-after">10秒</span></div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.12s">
+        <div class="case-head">
+          <div class="case-avatar">🕘</div>
+          <div>
+            <h3>行政李姐 · 考勤统计</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>打卡记录逐条对请假单，错一条全月返工。</div>
+        <div class="solution"><b>方案</b>两张表拖进去，自动核对出汇总。</div>
+        <div class="time-compare"><span class="tc-before">几天的活</span><span class="tc-arrow">→</span><span class="tc-after">几分钟</span></div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.05s">
+        <div class="case-head">
+          <div class="case-avatar">📈</div>
+          <div>
+            <h3>运营小王 · 数据周报</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>每周五导数据做表做图，折腾大半天。</div>
+        <div class="solution"><b>方案</b>数据拖进去，周报自动生成，直接能发。</div>
+        <div class="time-compare"><span class="tc-before">半天</span><span class="tc-arrow">→</span><span class="tc-after">5分钟</span></div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.12s">
+        <div class="case-head">
+          <div class="case-avatar">✉️</div>
+          <div>
+            <h3>HR 小赵 · 工资条拆分</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>几百份工资条，一条条拆、一封封发。</div>
+        <div class="solution"><b>方案</b>一键拆分，自动发邮件。</div>
+        <div class="time-compare"><span class="tc-before">一下午</span><span class="tc-arrow">→</span><span class="tc-after">3分钟</span></div>
+      </article>
+    </section>
+
+    <!-- ================= 教育行业案例 ================= -->
+    <section id="training" class="sec-head">
+      <span class="sec-tag">02 · 教育行业</span>
+      <h2>教育机构最烦的几件事</h2>
+      <p>老师省心，家长放心</p>
+      <p class="sec-price">小程序参考价 <b>¥3000～10000</b></p>
+    </section>
+
+    <section aria-label="教育行业案例">
+      <article class="case-card reveal" style="--d:.05s">
+        <div class="case-head">
+          <div class="case-avatar">📅</div>
+          <div>
+            <h3>学生上课记录</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>出勤记在本子上，月底数不清谁缺了课。</div>
+        <div class="solution"><b>方案</b>每节课自动记录，出勤补课随时能查。</div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.12s">
+        <div class="case-head">
+          <div class="case-avatar">💰</div>
+          <div>
+            <h3>剩余费用在线查</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>家长天天问还剩多少钱，翻本子挨个回。</div>
+        <div class="solution"><b>方案</b>家长扫码自己查课时余额，快用完了自动提醒。</div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.05s">
+        <div class="case-head">
+          <div class="case-avatar">📢</div>
+          <div>
+            <h3>放假通知</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>放假通知群里发几遍，还是有人说没看到。</div>
+        <div class="solution"><b>方案</b>一键群发，已读未读清清楚楚，没读的自动再提醒。</div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.12s">
+        <div class="case-head">
+          <div class="case-avatar">🎁</div>
+          <div>
+            <h3>新课程推荐</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>新课开班没人知道，宣传全靠朋友圈。</div>
+        <div class="solution"><b>方案</b>课程推送+在线报名，家长点开就能报名。</div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.05s">
+        <div class="case-head">
+          <div class="case-avatar">🧪</div>
+          <div>
+            <h3>课件演示</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>抽象知识干讲，学生听不懂、坐不住。</div>
+        <div class="solution"><b>方案</b>实验、公式做成能点能动的演示，学生秒懂。</div>
+      </article>
+    </section>
+
+    <!-- ================= 开店老板案例 ================= -->
+    <section id="print" class="sec-head">
+      <span class="sec-tag">03 · 开店老板</span>
+      <h2>开店最烦的几件事</h2>
+      <p>少接电话，多睡个午觉</p>
+    </section>
+
+    <section aria-label="开店老板案例">
+      <article class="case-card reveal" style="--d:.05s">
+        <div class="case-head">
+          <div class="case-avatar">📖</div>
+          <div>
+            <h3>案例册和报价册</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>客户想看效果、问价钱，翻半天相册，口算半天才报价。</div>
+        <div class="solution"><b>方案</b>一键生成图文案例册+报价册，客户扫码自己看，满意直接下单。</div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.12s">
+        <div class="case-head">
+          <div class="case-avatar">🤖</div>
+          <div>
+            <h3>AI客服接待咨询</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>白天忙、晚上没人回消息，客户问两句没人理，扭头就走。</div>
+        <div class="solution"><b>方案</b>AI 客服 24 小时在线，问价、预约秒回，半夜也不漏客。</div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.05s">
+        <div class="case-head">
+          <div class="case-avatar">🛒</div>
+          <div>
+            <h3>客户在线下单</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>看完册子想下单，还得打电话、跑一趟店里，麻烦又费时。</div>
+        <div class="solution"><b>方案</b>客户手机里自己选规格、自己付款，到店直接取。</div>
+      </article>
+
+      <article class="case-card reveal" style="--d:.12s">
+        <div class="case-head">
+          <div class="case-avatar">⚡</div>
+          <div>
+            <h3>自动化接单</h3>
+          </div>
+        </div>
+        <div class="pain"><b>痛点</b>单子一多就手忙脚乱，抄错规格、漏掉客户，白干还赔钱。</div>
+        <div class="solution"><b>方案</b>客户下的单自动汇成一张单，一键出开工单，谁的都漏不掉。</div>
+      </article>
+    </section>
+
+    <!-- ================= 服务与价格 ================= -->
+    <section id="services" class="sec-head">
+      <span class="sec-tag">04 · 服务与价格</span>
+      <h2>沟通需求，报价开工，包教包会</h2>
+    </section>
+
+    <section aria-label="服务类别">
+      <div class="price-card reveal" style="--d:.05s">
+        <div class="price-icon">⚡</div>
+        <div>
+          <h3>表格小工具</h3>
+          <p class="price-desc">月报合并、考勤核对、工资条拆分，双击就干完</p>
+        </div>
+        <div class="price-num"><b>¥499 起</b><small>看复杂程度</small></div>
+      </div>
+
+      <div class="price-card reveal" style="--d:.12s">
+        <div class="price-icon">📱</div>
+        <div>
+          <h3>小程序定制</h3>
+          <p class="price-desc">上课记录、课时查余、放假通知、在线下单，从想法到上线全包</p>
+        </div>
+        <div class="price-num"><b>¥3000 起</b><small>看功能多少</small></div>
+      </div>
+
+      <div class="price-card reveal" style="--d:.05s">
+        <div class="price-icon">🎓</div>
+        <div>
+          <h3>教学软件 / 课件</h3>
+          <p class="price-desc">实验、公式做成能点能动的演示，学生秒懂</p>
+        </div>
+        <div class="price-num"><b>¥5000 起</b><small>看内容多少</small></div>
+      </div>
+    </section>
+
+    <!-- ================= 合作流程 ================= -->
+    <section id="process" class="sec-head">
+      <span class="sec-tag">05 · 合作流程</span>
+      <h2>三步，搞定</h2>
+    </section>
+
+    <section aria-label="合作流程">
+      <div class="steps">
+        <div class="step reveal" style="--d:.05s">
+          <div class="step-num">1</div>
+          <div>
+            <b>你告诉我</b>
+            <p>最烦的重复活，或想做的软件</p>
+          </div>
+        </div>
+        <div class="step reveal" style="--d:.13s">
+          <div class="step-num">2</div>
+          <div>
+            <b>我评估报价</b>
+            <p>方案、工期、价格，清清楚楚</p>
+          </div>
+        </div>
+        <div class="step reveal" style="--d:.21s">
+          <div class="step-num">3</div>
+          <div>
+            <b>开发交付</b>
+            <p>工具做好，包教包会，发现 bug 包修</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section id="cta" class="cta-wrap">
+      <div class="cta-panel reveal">
+        <h2>省下的时间，<span class="hl">都是自己的</span></h2>
+        <p class="cta-sub">最烦的手工活，交给我做成工具。</p>
+
+        <button class="btn btn-gold" data-wx>免费聊聊你的需求</button>
+
+        <p class="qr-title">或扫码加微信</p>
+        <!-- ↓↓↓ .qr-box：上线前请替换为你的微信二维码图片（放 <img> 或背景图即可） ↓↓↓ -->
+        <div class="qr-box" role="img" aria-label="微信二维码占位">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <rect width="120" height="120" fill="#fff"/>
+            <rect x="10" y="10" width="42" height="42" fill="none" stroke="#141d3d" stroke-width="8"/>
+            <rect x="68" y="10" width="42" height="42" fill="none" stroke="#141d3d" stroke-width="8"/>
+            <rect x="10" y="68" width="42" height="42" fill="none" stroke="#141d3d" stroke-width="8"/>
+            <rect x="20" y="20" width="8" height="8" fill="#141d3d"/>
+            <rect x="34" y="20" width="8" height="8" fill="#141d3d"/>
+            <rect x="20" y="34" width="8" height="8" fill="#141d3d"/>
+            <rect x="78" y="20" width="8" height="8" fill="#141d3d"/>
+            <rect x="92" y="20" width="8" height="8" fill="#141d3d"/>
+            <rect x="78" y="34" width="8" height="8" fill="#141d3d"/>
+            <rect x="20" y="78" width="8" height="8" fill="#141d3d"/>
+            <rect x="34" y="78" width="8" height="8" fill="#141d3d"/>
+            <rect x="20" y="92" width="8" height="8" fill="#141d3d"/>
+            <rect x="52" y="52" width="8" height="8" fill="#141d3d"/>
+            <rect x="52" y="68" width="8" height="8" fill="#141d3d"/>
+            <rect x="68" y="52" width="8" height="8" fill="#141d3d"/>
+            <rect x="84" y="84" width="8" height="8" fill="#141d3d"/>
+            <rect x="84" y="100" width="8" height="8" fill="#141d3d"/>
+            <rect x="100" y="84" width="8" height="8" fill="#141d3d"/>
+          </svg>
+          <span class="scan"></span>
+        </div>
+        <p class="cta-note">扫码加微信 · 咨询免费 · 不满意不收费</p>
+        <p class="qr-hint">（上线前替换成你的二维码图片）</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <b>工具侠</b> · 定制小工具 / 小程序<br>
+    把重复工作，变成一键工具
+  </footer>
+</div>
+
+<!-- ============ 吸底栏 ============ -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sb-text">工具侠 · 重复工作，交给我做成工具<small>咨询免费 · 不满意不收费</small></div>
+  <button class="sb-btn" data-wx>免费聊聊</button>
+</div>
+
+<!-- ============ 加微信弹窗 ============ -->
+<div class="modal" id="wxModal" role="dialog" aria-modal="true" aria-label="添加微信">
+  <div class="modal-card">
+    <div class="modal-icon">💬</div>
+    <h3>加微信，免费聊聊</h3>
+    <p class="m-sub">把最烦的活说给我听，先给方案和报价</p>
+    <div class="wx-row">
+      <div class="wx-id">
+        <small>微信号</small>
+        <b id="wxId">你的微信号（此处替换）</b>
+      </div>
+      <button class="wx-copy" id="wxCopy">复制</button>
+    </div>
+    <p class="m-tip">也可直接扫码添加（页面下方二维码）<br>咨询免费 · 不满意不收费</p>
+    <button class="m-close" id="wxClose">关闭</button>
+  </div>
+</div>
+
+<script>
+// ============ 上线前必改：微信号 ============
+var WEIXIN_ID = "你的微信号（此处替换）";
+
+(function () {
+  // —— 滚动渐显（带交错延迟） ——
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) {
+        en.target.classList.add("in");
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+
+  // —— 吸底栏：滚过 Hero 后出现 ——
+  var bar = document.getElementById("stickyBar");
+  var hero = document.querySelector(".hero");
+  var onScroll = function () {
+    if (bar && hero) bar.classList.toggle("show", window.scrollY > hero.offsetHeight * 0.55);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // —— 加微信弹窗 ——
+  var modal = document.getElementById("wxModal");
+  var wxIdEl = document.getElementById("wxId");
+  var copyBtn = document.getElementById("wxCopy");
+  var closeBtn = document.getElementById("wxClose");
+  wxIdEl.textContent = WEIXIN_ID;
+
+  var open = function () { modal.classList.add("open"); document.body.style.overflow = "hidden"; };
+  var close = function () { modal.classList.remove("open"); document.body.style.overflow = ""; };
+
+  document.querySelectorAll("[data-wx]").forEach(function (b) { b.addEventListener("click", open); });
+  closeBtn.addEventListener("click", close);
+  modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+
+  // —— 复制微信号 ——
+  function copyText(t) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t);
+    return new Promise(function (res, rej) {
+      var ta = document.createElement("textarea");
+      ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); res(); } catch (e) { rej(e); }
+      ta.remove();
+    });
+  }
+  copyBtn.addEventListener("click", function () {
+    copyText(WEIXIN_ID).then(function () {
+      var old = copyBtn.textContent;
+      copyBtn.textContent = "✓ 已复制";
+      setTimeout(function () { copyBtn.textContent = old; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>
