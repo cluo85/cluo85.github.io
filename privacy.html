@@ -6,24 +6,127 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy - LL Game Studio</title>
 <meta property="og:title" content="Privacy Policy - LL Game Studio">
+<meta property="og:description" content="Privacy Policy for the apps published by LL Game Studio.">
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <style>
-.bs-docs-footer{padding-top:50px;padding-bottom:50px;margin-top:100px;color:#99979c;text-align:center;background-color:#2a2730;}
-.privacy-content {margin-bottom: 40px;}
-.privacy-content h3 {color: #2c3e50; margin-top: 30px; margin-bottom: 15px;}
-.privacy-content h4 {color: #34495e; margin-top: 25px; margin-bottom: 10px;}
-.privacy-content ul {padding-left: 20px;}
-.privacy-content li {margin-bottom: 8px;}
-.sdk-section {background: #f8f9fa; border-left: 4px solid #3498db; padding: 15px; margin: 15px 0;}
+:root{
+  --brand:#5b5bd6;
+  --brand-dark:#4a4ac4;
+  --ink:#24292f;
+  --muted:#57606a;
+  --line:#e9ecf2;
+  --soft:#f6f7fb;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:linear-gradient(165deg,#eef1f8 0%,#f7f6fc 50%,#eef1f8 100%);
+  color:var(--ink);
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.container{max-width:940px;padding:0;margin-top:48px;margin-bottom:48px;}
+.policy-card{background:#fff;border-radius:20px;box-shadow:0 16px 48px rgba(37,45,66,.10);overflow:hidden;}
+/* header */
+.page-header{
+  margin:0;padding:44px 52px 34px;
+  border-bottom:1px solid var(--line);
+  background:linear-gradient(135deg,#ffffff 0%,#f5f4ff 100%);
+}
+.page-header .brand{
+  display:inline-block;margin-bottom:16px;
+  font-size:12px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--brand);font-weight:700;
+}
+.page-header h2{
+  margin:0 0 14px;font-size:30px;font-weight:800;letter-spacing:.5px;color:#1b1f24;
+}
+.page-header .lead{color:var(--muted);font-size:15.5px;margin:0 0 18px;}
+.app-badges{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px;}
+.app-badges li{
+  background:#fff;border:1px solid #dfe3ee;border-radius:999px;
+  padding:7px 16px;font-size:13.5px;font-weight:600;color:#33394b;
+  box-shadow:0 2px 6px rgba(37,45,66,.05);
+}
+.app-badges li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--brand);margin-right:8px;vertical-align:1px;}
+/* content */
+.privacy-content{padding:38px 52px 26px;}
+.privacy-content p{color:#3a4048;font-size:15px;margin:0 0 16px;}
+.privacy-content strong{color:#1b1f24;}
+.privacy-content h3{
+  margin:40px 0 18px;padding-bottom:12px;padding-left:16px;font-size:21px;font-weight:800;color:#1b1f24;
+  border-bottom:2px solid var(--line);position:relative;
+}
+.privacy-content h3::before{
+  content:"";position:absolute;left:0;top:2px;bottom:14px;width:5px;border-radius:3px;
+  background:linear-gradient(180deg,var(--brand),#8f8ff0);
+}
+.privacy-content h4{margin:26px 0 10px;font-size:16.5px;font-weight:700;color:#2c3140;}
+.privacy-content h5{margin:20px 0 8px;font-size:14px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:1px;}
+.privacy-content ul{padding-left:0;list-style:none;margin:0 0 16px;}
+.privacy-content ul li{
+  position:relative;padding:8px 0 8px 28px;color:#3a4048;font-size:15px;
+  border-bottom:1px dashed #eef0f5;
+}
+.privacy-content ul li::before{
+  content:"";position:absolute;left:6px;top:17px;width:7px;height:7px;border-radius:50%;
+  background:var(--brand);opacity:.55;
+}
+.privacy-content ul li:last-child{border-bottom:none;}
+/* SDK cards */
+.sdk-section{
+  background:var(--soft);border:1px solid #e7eaf2;border-left:4px solid var(--brand);
+  border-radius:12px;padding:20px 24px;margin:18px 0 26px;
+}
+.sdk-section .sdk-title{margin:0 0 12px;font-size:15px;color:#1b1f24;text-transform:none;letter-spacing:0;}
+.sdk-section .sdk-title strong{color:var(--brand);}
+.kv-row{display:flex;gap:12px;padding:6px 0;font-size:14px;border-top:1px dashed #dde2ec;}
+.kv-row:first-of-type{border-top:none;}
+.kv-label{flex:0 0 230px;font-weight:700;color:#4a5161;}
+.kv-value{flex:1;color:#3a4048;}
+/* contact */
+a.contact-btn{
+  display:inline-block;margin:0 4px;padding:2px 14px;border-radius:999px;
+  background:var(--brand);color:#fff;font-weight:700;text-decoration:none;font-size:13.5px;
+  box-shadow:0 4px 12px rgba(91,91,214,.28);transition:background .2s,transform .2s;
+}
+a.contact-btn:hover{background:var(--brand-dark);transform:translateY(-1px);color:#fff;}
+/* footer */
+.bs-docs-footer{
+  padding:26px 0;margin:0;color:#9aa2b1;text-align:center;font-size:13px;
+  background:#232733;border-top:3px solid var(--brand);
+}
+.bs-docs-footer .footer-brand{
+  margin:0 0 4px;font-size:14px;font-weight:700;letter-spacing:1px;color:#e8eaf2;
+}
+.bs-docs-footer p{margin:0;}
+/* responsive */
+@media (max-width:768px){
+  .container{margin-top:16px;margin-bottom:16px;}
+  .page-header{padding:30px 24px 26px;}
+  .privacy-content{padding:26px 24px 20px;}
+  .page-header h2{font-size:24px;}
+  .kv-row{flex-direction:column;gap:2px;padding:8px 0;}
+  .kv-label{flex:none;}
+}
 </style>
 </head>
 <body>
 <div class="container">
+<div class="policy-card">
 <div class="page-header">
+<div class="brand">LL Game Studio &middot; Privacy Policy</div>
 <h2 style="text-align:left;">PRIVACY POLICY</h2>
 <p class="lead">This policy applies to the following apps published by <b>LL Game Studio</b>:</p>
-<p class="lead">Brainrot Book, Brainrot Fight, Brainrot Tile Match, Captain Bubble 2 - Brainrot, and Captain Bubbles - Spin</p>
+<ul class="app-badges">
+<li>Brainrot Book</li>
+<li>Brainrot Fight</li>
+<li>Brainrot Tile Match</li>
+<li>Captain Bubble 2 - Brainrot</li>
+<li>Captain Bubbles - Spin</li>
+</ul>
 </div>
 <div class="privacy-content">
 <p>This Privacy Policy was issued by <strong>LL Game Studio</strong>, a brand of <strong>Beijing Star Halo Technology Co., Ltd.</strong>, and applies to all apps we provide, including but not limited to: Brainrot Book, Brainrot Fight, Brainrot Tile Match, Captain Bubble 2 - Brainrot, and Captain Bubbles - Spin. This policy was first issued on December 1st, 2024 and last updated on August 13, 2026. We value user privacy, especially the protection of minors' personal information.</p>
@@ -53,17 +156,17 @@
 
 <h5>Specific SDK Information</h5>
 <div class="sdk-section">
-<p><strong>a) Firebase SDK</strong></p>
-<p>Application scenario: Data analysis</p>
-<p>Types of personal information that may be collected: User approximate location information, device advertising ID</p>
-<p>Third-party SDK provider: Google LLC</p>
+<h5 class="sdk-title"><strong>a) Firebase SDK</strong></h5>
+<div class="kv-row"><span class="kv-label">Application scenario</span><span class="kv-value">Data analysis</span></div>
+<div class="kv-row"><span class="kv-label">Types of personal information that may be collected</span><span class="kv-value">User approximate location information, device advertising ID</span></div>
+<div class="kv-row"><span class="kv-label">Third-party SDK provider</span><span class="kv-value">Google LLC</span></div>
 </div>
 
 <div class="sdk-section">
-<p><strong>b) Admob SDK</strong></p>
-<p>Application scenario: Advertising services</p>
-<p>Types of personal information that may be collected: User approximate location information, device advertising ID</p>
-<p>Third-party SDK provider: Google LLC</p>
+<h5 class="sdk-title"><strong>b) Admob SDK</strong></h5>
+<div class="kv-row"><span class="kv-label">Application scenario</span><span class="kv-value">Advertising services</span></div>
+<div class="kv-row"><span class="kv-label">Types of personal information that may be collected</span><span class="kv-value">User approximate location information, device advertising ID</span></div>
+<div class="kv-row"><span class="kv-label">Third-party SDK provider</span><span class="kv-value">Google LLC</span></div>
 </div>
 
 <h3>2. Information Storage</h3>
@@ -83,11 +186,13 @@
 <p>We protect minor information according to regulations, collecting and processing minor information only under legal circumstances, guardian consent, or necessity.</p>
 
 <h3>6. Contact Us</h3>
-<p>If you have any questions, opinions, or suggestions about this Privacy Policy, please contact us via customer service email: <a href="mailto:cluo85@foxmail.com">cluo85@foxmail.com</a> during working hours 9:00 - 18:00 on weekdays.</p>
-</div>
+<p>If you have any questions, opinions, or suggestions about this Privacy Policy, please contact us via customer service email: <a class="contact-btn" href="mailto:cluo85@foxmail.com">cluo85@foxmail.com</a> during working hours 9:00 - 18:00 on weekdays.</p>
 </div>
 <footer class="bs-docs-footer">
-<div class="container">Copyright © 2024 Beijing Star Halo Technology Co., Ltd. All Rights Reserved.<br>
-</div>
+<p class="footer-brand">LL Game Studio</p>
+<p>Copyright &copy; 2024 Beijing Star Halo Technology Co., Ltd. All Rights Reserved.</p>
 </footer>
-
+</div>
+</div>
+</body>
+</html>
