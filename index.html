@@ -1,613 +1,1026 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>LL Game Studio - Beijing Star Halo Technology Co., Ltd. - 北京星环漫宇科技有限公司</title>
-        <meta name="description" content="LL Game Studio 星环漫宇 Starhalo">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/fontAwesome.css">
-        <link rel="stylesheet" href="css/hero-slider.css">
-        <link rel="stylesheet" href="css/tooplate-style.css">
-        <link rel="stylesheet" href="css/premium-enhancements.css">
-
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Star Halo — Ideas become real games</title>
+  <meta name="description" content="An independent game studio in Beijing. We take ideas all the way to real games.">
+  <meta name="theme-color" content="#050507">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Star Halo">
+  <meta property="og:title" content="Star Halo — Ideas become real games.">
+  <meta property="og:description" content="An independent studio in Beijing. We take ideas all the way to real games.">
+  <meta property="og:url" content="https://starhalobj.com/">
+  <meta property="og:image" content="https://starhalobj.com/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Star Halo — Ideas become real games.">
+  <meta name="twitter:description" content="An independent studio in Beijing. We take ideas all the way to real games.">
+  <meta name="twitter:image" content="https://starhalobj.com/img/og-cover.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23050507'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23fff'/%3E%3Cellipse cx='32' cy='32' rx='23' ry='9' fill='none' stroke='%238fadff' stroke-width='2.5' transform='rotate(-28 32 32)'/%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="img/hero-poster.webp" fetchpriority="high">
+  <link rel="preload" href="css/main.css" as="style">
+  <link rel="stylesheet" href="css/main.css">
+  <noscript><style>.js .reveal{opacity:1;transform:none}</style></noscript>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
 <body>
-    <div class="header">
-        <div class="container">
-            <nav class="navbar navbar-inverse" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="#" class="navbar-brand scroll-top">
-                        <div class="logo"></div>
-                    </a>
-                </div>
-                <!--/.navbar-header-->
-                <div id="main-nav" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#" class="scroll-top"><b>Home</b></a></li>
-                        <li><a href="#" class="scroll-link" data-id="about"><b>About Us</b></a></li>
-                        <li><a href="#" class="scroll-link" data-id="gallery"><b>Gallery</b></a></li>
-                        <li><a href="#" class="scroll-link" data-id="blog"><b>Blog</b></a></li>
-                        <li><a href="#" class="scroll-link" data-id="contact"><b>Contact Us</b></a></li>
-                    </ul>
-                </div>
-                <!--/.navbar-collapse-->
-            </nav>
-            <!--/.navbar-->
+  <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳到主要内容">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Star Halo home" data-en-aria="Star Halo home" data-zh-aria="Star Halo 首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+          <ellipse cx="16" cy="16" rx="13" ry="5.2" fill="none" stroke="currentColor" stroke-width="1.25" transform="rotate(-28 16 16)"/>
+          <circle cx="27" cy="9.3" r="1.4" fill="currentColor"/>
+        </svg>
+        <span>STAR HALO</span>
+      </a>
+
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Language" data-en-aria="Language" data-zh-aria="语言">
+          <button type="button" data-lang-switch="en" aria-pressed="true">EN</button>
+          <span aria-hidden="true"></span>
+          <button type="button" data-lang-switch="zh" aria-pressed="false">中文</button>
         </div>
-        <!--/.container-->
-    </div>
-    <!--/.header-->
+      </div>
 
-
-    <section class="cd-hero">
-        <ul class="cd-hero-slider autoplay">  
-        <!-- 
-            <ul class="cd-hero-slider autoplay"> for slider auto play 
-            <ul class="cd-hero-slider"> for disabled auto play
-        -->
-            <li class="selected first-slide">
-                <div class="cd-full-width">
-                    <img src="img/slide_01.jpg" alt="Slide 1" class="slide-image">
-                    <div class="tm-slide-content-div slide-caption">
-                        <h2>LL Game Studio</h2>
-                        <p>Crafting Worlds, Creating Joy</p>
-                    </div>
-                </div> <!-- .cd-full-width -->
-            </li>
-
-            <li class="second-slide">
-                <div class="cd-full-width">
-                    <img src="img/slide_02.jpg" alt="Slide 2" class="slide-image">
-                    <div class="tm-slide-content-div slide-caption">
-                        <h2>Creative Arts</h2>
-                        <p>Stunning Visual Experiences</p>
-                    </div>
-                </div> <!-- .cd-full-width -->
-            </li>
-
-            <li class="third-slide">
-                <div class="cd-full-width">
-                    <img src="img/slide_03.jpg" alt="Slide 3" class="slide-image">
-                    <div class="tm-slide-content-div slide-caption">
-                        <h2>Game Development</h2>
-                        <p>From Ideas to Reality</p>
-                    </div>
-                </div> <!-- .cd-full-width -->
-            </li>
-
-            <li class="fourth-slide">
-                <div class="cd-full-width">
-                    <img src="img/slide_04.jpg" alt="Slide 4" class="slide-image">
-                    <div class="tm-slide-content-div slide-caption">
-                        <h2>Innovation</h2>
-                        <p>Pushing Boundaries Forward</p>
-                    </div>
-                </div> <!-- .cd-full-width -->
-            </li>
-
-            <li class="fifth-slide">
-                <div class="cd-full-width">
-                    <img src="img/slide_05.jpg" alt="Slide 5" class="slide-image">
-                    <div class="tm-slide-content-div slide-caption">
-                        <h2>Quality</h2>
-                        <p>Excellence in Every Pixel</p>
-                    </div>
-                </div> <!-- .cd-full-width -->
-            </li>
-
-            <li class="sixth-slide">
-                <div class="cd-full-width">
-                    <img src="img/slide_06.jpg" alt="Slide 6" class="slide-image">
-                    <div class="tm-slide-content-div slide-caption">
-                        <h2>Passion</h2>
-                        <p>Games Made with Heart</p>
-                    </div>
-                </div> <!-- .cd-full-width -->
-            </li>
-
-            <li class="seventh-slide">
-                <div class="cd-full-width">
-                    <img src="img/slide_07.jpg" alt="Slide 7" class="slide-image">
-                    <div class="tm-slide-content-div slide-caption">
-                        <h2>Cooperation</h2>
-                        <p>Let's Build Together</p>
-                    </div>
-                </div> <!-- .cd-full-width -->
-            </li>
-
-            <li class="eighth-slide">
-                <div class="cd-full-width">
-                    <img src="img/slide_08.jpg" alt="Slide 8" class="slide-image">
-                    <div class="tm-slide-content-div slide-caption">
-                        <h2>Star Halo</h2>
-                        <p>Beijing Star Halo Technology</p>
-                    </div>
-                </div> <!-- .cd-full-width -->
-            </li>
-        </ul> <!-- .cd-hero-slider -->
-
-        <div class="cd-slider-nav">
-            <nav>
-                <span class="cd-marker item-1"></span>
-                
-                <ul>
-                    <li class="selected"><a href="#0"></a></li>
-                    <li><a href="#0"></a></li>
-                    <li><a href="#0"></a></li>
-                    <li><a href="#0"></a></li>
-                    <li><a href="#0"></a></li>
-                    <li><a href="#0"></a></li>
-                    <li><a href="#0"></a></li>
-                    <li><a href="#0"></a></li>
-                </ul>
-            </nav> 
-        </div> <!-- .cd-slider-nav -->
-    </section> <!-- .cd-hero -->
-
-    <div id="about" class="page-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading reveal">
-                        <h4>What We Do</h4>
-                        <div class="line-dec"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item first-service reveal">
-                        <div class="icon"></div>
-                        <h4>Games</h4>
-                        <p>We are a group of people who live on games. We play games, study games, make games and love games. We learn from games and experience happiness from games.</p>
-                    </div>
-                </div>
-                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item second-service reveal">
-                        <div class="icon"></div>
-                        <h4>Creative Arts</h4>
-                        <p>Powered by numbers of creative artists and designers, We have created several interesting game arts, including both 2D and 3D game products. <br/></p>
-                    </div>
-                </div>
-                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item third-service reveal">
-                        <div class="icon"></div>
-                        <h4>Development</h4>
-                        <p>We have rich development experience and technological accumulation, which ensures that we can turn ideas into reality with extremely high quality.<br/></p>
-                    </div>
-                </div>
-                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="service-item fourth-service reveal">
-                        <div class="icon"></div>
-                        <h4>Cooperation</h4>
-                        <p>Cooperate with an open mind. We welcome game distribution, game development outsourcing, design outsourcing, and other forms of cooperation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteMenu">
+        <span class="menu-toggle-text" data-en="Menu" data-zh="菜单">Menu</span>
+        <span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </div>
 
-    <div id="what-we-do">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="left-text centered-text reveal">
-	                    <br/><br/>
-                        <h1><b>Star Halo Technology</b></h1><br/>
-                        <h4>OPEN PERSIST IMPROVE INNOVATE</h4>
-                        <p>Since the inception, we has maintained an open mind, unswerving heart, continuous improvement, innovation and breakthrough.<br/><br/><span class="quote-text">Nothing is impossible to a willing heart.</span></p>
-                        <ul>
-                            <!--li>
-                                <div class="white-button">
-                                    <a href="#" class="scroll-link" data-id="gallery">Discover More</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="primary-button">
-                                    <a href="#">Purchase Now</a>
-                                </div>
-                            </li-->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="mobile-menu" id="siteMenu" aria-hidden="true">
+      <nav aria-label="Mobile" data-en-aria="Mobile navigation" data-zh-aria="移动端导航">
+        <a href="#contact" class="mobile-link"><span data-en="Contact" data-zh="联系">Contact</span></a>
+      </nav>
+      <a class="button button-light mobile-menu-cta" href="https://apps.apple.com/us/developer/beijing-star-halo-technology-co-ltd/id500676809" target="_blank" rel="noopener">
+        <span data-en="Browse all games" data-zh="浏览全部游戏">Browse all games</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="mobile-menu-note" data-en="Independent games from Beijing." data-zh="独立游戏，北京。">Independent games from Beijing.</p>
     </div>
+  </header>
 
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-poster" src="img/hero-poster.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        <video class="hero-video" id="heroVideo" muted playsinline loop preload="none" poster="img/hero-poster.webp" data-src="brainrot/video/hero-loop.mp4" data-src-mobile="brainrot/video/hero-loop-mobile.mp4"></video>
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
 
-    <div id="gallery" class="page-section">
-        <div class="content-wrapper">
-            <div class="inner-container container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-heading reveal">
-                            <h4>Gallery</h4>
-                            <div class="line-dec"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="projects-holder-3">
-                    <!-- 移除分类过滤 -->
-                    <div class="projects-holder">
-                        <div class="gallery-scroll-container">
-                            <div class="row flex-row" id="gallery-items">
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_22.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_22.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_21.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_21.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_20.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_20.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_19.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_19.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_18.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_18.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_17.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_17.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_13.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_13.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_12.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_12.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_11.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_11.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_10.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_10.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_09.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_09.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_01.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_01.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix shooting">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_02.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_02.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix puzzle">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_03.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_03.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix puzzle">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_04.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_04.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix puzzle">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_05.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_05.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix puzzle">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_06.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_06.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix action">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_07.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_07.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 project-item mix adventure">
-                              <div class="thumb">
-                                  <div class="image" style="background-image: url('img/portfolio_big_08.jpg');"></div>
-                                  <div class="hover-effect">
-                                    <a href="img/portfolio_big_08.jpg" data-lightbox="image-1"><i class="fa fa-search"></i></a>
-                                  </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </div>
+      <div class="hero-content page-width">
+        <p class="eyebrow hero-eyebrow reveal" data-en="Independent game studio · Beijing" data-zh="独立游戏工作室 · 北京">Independent game studio · Beijing</p>
+        <h1 class="hero-title" id="hero-title">
+          <span class="hero-line"><span data-en="Ideas become" data-zh="把点子做成">Ideas become</span></span>
+          <span class="hero-line"><span data-en="real games" data-zh="真正的游戏">real games</span></span>
+        </h1>
+        <p class="hero-lead reveal" data-en="A small team that takes an idea all the way — building, testing, cutting — until it is a real game." data-zh="一个小团队，擅长从点子一路搭建、测试、删减，一直做到它成为真正的游戏。">A small team that takes an idea all the way — building, testing, cutting — until it is a real game.</p>
+      </div>
+    </section>
 
-
-    <div id="blog" class="page-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading reveal">
-                        <h4>Our Blog Posts</h4>
-                        <div class="line-dec"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="blog-item b1 reveal">
-                        <div class="thumb">
-                            <img src="img/blog_01.jpg" alt="">
-                            <div class="text-content">
-                                <h4>Unblock Puzzle</h4>
-                                <span>Posted: <em>Eric</em>  /  Date: <em>19 July 2018</em></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="blog-item second-blog b2 reveal">
-                        <div class="thumb">
-                            <img src="img/blog_02.jpg" alt="">
-                            <div class="text-content">
-                                <h4>Bubble Shooter</h4>
-                                <span>Posted: <em>Eric</em>  /  Date: <em>24 Jan 2018</em></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="blog-item b3 reveal">
-                        <div class="thumb">
-                            <img src="img/blog_03.jpg" alt="">
-                            <div class="text-content">
-                                <h4>Super Jam Jump</h4>
-                                <span>Posted: <em>Eric</em>  /  Date: <em>16 Jul 2017</em></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="pop">
-                      <p>Through the team's efforts, we finally made this unlock game available online. Now it can be downloaded at Google play store. Apple users may get it later.</p>
-                      <span>✖</span>
-                    </div>
-                    <div class="pop2">
-                      <p>We are pleased to announce that this game has been released. Many modifications have been made on the basis of the classic Bubble Dragon Game, making this game more interesting and fun. Available on both GooglePlay and AppStore</p>
-                      <span>✖</span>
-                    </div>
-                    <div class="pop3">
-                      <p>If you played with the super Mario brothers, you will definitely feel familiar with it. You must not miss the improvement and expansion on the basis of classic play.</p>
-                      <span>✖</span>
-                    </div>
-                </div>
-            </div>
+    <section class="statement" id="statement" aria-labelledby="statement-title">
+      <img class="statement-bg" src="img/hero-atmosphere.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+      <div class="statement-inner page-width">
+        <p class="eyebrow reveal" data-en="Star Halo" data-zh="星环漫宇">Star Halo</p>
+        <h2 class="statement-title reveal" id="statement-title">
+          <span class="statement-line" data-en="The idea takes an afternoon." data-zh="点子，一个下午就有了。">The idea takes an afternoon.</span>
+          <span class="statement-line"><em data-en="Everything after " data-zh="之后的所有时间">Everything after </em><span data-en="is the game." data-zh="才是在做游戏。">is the game.</span></span>
+        </h2>
+      </div>
+      <div class="pixel-town" aria-hidden="true">
+        <div class="pixel-town-scene" data-pixel-town>
+          <canvas class="pixel-town-layer" data-layer="far"></canvas>
+          <canvas class="pixel-town-layer" data-layer="mid"></canvas>
+          <canvas class="pixel-town-layer" data-layer="lights"></canvas>
+          <canvas class="pixel-town-layer" data-layer="near"></canvas>
+          <span class="pixel-town-glow"></span>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div id="fun-facts">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="fact-item reveal">
-                        <div class="counter" data-count="11">11</div>
-                        <span>Team Age</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="fact-item reveal">
-                        <div class="counter" data-count="10">0</div>
-                        <span>Games</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="fact-item reveal">
-                        <div class="counter" data-count="10">0</div>
-                        <span>Cooperators</span>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="fact-item reveal">
-                        <div class="counter" data-count="45">0</div>
-                        <span>Outsourcing Projects</span>
-                    </div>
-                </div>
-            </div>
+    <section class="shelf" id="games" aria-labelledby="shelf-title">
+      <div class="page-width">
+        <div class="shelf-head">
+          <div>
+            <p class="eyebrow reveal" data-en="The shelf" data-zh="作品货架">The shelf</p>
+            <h2 class="shelf-title reveal" id="shelf-title">
+              <span data-en="Every game" data-zh="一作一作">Every game</span>
+              <em data-en="better built" data-zh="越做越扎实">better built</em>
+            </h2>
+          </div>
+          <p class="shelf-lead reveal" data-en="Auto-battlers, match-3, tower defense, word games, puzzles — all easy to pick up for a few minutes, plus a garden that grows on your desktop." data-zh="自走棋、三消、塔防、单词、解谜，都是随手就能玩两把的小游戏；另有一款养在电脑桌面上的花园。">Auto-battlers, match-3, tower defense, word games, puzzles — all easy to pick up for a few minutes, plus a garden that grows on your desktop.</p>
         </div>
-    </div>
+      </div>
 
-
-    <div id="contact" class="page-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading reveal">
-                        <h4>Contact Us</h4>
-                        <div class="line-dec"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="map">
-                        <img src="img/map.jpg" alt="">
-                        <div class="bottom-contacts reveal">
-	                        <h3>Room 301, No. 15 of Zhixin Road, Haidian District, Beijing, China</h3>
-	                        <h3>中国 北京 海淀区 志新路15号3层301室</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                      <div class="col-md-12">
-		                    <div class="bottom-contacts reveal">
-		                        <h4>QQ: 23806653 / 1200550</h4>
-		                        <h4>WeChat: +8613811471853 / +8613910095277</h4>
-		                        <h4>E-mail: cluo85@foxmail.com</h4>
-		                        <h4>Phone: +86 13811471853 / +86 13910095277</h4>
-		                    </div>
-		                </div>
-                    </div>
-                </div>
-            </div>
+      <div class="page-width">
+        <div class="shelf-grid reveal">
+          <a class="shelf-feature" href="#game-paid-bloom">
+            <span class="shelf-feature-shot"><img src="img/games/paid-bloom-1.webp" alt="" width="1400" height="788" loading="lazy" decoding="async"></span>
+            <span class="shelf-feature-copy">
+              <span class="shelf-feature-badge" data-en="New" data-zh="新作">New</span>
+              <span class="shelf-feature-name">Paid Bloom</span>
+              <span class="shelf-feature-line" data-en="A garden that grows on your desktop while you work. Wishlist open on Steam." data-zh="花种在桌面上，你照常工作，它自己长。Steam 已可加入愿望单。">A garden that grows on your desktop while you work. Wishlist open on Steam.</span>
+            </span>
+            <span class="shelf-feature-cta">
+              <span data-en="View" data-zh="查看">View</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <a class="shelf-item" href="#game-brainrot-fight">
+            <img src="img/games/brainrot-fight-icon.webp" alt="" width="256" height="256" decoding="async">
+            <span class="shelf-name" data-en="Brainrot Fight" data-zh="Brainrot Fight">Brainrot Fight</span>
+            <span class="shelf-genre" data-en="Auto-battler" data-zh="自走棋">Auto-battler</span>
+          </a>
+          <a class="shelf-item" href="#game-brainrot-book">
+            <img src="img/games/brainrot-book-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Brainrot Book" data-zh="Brainrot Book">Brainrot Book</span>
+            <span class="shelf-genre" data-en="Card collection" data-zh="卡牌收集">Card collection</span>
+          </a>
+          <a class="shelf-item" href="#game-brainrot-tile-match">
+            <img src="img/games/brainrot-tile-match-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Brainrot Tile Match" data-zh="Brainrot Tile Match">Brainrot Tile Match</span>
+            <span class="shelf-genre" data-en="Match-3" data-zh="三消">Match-3</span>
+          </a>
+          <a class="shelf-item" href="#game-merge-defense">
+            <img src="img/games/merge-defense-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Merge Defense" data-zh="Merge Defense">Merge Defense</span>
+            <span class="shelf-genre" data-en="Tower defense" data-zh="塔防">Tower defense</span>
+          </a>
+          <a class="shelf-item" href="#game-captain-bubble-2">
+            <img src="img/games/captain-bubble-2-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Captain Bubble 2" data-zh="Captain Bubble 2">Captain Bubble 2</span>
+            <span class="shelf-genre" data-en="Bubble shooter" data-zh="泡泡射击">Bubble shooter</span>
+          </a>
+          <a class="shelf-item" href="#game-captain-bubble">
+            <img src="img/games/captain-bubble-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Captain Bubble" data-zh="Captain Bubble">Captain Bubble</span>
+            <span class="shelf-genre" data-en="Arcade" data-zh="街机">Arcade</span>
+          </a>
+          <a class="shelf-item shelf-item--award" href="#game-galaxy-tycoon">
+            <img src="img/games/galaxy-tycoon-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Galaxy Tycoon" data-zh="Galaxy Tycoon">Galaxy Tycoon</span>
+            <span class="shelf-genre" data-en="Space trading" data-zh="太空贸易">Space trading</span>
+            <span class="shelf-award">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.4l1.95 4.13 4.55.62-3.32 3.16.82 4.49L8 11.66l-4 2.14.82-4.49L1.5 6.15l4.55-.62z" fill="currentColor"/></svg>
+              <span class="shelf-award-full" data-en="Featured 5×" data-zh="编辑推荐 5 次">Featured 5×</span>
+              <span class="shelf-award-short" data-en="5×" data-zh="推荐 5 次">5×</span>
+            </span>
+          </a>
+          <a class="shelf-item" href="#game-flower-connect">
+            <img src="img/games/flower-connect-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Flower Connect" data-zh="Flower Connect">Flower Connect</span>
+            <span class="shelf-genre" data-en="Line puzzle" data-zh="连线谜题">Line puzzle</span>
+          </a>
+          <a class="shelf-item" href="#game-word-biscuits">
+            <img src="img/games/word-biscuits-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Word Biscuits" data-zh="Word Biscuits">Word Biscuits</span>
+            <span class="shelf-genre" data-en="Word search" data-zh="单词搜索">Word search</span>
+          </a>
+          <a class="shelf-item" href="#game-word-talent">
+            <img src="img/games/word-talent-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Word Talent" data-zh="Word Talent">Word Talent</span>
+            <span class="shelf-genre" data-en="Word puzzle" data-zh="单词谜题">Word puzzle</span>
+          </a>
+          <a class="shelf-item" href="#game-word-talent-2">
+            <img src="img/games/word-talent-2-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Word Talent 2" data-zh="Word Talent 2">Word Talent 2</span>
+            <span class="shelf-genre" data-en="Word puzzle" data-zh="单词谜题">Word puzzle</span>
+          </a>
+          <a class="shelf-item" href="#game-golden-unblock">
+            <img src="img/games/golden-unblock-icon.webp" alt="" width="256" height="256" loading="lazy" decoding="async">
+            <span class="shelf-name" data-en="Golden Unblock" data-zh="Golden Unblock">Golden Unblock</span>
+            <span class="shelf-genre" data-en="Block puzzle" data-zh="滑块谜题">Block puzzle</span>
+          </a>
         </div>
-    </div>
+      </div>
+    </section>
 
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="FooterCenteredDiv">
-                    <p>Copyright &copy; 2018 - Beijing Star Halo Technology Co., Ltd. - 北京星环漫宇科技有限公司</p>
-                </div>
-                <div class="FooterCenteredDiv">
-                    <a href="http://beian.miit.gov.cn">京ICP备18040794号-3</a>
-                </div>
-            </div>
+    <article class="chapter chapter--dark" id="game-paid-bloom" style="--accent:#e9a2b6" aria-labelledby="game-paid-bloom-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Steam · Coming soon" data-zh="Steam · 即将推出">Steam · Coming soon</span></p>
+          <h3 class="chapter-title reveal" id="game-paid-bloom-title">Paid <em>Bloom</em></h3>
+          <p class="chapter-tagline reveal" data-en="You work. It blooms" data-zh="你工作，它开花">You work. It blooms</p>
+          <p class="chapter-body reveal" data-en="Plant flowers on your desktop and get on with your day. Every ten keystrokes adds a drop of water; the garden does the rest. Look up one afternoon and something has opened behind your windows." data-zh="花种在桌面上，你照常工作。每敲十个字落一滴水，花自己长；抬头就开了一片。">Plant flowers on your desktop and get on with your day. Every ten keystrokes adds a drop of water; the garden does the rest. Look up one afternoon and something has opened behind your windows.</p>
+          <ul class="chapter-points reveal">
+            <li><b data-en="55" data-zh="55">55</b><span data-en="species, and no two of them alike" data-zh="种花，每一朵都长得不一样">species, and no two of them alike</span></li>
+            <li><b data-en="Rare" data-zh="稀有">Rare</b><span data-en="colors that only show when they open" data-zh="花色，开出来才知道是什么样">colors that only show when they open</span></li>
+            <li><b data-en="Forever" data-zh="不枯萎">Forever</b><span data-en="close it for a week — it waits" data-zh="关掉一周，回来还是原样">close it for a week — it waits</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="Steam · Wishlist open now" data-zh="Steam 平台 · 可加入愿望单">Steam · Wishlist open now</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-light" href="https://store.steampowered.com/app/5490470/Paid_Bloom/" target="_blank" rel="noopener">
+              <span data-en="Wishlist on Steam" data-zh="在 Steam 预约">Wishlist on Steam</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
         </div>
-    </footer>
+        <div class="chapter-visual chapter-visual--wide bloom-gallery reveal" data-tilt data-gallery>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="gallery-stage">
+            <div class="wide-shot gallery-frame">
+              <img class="gallery-main" src="img/games/paid-bloom-1.webp" alt="Paid Bloom gameplay — view 1" data-en-alt="Paid Bloom gameplay — view 1" data-zh-alt="Paid Bloom 游戏画面 1" width="1400" height="788" loading="lazy" decoding="async">
+              <span class="gallery-count" aria-hidden="true"><b id="bloomCount">01</b> / 03</span>
+            </div>
+            <div class="gallery-thumbs" role="group" aria-label="Paid Bloom screenshots" data-en-aria="Paid Bloom screenshots" data-zh-aria="Paid Bloom 游戏截图">
+          <button class="gallery-thumb is-active" type="button" data-full="img/games/paid-bloom-1.webp" data-alt-en="Paid Bloom gameplay — view 1" data-alt-zh="Paid Bloom 游戏画面 1" aria-pressed="true" aria-label="View screenshot 1" data-en-aria="View screenshot 1" data-zh-aria="查看截图 1">
+            <img src="img/games/paid-bloom-1.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
+          </button>
+          <button class="gallery-thumb" type="button" data-full="img/games/paid-bloom-2.webp" data-alt-en="Paid Bloom gameplay — view 2" data-alt-zh="Paid Bloom 游戏画面 2" aria-pressed="false" aria-label="View screenshot 2" data-en-aria="View screenshot 2" data-zh-aria="查看截图 2">
+            <img src="img/games/paid-bloom-2.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
+          </button>
+          <button class="gallery-thumb" type="button" data-full="img/games/paid-bloom-3.webp" data-alt-en="Paid Bloom gameplay — view 3" data-alt-zh="Paid Bloom 游戏画面 3" aria-pressed="false" aria-label="View screenshot 3" data-en-aria="View screenshot 3" data-zh-aria="查看截图 3">
+            <img src="img/games/paid-bloom-3.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
+          </button>
+            </div>
+          </div>
+          <div class="chapter-icon"><img src="img/games/paid-bloom-icon.webp" alt="Paid Bloom icon" data-en-alt="Paid Bloom icon" data-zh-alt="Paid Bloom 图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter chapter--light chapter--flagship" id="game-brainrot-fight" style="--accent:#935e08" aria-labelledby="game-brainrot-fight-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Flagship · Auto-battler" data-zh="主打作品 · 自走棋">Flagship · Auto-battler</span></p>
+          <h3 class="chapter-title reveal" id="game-brainrot-fight-title">Brainrot <em>Fight</em></h3>
+          <p class="chapter-tagline reveal" data-en="Buy. Merge. Field five" data-zh="买怪、合成、五只上阵">Buy. Merge. Field five</p>
+          <p class="chapter-body reveal" data-en="Spend gold on monsters, merge duplicates to level them up, and field five. Once the fight starts it plays itself — everything rides on the lineup." data-zh="花金币买怪物，同款合成升级，凑五只上场。开打后自动战斗，胜负看赛前怎么排。">Spend gold on monsters, merge duplicates to level them up, and field five. Once the fight starts it plays itself — everything rides on the lineup.</p>
+          <ul class="chapter-points reveal">
+            <li><b>100+</b><span data-en="monsters, each with its own skill" data-zh="只怪物，技能各不相同">monsters, each with its own skill</span></li>
+            <li><b>5</b><span data-en="slots — order decides who strikes first." data-zh="个出战位，排列顺序决定出手顺序">slots — order decides who strikes first.</span></li>
+            <li><b>∞</b><span data-en="lineups. There is no one right answer." data-zh="种阵容，没有标准答案">lineups. There is no one right answer.</span></li>
+          </ul>
+          <div class="chapter-actions reveal">
+            <a class="button button-dark" href="https://apps.apple.com/us/app/brainrot-fight-merge-monsters/id6747565760" target="_blank" rel="noopener">
+              <span data-en="Download on the App Store" data-zh="前往 App Store 下载">Download on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="chapter-visual chapter-visual--wide fight-gallery reveal" data-tilt data-gallery>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="gallery-stage">
+            <div class="wide-shot gallery-frame">
+              <img class="gallery-main" src="img/games/brainrot-fight-1.webp" alt="Brainrot Fight gameplay — view 1" data-en-alt="Brainrot Fight gameplay — view 1" data-zh-alt="Brainrot Fight 游戏画面 1" width="1400" height="648" loading="lazy" decoding="async">
+              <span class="gallery-count" aria-hidden="true"><b id="fightCount">01</b> / 04</span>
+            </div>
+            <div class="gallery-thumbs" role="group" aria-label="Brainrot Fight screenshots" data-en-aria="Brainrot Fight screenshots" data-zh-aria="Brainrot Fight 游戏截图">
+          <button class="gallery-thumb is-active" type="button" data-full="img/games/brainrot-fight-1.webp" data-alt-en="Brainrot Fight gameplay — view 1" data-alt-zh="Brainrot Fight 游戏画面 1" aria-pressed="true" aria-label="View screenshot 1" data-en-aria="View screenshot 1" data-zh-aria="查看截图 1">
+            <img src="img/games/brainrot-fight-1.webp" alt="" width="1400" height="648" loading="lazy" decoding="async">
+          </button>
+          <button class="gallery-thumb" type="button" data-full="img/games/brainrot-fight-2.webp" data-alt-en="Brainrot Fight gameplay — view 2" data-alt-zh="Brainrot Fight 游戏画面 2" aria-pressed="false" aria-label="View screenshot 2" data-en-aria="View screenshot 2" data-zh-aria="查看截图 2">
+            <img src="img/games/brainrot-fight-2.webp" alt="" width="1400" height="648" loading="lazy" decoding="async">
+          </button>
+          <button class="gallery-thumb" type="button" data-full="img/games/brainrot-fight-3.webp" data-alt-en="Brainrot Fight gameplay — view 3" data-alt-zh="Brainrot Fight 游戏画面 3" aria-pressed="false" aria-label="View screenshot 3" data-en-aria="View screenshot 3" data-zh-aria="查看截图 3">
+            <img src="img/games/brainrot-fight-3.webp" alt="" width="1400" height="648" loading="lazy" decoding="async">
+          </button>
+          <button class="gallery-thumb" type="button" data-full="img/games/brainrot-fight-4.webp" data-alt-en="Brainrot Fight gameplay — view 4" data-alt-zh="Brainrot Fight 游戏画面 4" aria-pressed="false" aria-label="View screenshot 4" data-en-aria="View screenshot 4" data-zh-aria="查看截图 4">
+            <img src="img/games/brainrot-fight-4.webp" alt="" width="1400" height="648" loading="lazy" decoding="async">
+          </button>
+            </div>
+          </div>
+          <div class="chapter-icon"><img src="img/games/brainrot-fight-icon.webp" alt="Brainrot Fight app icon" data-en-alt="Brainrot Fight 应用图标" data-zh-alt="Brainrot Fight 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
 
 
-    <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script-->
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
-    <script src="js/vendor/bootstrap.min.js"></script>
+    <article class="chapter chapter--dark chapter--reverse" id="game-brainrot-book" style="--accent:#d9a94e" aria-labelledby="game-brainrot-book-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Card collection" data-zh="卡牌收集">Card collection</span></p>
+          <h3 class="chapter-title reveal" id="game-brainrot-book-title">Brainrot <em>Book</em></h3>
+          <p class="chapter-tagline reveal" data-en="The internet&rsquo;s strangest creatures, filed in one card album" data-zh="把网络怪角色收进卡册">The internet&rsquo;s strangest creatures, filed in one card album</p>
+          <p class="chapter-body reveal" data-en="Collect the Brainrot cast as holographic cards. Turn them in your hand. Each one shouts its own name." data-zh="收集脑腐全员，做成全息卡，能在手里转着看。每张卡都会喊出自己的名字。">Collect the Brainrot cast as holographic cards. Turn them in your hand. Each one shouts its own name.</p>
+          <ul class="chapter-points reveal">
+            <li><b>145</b><span data-en="holographic cards, rendered in real time" data-zh="张全息卡，效果实时渲染">holographic cards, rendered in real time</span></li>
+            <li><b data-en="Six" data-zh="稀有度">Six</b><span data-en="rarity tiers, from white to red" data-zh="从白卡到红卡，一共六档">rarity tiers, from white to red</span></li>
+            <li><b data-en="Match-3" data-zh="三消">Match-3</b><span data-en="mini-game, to earn coins between unlocks" data-zh="内置小游戏，攒金币开新卡">mini-game, to earn coins between unlocks</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-light" href="https://apps.apple.com/us/app/brainrot-book-meme-cards/id6749748835" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/brainrot-book-2.webp" alt="Brainrot Book card detail screen" data-en-alt="Brainrot Book 卡牌详情界面" data-zh-alt="Brainrot Book 卡牌详情界面" width="692" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/brainrot-book-1.webp" alt="Brainrot Book collection screen" data-en-alt="Brainrot Book 图鉴界面" data-zh-alt="Brainrot Book 图鉴界面" width="692" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/brainrot-book-icon.webp" alt="Brainrot Book app icon" data-en-alt="Brainrot Book 应用图标" data-zh-alt="Brainrot Book 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
 
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <article class="chapter chapter--light" id="game-brainrot-tile-match" style="--accent:#2c773c" aria-labelledby="game-brainrot-tile-match-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Match-3" data-zh="三消">Match-3</span></p>
+          <h3 class="chapter-title reveal" id="game-brainrot-tile-match-title">Brainrot <em>Tile Match</em></h3>
+          <p class="chapter-tagline reveal" data-en="Three of a kind clears the board" data-zh="三个一组，消掉全屏">Three of a kind clears the board</p>
+          <p class="chapter-body reveal" data-en="The Brainrot cast, turned into pieces; three in a row clears them. Special tiles and level goals keep breaking your rhythm." data-zh="脑腐全员变成棋子，三个相同就能消。特殊棋子和关卡目标会一直打乱节奏。">The Brainrot cast, turned into pieces; three in a row clears them. Special tiles and level goals keep breaking your rhythm.</p>
+          <ul class="chapter-points reveal">
+            <li><b data-en="3+" data-zh="三连">3+</b><span data-en="in a row. That is the whole rule." data-zh="三个相同就能消，规则只有这一条">in a row. That is the whole rule.</span></li>
+            <li><b data-en="Special" data-zh="特殊">Special</b><span data-en="pieces and level goals that tighten as you go" data-zh="棋子与关卡目标，越往后越紧">pieces and level goals that tighten as you go</span></li>
+            <li><b data-en="Cast" data-zh="角色">Cast</b><span data-en="all of them, with names to match" data-zh="全员登场，名字一个比一个离谱">all of them, with names to match</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-dark" href="https://apps.apple.com/us/app/brainrot-tile-match/id6755831099" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/brainrot-tile-match-2.webp" alt="Brainrot Tile Match gameplay screen" data-en-alt="Brainrot Tile Match 游戏界面" data-zh-alt="Brainrot Tile Match 游戏界面" width="692" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/brainrot-tile-match-1.webp" alt="Brainrot Tile Match level screen" data-en-alt="Brainrot Tile Match 关卡界面" data-zh-alt="Brainrot Tile Match 关卡界面" width="692" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/brainrot-tile-match-icon.webp" alt="Brainrot Tile Match app icon" data-en-alt="Brainrot Tile Match 应用图标" data-zh-alt="Brainrot Tile Match 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
 
-    <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script-->
-    <script type="text/javascript">
-    $(document).ready(function() {
-        // navigation click actions 
-        $('.scroll-link').on('click', function(event){
-            event.preventDefault();
-            var sectionID = $(this).attr("data-id");
-            scrollToID('#' + sectionID, 750);
-        });
-        // scroll to top action
-        $('.scroll-top').on('click', function(event) {
-            event.preventDefault();
-            $('html, body').animate({scrollTop:0}, 'slow');          
-        });
-        // mobile nav toggle
-        $('#nav-toggle').on('click', function (event) {
-            event.preventDefault();
-            $('#main-nav').toggleClass("open");
-        });
-    });
-    // scroll function
-    function scrollToID(id, speed){
-        var offSet = 50;
-        var targetOffset = $(id).offset().top - offSet;
-        var mainNav = $('#main-nav');
-        $('html,body').animate({scrollTop:targetOffset}, speed);
-        if (mainNav.hasClass("open")) {
-            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
-            mainNav.removeClass("open");
-        }
-    }
-    // scroll reveal animation
-    $(window).on('scroll load', function() {
-        $('.reveal').each(function() {
-            var elementTop = $(this).offset().top;
-            var viewportBottom = $(window).scrollTop() + $(window).height() - 80;
-            if (elementTop < viewportBottom) {
-                $(this).addClass('active');
-            }
-        });
-    });
+    <article class="chapter chapter--dark chapter--reverse" id="game-merge-defense" style="--accent:#5cb6d4" aria-labelledby="game-merge-defense-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Tower defense" data-zh="塔防">Tower defense</span></p>
+          <h3 class="chapter-title reveal" id="game-merge-defense-title">Merge <em>Defense</em></h3>
+          <p class="chapter-tagline reveal" data-en="Merge turrets. Hold the backyard" data-zh="合成炮塔，守住后院">Merge turrets. Hold the backyard</p>
+          <p class="chapter-body reveal" data-en="Plastic soldiers come in waves. Two turrets of the same level merge into one, stronger — upgrade mid-fight, or give up the lawn." data-zh="塑料士兵一波波冲过来。两座同级炮塔合成一座，边打边升级，破了就丢后院。">Plastic soldiers come in waves. Two turrets of the same level merge into one, stronger — upgrade mid-fight, or give up the lawn.</p>
+          <ul class="chapter-points reveal">
+            <li><b data-en="Turrets" data-zh="炮塔">Turrets</b><span data-en="rapid-fire, freeze, poison — three ways to break a wave" data-zh="速射、冰冻、剧毒，各有各的用法">rapid-fire, freeze, poison — three ways to break a wave</span></li>
+            <li><b data-en="Hero" data-zh="英雄">Hero</b><span data-en="skills for the moment the line breaks" data-zh="防线快破时，手动放技能救场">skills for the moment the line breaks</span></li>
+            <li><b>∞</b><span data-en="combinations, reshuffled every wave" data-zh="种组合，每波敌人都重新洗牌">combinations, reshuffled every wave</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-light" href="https://apps.apple.com/us/app/merge-defense-toy-soldiers/id1585085764" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/merge-defense-2.webp" alt="Merge Defense battle screen" data-en-alt="Merge Defense 战斗界面" data-zh-alt="Merge Defense 战斗界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/merge-defense-1.webp" alt="Merge Defense turret board" data-en-alt="Merge Defense 炮塔布局界面" data-zh-alt="Merge Defense 炮塔布局界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/merge-defense-icon.webp" alt="Merge Defense app icon" data-en-alt="Merge Defense 应用图标" data-zh-alt="Merge Defense 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
 
-    if (typeof console === "undefined") {
-        console = {
-            log: function() { }
-        };
-    }
-    </script>
+    <article class="chapter chapter--light" id="game-captain-bubble-2" style="--accent:#23708f" aria-labelledby="game-captain-bubble-2-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Bubble shooter" data-zh="泡泡射击">Bubble shooter</span></p>
+          <h3 class="chapter-title reveal" id="game-captain-bubble-2-title">Captain <em>Bubble 2</em></h3>
+          <p class="chapter-tagline reveal" data-en="A quiet seabed, cleared bubble by bubble" data-zh="海底射泡泡，安静地清场">A quiet seabed, cleared bubble by bubble</p>
+          <p class="chapter-body reveal" data-en="Aim, shoot, and clear three of the same color. Every level is hand-built. The ocean stays quiet; you keep pressing for one more." data-zh="瞄准、发射，三个同色就消。关卡全手工设计，海底很安静，一关接一关。">Aim, shoot, and clear three of the same color. Every level is hand-built. The ocean stays quiet; you keep pressing for one more.</p>
+          <ul class="chapter-points reveal">
+            <li><b data-en="Levels" data-zh="关卡">Levels</b><span data-en="all hand-built, none of them generated" data-zh="全部手工设计，没有随机生成">all hand-built, none of them generated</span></li>
+            <li><b data-en="Items" data-zh="道具">Items</b><span data-en="rockets, vortices, shell boosts" data-zh="火箭、漩涡、贝壳三种强化">rockets, vortices, shell boosts</span></li>
+            <li><b data-en="Bubbles" data-zh="泡泡">Bubbles</b><span data-en="moving, color-shifting ones that change how you aim" data-zh="会移动会变色，瞄准得跟着变">moving, color-shifting ones that change how you aim</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-dark" href="https://apps.apple.com/us/app/captain-bubble-2-master/id6737189944" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/captain-bubble-2-2.webp" alt="Captain Bubble 2 level screen" data-en-alt="Captain Bubble 2 关卡界面" data-zh-alt="Captain Bubble 2 关卡界面" width="692" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/captain-bubble-2-1.webp" alt="Captain Bubble 2 underwater board" data-en-alt="Captain Bubble 2 海底关卡" data-zh-alt="Captain Bubble 2 海底关卡" width="692" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/captain-bubble-2-icon.webp" alt="Captain Bubble 2 app icon" data-en-alt="Captain Bubble 2 应用图标" data-zh-alt="Captain Bubble 2 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter chapter--dark chapter--reverse" id="game-captain-bubble" style="--accent:#8f8cf0" aria-labelledby="game-captain-bubble-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Arcade" data-zh="街机">Arcade</span></p>
+          <h3 class="chapter-title reveal" id="game-captain-bubble-title">Captain <em>Bubble</em></h3>
+          <p class="chapter-tagline reveal" data-en="The board spins. Your aim has to keep up" data-zh="棋盘会转，瞄准得跟上">The board spins. Your aim has to keep up</p>
+          <p class="chapter-body reveal" data-en="Bubble shooting with a physical twist: the board turns with the angle and the force of your shot. The safe shot is rarely the obvious one." data-zh="棋盘会跟着你的发射角度和力度转动。看着最顺的那一发，常常不是最安全的。">Bubble shooting with a physical twist: the board turns with the angle and the force of your shot. The safe shot is rarely the obvious one.</p>
+          <ul class="chapter-points reveal">
+            <li><b>300</b><span data-en="levels, scored on how few shots you needed" data-zh="关，用更少的发射拿满三星">levels, scored on how few shots you needed</span></li>
+            <li><b data-en="Spin" data-zh="旋转">Spin</b><span data-en="the board turns as your bubble flies" data-zh="泡泡飞行时，棋盘跟着转">the board turns as your bubble flies</span></li>
+            <li><b data-en="Offline" data-zh="离线">Offline</b><span data-en="no connection, no waiting" data-zh="不用联网，打开就玩">no connection, no waiting</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-light" href="https://apps.apple.com/us/app/captain-bubble-spin-and-shoot/id1444267653" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/captain-bubble-2.webp" alt="Captain Bubble gameplay screen" data-en-alt="Captain Bubble 游戏界面" data-zh-alt="Captain Bubble 游戏界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/captain-bubble-1.webp" alt="Captain Bubble level select" data-en-alt="Captain Bubble 关卡选择" data-zh-alt="Captain Bubble 关卡选择" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/captain-bubble-icon.webp" alt="Captain Bubble app icon" data-en-alt="Captain Bubble 应用图标" data-zh-alt="Captain Bubble 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter chapter--light chapter--wide" id="game-galaxy-tycoon" style="--accent:#1d69b8" aria-labelledby="game-galaxy-tycoon-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Space trading" data-zh="太空贸易">Space trading</span></p>
+          <p class="chapter-award reveal" data-en-aria="Featured by Apple, 5 times" data-zh-aria="苹果编辑推荐，5 次">
+            <svg class="chapter-award-star" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.4l1.95 4.13 4.55.62-3.32 3.16.82 4.49L8 11.66l-4 2.14.82-4.49L1.5 6.15l4.55-.62z" fill="currentColor"/></svg>
+            <span class="chapter-award-label" data-en="Featured by Apple" data-zh="苹果编辑推荐">Featured by Apple</span>
+            <svg class="chapter-award-stars" viewBox="0 0 92 16" aria-hidden="true">
+              <defs><path id="awardStar" d="M8 1.4l1.95 4.13 4.55.62-3.32 3.16.82 4.49L8 11.66l-4 2.14.82-4.49L1.5 6.15l4.55-.62z"/></defs>
+              <use href="#awardStar" x="0"/><use href="#awardStar" x="18"/><use href="#awardStar" x="36"/><use href="#awardStar" x="54"/><use href="#awardStar" x="72"/>
+            </svg>
+          </p>
+          <h3 class="chapter-title reveal" id="game-galaxy-tycoon-title">Galaxy <em>Tycoon</em></h3>
+          <p class="chapter-tagline reveal" data-en="Buy low on one planet. Sell high on the next" data-zh="这颗星球买入，下颗卖出">Buy low on one planet. Sell high on the next</p>
+          <p class="chapter-body reveal" data-en="A living galaxy of prices. Read the market, upgrade the ship, defend the route. One cargo hold becomes an empire." data-zh="几十颗星球，物价各不相同，一直在变。低买高卖，升级飞船，把货舱做成帝国。">A living galaxy of prices. Read the market, upgrade the ship, defend the route. One cargo hold becomes an empire.</p>
+          <ul class="chapter-points reveal">
+            <li><b data-en="Planets" data-zh="行星">Planets</b><span data-en="dozens of them, each with its own goods and prices" data-zh="数十颗星球，各有各的物产和物价">dozens of them, each with its own goods and prices</span></li>
+            <li><b data-en="Systems" data-zh="系统">Systems</b><span data-en="cargo, engines, life support — all upgradeable" data-zh="货舱、引擎、生命维持，都能升级">cargo, engines, life support — all upgradeable</span></li>
+            <li><b data-en="Idle" data-zh="离线">Idle</b><span data-en="you keep earning while away" data-zh="人不在，也一直在赚">you keep earning while away</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-dark" href="https://apps.apple.com/us/app/galaxy-tycoon-space-trader/id1463927176" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual chapter-visual--wide galaxy-gallery reveal" data-tilt data-gallery>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="gallery-stage">
+            <div class="wide-shot gallery-frame">
+              <img class="gallery-main" src="img/games/galaxy-tycoon-1.webp" alt="Galaxy Tycoon gameplay — view 1" data-en-alt="Galaxy Tycoon gameplay — view 1" data-zh-alt="Galaxy Tycoon 游戏画面 1" width="1400" height="788" loading="lazy" decoding="async">
+              <span class="gallery-count" aria-hidden="true"><b id="galaxyCount">01</b> / 04</span>
+            </div>
+            <div class="gallery-thumbs" role="group" aria-label="Galaxy Tycoon screenshots" data-en-aria="Galaxy Tycoon screenshots" data-zh-aria="Galaxy Tycoon 游戏截图">
+          <button class="gallery-thumb is-active" type="button" data-full="img/games/galaxy-tycoon-1.webp" data-alt-en="Galaxy Tycoon gameplay — view 1" data-alt-zh="Galaxy Tycoon 游戏画面 1" aria-pressed="true" aria-label="View screenshot 1" data-en-aria="View screenshot 1" data-zh-aria="查看截图 1">
+            <img src="img/games/galaxy-tycoon-1.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
+          </button>
+          <button class="gallery-thumb" type="button" data-full="img/games/galaxy-tycoon-2.webp" data-alt-en="Galaxy Tycoon gameplay — view 2" data-alt-zh="Galaxy Tycoon 游戏画面 2" aria-pressed="false" aria-label="View screenshot 2" data-en-aria="View screenshot 2" data-zh-aria="查看截图 2">
+            <img src="img/games/galaxy-tycoon-2.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
+          </button>
+          <button class="gallery-thumb" type="button" data-full="img/games/galaxy-tycoon-3.webp" data-alt-en="Galaxy Tycoon gameplay — view 3" data-alt-zh="Galaxy Tycoon 游戏画面 3" aria-pressed="false" aria-label="View screenshot 3" data-en-aria="View screenshot 3" data-zh-aria="查看截图 3">
+            <img src="img/games/galaxy-tycoon-3.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
+          </button>
+          <button class="gallery-thumb" type="button" data-full="img/games/galaxy-tycoon-4.webp" data-alt-en="Galaxy Tycoon gameplay — view 4" data-alt-zh="Galaxy Tycoon 游戏画面 4" aria-pressed="false" aria-label="View screenshot 4" data-en-aria="View screenshot 4" data-zh-aria="查看截图 4">
+            <img src="img/games/galaxy-tycoon-4.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
+          </button>
+            </div>
+          </div>
+          <div class="chapter-icon"><img src="img/games/galaxy-tycoon-icon.webp" alt="Galaxy Tycoon app icon" data-en-alt="Galaxy Tycoon 应用图标" data-zh-alt="Galaxy Tycoon 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter chapter--dark chapter--reverse" id="game-flower-connect" style="--accent:#9cc48d" aria-labelledby="game-flower-connect-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Line puzzle" data-zh="连线谜题">Line puzzle</span></p>
+          <h3 class="chapter-title reveal" id="game-flower-connect-title">Flower <em>Connect</em></h3>
+          <p class="chapter-tagline reveal" data-en="Clear a color in one stroke" data-zh="一笔连过同色花">Clear a color in one stroke</p>
+          <p class="chapter-body reveal" data-en="Draw one stroke through matching flowers and the whole patch clears. Match the numbers along the line and the score goes up tenfold. Simple rules; more arithmetic as you go." data-zh="一笔连过同色的花，整片清掉；数字相同再翻十倍。规则简单，越往后越要算。">Draw one stroke through matching flowers and the whole patch clears. Match the numbers along the line and the score goes up tenfold. Simple rules; more arithmetic as you go.</p>
+          <ul class="chapter-points reveal">
+            <li><b>200</b><span data-en="hand-made levels across ten chapters" data-zh="个手工关卡，分成十个章节">hand-made levels across ten chapters</span></li>
+            <li><b>×10</b><span data-en="for every number matched in line" data-zh="数字对上，分数再翻十倍">for every number matched in line</span></li>
+            <li><b data-en="Zen" data-zh="花园">Zen</b><span data-en="a garden that grows between puzzles" data-zh="关卡之间，慢慢养起来">a garden that grows between puzzles</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-light" href="https://apps.apple.com/us/app/flower-connect-line-puzzle/id1445807008" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/flower-connect-2.webp" alt="Flower Connect chapter screen" data-en-alt="Flower Connect 章节界面" data-zh-alt="Flower Connect 章节界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/flower-connect-1.webp" alt="Flower Connect puzzle board" data-en-alt="Flower Connect 连线棋盘" data-zh-alt="Flower Connect 连线棋盘" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/flower-connect-icon.webp" alt="Flower Connect app icon" data-en-alt="Flower Connect 应用图标" data-zh-alt="Flower Connect 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter chapter--light" id="game-word-biscuits" style="--accent:#9c520f" aria-labelledby="game-word-biscuits-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Word search" data-zh="单词搜索">Word search</span></p>
+          <h3 class="chapter-title reveal" id="game-word-biscuits-title">Word <em>Biscuits</em></h3>
+          <p class="chapter-tagline reveal" data-en="Words first. Clock optional" data-zh="单词搜索，计时可选">Words first. Clock optional</p>
+          <p class="chapter-body reveal" data-en="A word search for short breaks: clean grids, generous categories, and a clock only if you want the pressure." data-zh="随手能玩的单词搜索：字盘干净，分类宽松，想要压力的时候再开计时。">A word search for short breaks: clean grids, generous categories, and a clock only if you want the pressure.</p>
+          <ul class="chapter-points reveal">
+            <li><b>8</b><span data-en="directions, diagonals and backward all count" data-zh="个方向，斜着倒着都算">directions, diagonals and backward all count</span></li>
+            <li><b data-en="Easy" data-zh="难度">Easy</b><span data-en="to hard, one grid at a time" data-zh="从简单到困难，一张一张来">to hard, one grid at a time</span></li>
+            <li><b data-en="Timed" data-zh="计时">Timed</b><span data-en="mode, for when the puzzle is not the hard part" data-zh="嫌太简单，再打开">mode, for when the puzzle is not the hard part</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-dark" href="https://apps.apple.com/us/app/word-biscuits-fun-puzzle-game/id1487768826" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/word-biscuits-2.webp" alt="Word Biscuits word list screen" data-en-alt="Word Biscuits 单词列表界面" data-zh-alt="Word Biscuits 单词列表界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/word-biscuits-1.webp" alt="Word Biscuits word search grid" data-en-alt="Word Biscuits 单词搜索字盘" data-zh-alt="Word Biscuits 单词搜索字盘" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/word-biscuits-icon.webp" alt="Word Biscuits app icon" data-en-alt="Word Biscuits 应用图标" data-zh-alt="Word Biscuits 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter chapter--dark chapter--reverse" id="game-word-talent" style="--accent:#d78fbe" aria-labelledby="game-word-talent-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Word puzzle" data-zh="单词谜题">Word puzzle</span></p>
+          <h3 class="chapter-title reveal" id="game-word-talent-title">Word <em>Talent</em></h3>
+          <p class="chapter-tagline reveal" data-en="Six guesses. One word" data-zh="六次机会，一个单词">Six guesses. One word</p>
+          <p class="chapter-body reveal" data-en="One word a day. Colors tell you which letters are right and whether they sit in the right place. A fixed word list, and nobody watching." data-zh="一天一个单词，六次机会。颜色告诉你哪些字母对、位置对不对，词库固定。">One word a day. Colors tell you which letters are right and whether they sit in the right place. A fixed word list, and nobody watching.</p>
+          <ul class="chapter-points reveal">
+            <li><b>4–6</b><span data-en="letters — start with the short ones" data-zh="个字母，可以从短的开始">letters — start with the short ones</span></li>
+            <li><b data-en="Six" data-zh="六次">Six</b><span data-en="attempts, color clues after every guess" data-zh="机会，每次猜完都给颜色线索">attempts, color clues after every guess</span></li>
+            <li><b data-en="Friend" data-zh="好友">Friend</b><span data-en="mode, one phone passed around" data-zh="模式，一部手机轮流猜">mode, one phone passed around</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-light" href="https://apps.apple.com/us/app/word-talent-guess-puzzles/id1612437456" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/word-talent-2.webp" alt="Word Talent result screen" data-en-alt="Word Talent 结果界面" data-zh-alt="Word Talent 结果界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/word-talent-1.webp" alt="Word Talent guess grid" data-en-alt="Word Talent 猜词界面" data-zh-alt="Word Talent 猜词界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/word-talent-icon.webp" alt="Word Talent app icon" data-en-alt="Word Talent 应用图标" data-zh-alt="Word Talent 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter chapter--light" id="game-word-talent-2" style="--accent:#b8400d" aria-labelledby="game-word-talent-2-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Word puzzle" data-zh="单词谜题">Word puzzle</span></p>
+          <h3 class="chapter-title reveal" id="game-word-talent-2-title">Word <em>Talent 2</em></h3>
+          <p class="chapter-tagline reveal" data-en="A bigger vocabulary. The same six tries" data-zh="更大的词库，还是六次机会">A bigger vocabulary. The same six tries</p>
+          <p class="chapter-body reveal" data-en="Pick your word length, play the whole game offline, and take a hint when the word will not come — no waiting for tomorrow." data-zh="四、五、六个字母自己选，整款游戏离线可玩；卡住时有提示，不用等到第二天。">Pick your word length, play the whole game offline, and take a hint when the word will not come — no waiting for tomorrow.</p>
+          <ul class="chapter-points reveal">
+            <li><b data-en="Lengths" data-zh="词长">Lengths</b><span data-en="four, five and six letters" data-zh="四、五、六个字母，自己选">four, five and six letters</span></li>
+            <li><b data-en="Offline" data-zh="离线">Offline</b><span data-en="the whole game, no connection" data-zh="整款游戏，不联网也能玩">the whole game, no connection</span></li>
+            <li><b data-en="Hints" data-zh="提示">Hints</b><span data-en="for when you are one letter short" data-zh="差一个字母时用得上">for when you are one letter short</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-dark" href="https://apps.apple.com/us/app/word-talent-2-guess-word-game/id1623998856" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/word-talent-2-2.webp" alt="Word Talent 2 result screen" data-en-alt="Word Talent 2 结果界面" data-zh-alt="Word Talent 2 结果界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/word-talent-2-1.webp" alt="Word Talent 2 guess grid" data-en-alt="Word Talent 2 猜词界面" data-zh-alt="Word Talent 2 猜词界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/word-talent-2-icon.webp" alt="Word Talent 2 app icon" data-en-alt="Word Talent 2 应用图标" data-zh-alt="Word Talent 2 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter chapter--dark chapter--reverse" id="game-golden-unblock" style="--accent:#d9a44f" aria-labelledby="game-golden-unblock-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre" data-en="Block puzzle" data-zh="滑块谜题">Block puzzle</span></p>
+          <h3 class="chapter-title reveal" id="game-golden-unblock-title">Golden <em>Unblock</em></h3>
+          <p class="chapter-tagline reveal" data-en="Move the silver, free the gold" data-zh="挪开银块，金块出关">Move the silver, free the gold</p>
+          <p class="chapter-body reveal" data-en="Slide the silver blocks out of the way and walk the gold one to the exit. A classic sliding-block puzzle with plenty of levels, and no penalty for a wrong move." data-zh="挪开挡路的银块，把金块推到出口。经典滑块玩法，关卡够多，走错了可以重来。">Slide the silver blocks out of the way and walk the gold one to the exit. A classic sliding-block puzzle with plenty of levels, and no penalty for a wrong move.</p>
+          <ul class="chapter-points reveal">
+            <li><b>1200</b><span data-en="puzzles, three board sizes" data-zh="道谜题，三种棋盘">puzzles, three board sizes</span></li>
+            <li><b data-en="3★" data-zh="三星">3★</b><span data-en="for the cleanest solution" data-zh="步数够少才能拿满">for the cleanest solution</span></li>
+            <li><b data-en="Undo" data-zh="撤销">Undo</b><span data-en="every move, plus hints when you are stuck" data-zh="每步都能退回，卡住有提示">every move, plus hints when you are stuck</span></li>
+          </ul>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad · Free" data-zh="iPhone 与 iPad · 免费">iPhone &amp; iPad · Free</p>
+          <div class="chapter-actions reveal">
+            <a class="button button-light" href="https://apps.apple.com/us/app/golden-unblock-puzzle/id1453505953" target="_blank" rel="noopener">
+              <span data-en="View on the App Store" data-zh="在 App Store 查看">View on the App Store</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="chapter-visual reveal" data-tilt>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="phone phone-back" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/golden-unblock-2.webp" alt="Golden Unblock level pack screen" data-en-alt="Golden Unblock 关卡包界面" data-zh-alt="Golden Unblock 关卡包界面" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="phone phone-front" data-en-aria="Show the other screenshot" data-zh-aria="查看另一张截图"><img src="img/games/golden-unblock-1.webp" alt="Golden Unblock puzzle board" data-en-alt="Golden Unblock 滑块棋盘" data-zh-alt="Golden Unblock 滑块棋盘" width="844" height="1500" loading="lazy" decoding="async"></div>
+          <div class="chapter-icon"><img src="img/games/golden-unblock-icon.webp" alt="Golden Unblock app icon" data-en-alt="Golden Unblock 应用图标" data-zh-alt="Golden Unblock 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter chapter--light" id="game-stitch-thread" style="--accent:#a2503c" aria-labelledby="game-stitch-thread-title">
+      <div class="chapter-inner page-width">
+        <div class="chapter-copy">
+          <p class="chapter-kicker reveal"><span class="chapter-genre"><span class="chapter-genre-brand" data-en="iOS" data-zh="iOS">iOS</span><span data-en=" &middot; In development" data-zh=" &middot; 开发中"> &middot; In development</span></span></p>
+          <h3 class="chapter-title reveal" id="game-stitch-thread-title">Stitch <em>&amp; Thread</em></h3>
+          <p class="chapter-tagline reveal" data-en="Pull one thread and the picture stitches itself" data-zh="抽走一根线，画面自己绣出来">Pull one thread and the picture stitches itself</p>
+          <p class="chapter-body reveal" data-en="Colored threads lie tangled across a grid, each with a single gap it can slip through. Tap the loose end, clear the board, and the picture appears stitch by stitch." data-zh="彩线缠在网格上，只有一处缺口能出去。点住线头，清空整块，图案自己绣出来。">Colored threads lie tangled across a grid, each with a single gap it can slip through. Tap the loose end, clear the board, and the picture appears stitch by stitch.</p>
+          <ul class="chapter-points reveal">
+            <li><b>400</b><span data-en="pixel patterns, finished stitch by stitch" data-zh="张像素图案，一针一针绣完">pixel patterns, finished stitch by stitch</span></li>
+            <li><b>1</b><span data-en="tap to unwind a whole thread" data-zh="次点触，抽走一整根线">tap to unwind a whole thread</span></li>
+            <li><b>0</b><span data-en="timers. Sit with a board as long as you like" data-zh="个计时器，想多久想多久">timers. Sit with a board as long as you like</span></li>
+          </ul>
+          <p class="stitch-flag reveal"><span data-en="In development" data-zh="开发中">In development</span></p>
+          <p class="chapter-meta reveal" data-en="iPhone &amp; iPad &middot; Not on the App Store yet" data-zh="iPhone 与 iPad &middot; 尚未上架">iPhone &amp; iPad &middot; Not on the App Store yet</p>
+        </div>
+        <div class="chapter-visual stitch-gallery reveal" data-tilt data-deck>
+          <span class="chapter-glow" aria-hidden="true"></span>
+          <div class="stitch-deck" role="group" aria-label="Stitch &amp; Thread screenshots" data-en-aria="Stitch &amp; Thread screenshots" data-zh-aria="Stitch &amp; Thread 游戏截图">
+<button class="stitch-card" type="button" data-slot="0" aria-label="View screenshot 2" data-en-aria="View screenshot 2" data-zh-aria="查看截图 2">
+              <img src="img/games/stitch-thread-2.webp" alt="Stitch &amp; Thread &mdash; view 2" data-en-alt="Stitch &amp; Thread &mdash; view 2" data-zh-alt="Stitch &amp; Thread 画面 2" width="640" height="1422" loading="lazy" decoding="async">
+            </button>
+<button class="stitch-card" type="button" data-slot="1" aria-label="View screenshot 3" data-en-aria="View screenshot 3" data-zh-aria="查看截图 3">
+              <img src="img/games/stitch-thread-3.webp" alt="Stitch &amp; Thread &mdash; view 3" data-en-alt="Stitch &amp; Thread &mdash; view 3" data-zh-alt="Stitch &amp; Thread 画面 3" width="640" height="1422" loading="lazy" decoding="async">
+            </button>
+<button class="stitch-card" type="button" data-slot="2" aria-label="View screenshot 4" data-en-aria="View screenshot 4" data-zh-aria="查看截图 4">
+              <img src="img/games/stitch-thread-4.webp" alt="Stitch &amp; Thread &mdash; view 4" data-en-alt="Stitch &amp; Thread &mdash; view 4" data-zh-alt="Stitch &amp; Thread 画面 4" width="640" height="1422" loading="lazy" decoding="async">
+            </button>
+<button class="stitch-card" type="button" data-slot="3" aria-label="View screenshot 5" data-en-aria="View screenshot 5" data-zh-aria="查看截图 5">
+              <img src="img/games/stitch-thread-5.webp" alt="Stitch &amp; Thread &mdash; view 5" data-en-alt="Stitch &amp; Thread &mdash; view 5" data-zh-alt="Stitch &amp; Thread 画面 5" width="640" height="1422" loading="lazy" decoding="async">
+            </button>
+<button class="stitch-card" type="button" data-slot="4" aria-label="View screenshot 1" data-en-aria="View screenshot 1" data-zh-aria="查看截图 1">
+              <img src="img/games/stitch-thread-1.webp" alt="Stitch &amp; Thread &mdash; view 1" data-en-alt="Stitch &amp; Thread &mdash; view 1" data-zh-alt="Stitch &amp; Thread 画面 1" width="640" height="1422" loading="lazy" decoding="async">
+            </button>
+            <span class="gallery-count" aria-hidden="true"><b>01</b> / 05</span>
+          </div>
+          <div class="chapter-icon"><img src="img/games/stitch-thread-icon.webp" alt="Stitch &amp; Thread app icon" data-en-alt="Stitch &amp; Thread 应用图标" data-zh-alt="Stitch &amp; Thread 应用图标" width="256" height="256" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </article>
+
+    <section class="films" id="films" aria-labelledby="films-title">
+      <div class="page-width">
+        <div class="section-head section-head-dark">
+          <div>
+            <p class="eyebrow reveal" data-en="Films" data-zh="影像">Films</p>
+            <h2 class="display-title reveal" id="films-title">
+              <span data-en="Selected " data-zh="作品">Selected </span><span data-en="work" data-zh="展示">work</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="film-player reveal" data-player>
+          <div class="film-media">
+            <video id="trailerVideo" playsinline preload="none" poster="img/hero-poster.webp" data-src="brainrot/video/video1m.mp4"></video>
+            <div class="film-overlay" id="filmOverlay">
+              <button class="film-play" id="filmPlay" type="button" aria-label="Play trailer" data-en-aria="Play trailer" data-zh-aria="播放预告片">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5 19 12 8 18.5Z" fill="currentColor"/></svg>
+              </button>
+              <div class="film-overlay-meta">
+                <span id="filmOverlayTitle" data-en="Official trailer" data-zh="官方预告">Official trailer</span>
+                <span id="filmOverlayDuration">1:00</span>
+              </div>
+            </div>
+            <div class="film-topline" aria-hidden="true">STAR HALO FILMS</div>
+          </div>
+        </div>
+
+        <div class="youtube-head reveal">
+          <p class="micro-label" data-en="More videos" data-zh="更多视频">More videos</p>
+        </div>
+
+        <div class="youtube-grid">
+          <button class="video-card reveal" type="button" data-youtube-id="Mu3fMdFVbag" data-youtube-title-en="Paid Bloom" data-youtube-title-zh="Paid Bloom 宣传片" aria-label="Play embedded video: Paid Bloom" data-en-aria="Play embedded video: Paid Bloom" data-zh-aria="播放内嵌视频：Paid Bloom 宣传片">
+            <span class="video-thumb">
+              <img src="img/yt-paid-bloom.webp" alt="Paid Bloom video thumbnail" data-en-alt="Paid Bloom video thumbnail" data-zh-alt="Paid Bloom 宣传片封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration" data-en="Trailer" data-zh="预告">Trailer</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+          <button class="video-card reveal" type="button" data-youtube-id="yZuTS_wCEjc" data-youtube-title-en="Brainrot Fight" data-youtube-title-zh="Brainrot Fight 宣传片" aria-label="Play embedded video: Brainrot Fight" data-en-aria="Play embedded video: Brainrot Fight" data-zh-aria="播放内嵌视频：Brainrot Fight 宣传片">
+            <span class="video-thumb">
+              <img src="img/yt-brainrot-trailer.webp" alt="Brainrot Fight video thumbnail" data-en-alt="Brainrot Fight video thumbnail" data-zh-alt="Brainrot Fight 宣传片封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration">0:31</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+
+          <button class="video-card reveal" type="button" data-youtube-id="-BdBAKmassU" data-youtube-title-en="Beginner Team Composition: Banana Monkey" data-youtube-title-zh="新手阵容：香蕉猴" aria-label="Play embedded video: Beginner Team Composition: Banana Monkey" data-en-aria="Play embedded video: Beginner Team Composition: Banana Monkey" data-zh-aria="播放内嵌视频：新手阵容：香蕉猴">
+            <span class="video-thumb">
+              <img src="img/yt-banana-monkey.webp" alt="Banana Monkey video thumbnail" data-en-alt="Banana Monkey video thumbnail" data-zh-alt="新手阵容：香蕉猴封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration">0:55</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+
+          <button class="video-card reveal" type="button" data-youtube-id="uLzHlpWiIg4" data-youtube-title-en="Beginner Team Composition: Long-Range Bombardment" data-youtube-title-zh="新手阵容：远程轰炸" aria-label="Play embedded video: Beginner Team Composition: Long-Range Bombardment" data-en-aria="Play embedded video: Beginner Team Composition: Long-Range Bombardment" data-zh-aria="播放内嵌视频：新手阵容：远程轰炸">
+            <span class="video-thumb">
+              <img src="img/yt-long-range.webp" alt="Long-range bombardment video thumbnail" data-en-alt="Long-range bombardment video thumbnail" data-zh-alt="新手阵容：远程轰炸封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration">0:19</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+
+          <button class="video-card reveal" type="button" data-youtube-id="s_oT0bCmD50" data-youtube-title-en="Captain Bubble 2" data-youtube-title-zh="Captain Bubble 2 宣传片" aria-label="Play embedded video: Captain Bubble 2" data-en-aria="Play embedded video: Captain Bubble 2" data-zh-aria="播放内嵌视频：Captain Bubble 2 宣传片">
+            <span class="video-thumb">
+              <img src="img/yt-captain-bubble-2.webp" alt="Captain Bubble 2 video thumbnail" data-en-alt="Captain Bubble 2 video thumbnail" data-zh-alt="Captain Bubble 2 宣传片封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration">0:30</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+
+          <button class="video-card reveal" type="button" data-youtube-id="SjaMmLY_JBM" data-youtube-title-en="Galaxy Tycoon" data-youtube-title-zh="Galaxy Tycoon 宣传片" aria-label="Play embedded video: Galaxy Tycoon" data-en-aria="Play embedded video: Galaxy Tycoon" data-zh-aria="播放内嵌视频：Galaxy Tycoon 宣传片">
+            <span class="video-thumb">
+              <img src="img/yt-galaxy-tycoon.webp" alt="Galaxy Tycoon video thumbnail" data-en-alt="Galaxy Tycoon video thumbnail" data-zh-alt="Galaxy Tycoon 宣传片封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration">0:48</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+
+          <button class="video-card reveal" type="button" data-youtube-id="M-FTzi9ZFik" data-youtube-title-en="FlowerJourney" data-youtube-title-zh="FlowerJourney 宣传片" aria-label="Play embedded video: FlowerJourney" data-en-aria="Play embedded video: FlowerJourney" data-zh-aria="播放内嵌视频：FlowerJourney 宣传片">
+            <span class="video-thumb">
+              <img src="img/yt-flower-journey.webp" alt="FlowerJourney video thumbnail" data-en-alt="FlowerJourney video thumbnail" data-zh-alt="FlowerJourney 宣传片封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration">0:30</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+
+          <button class="video-card reveal" type="button" data-youtube-id="wW6vjuqO6kM" data-youtube-title-en="FireParty Game Video" data-youtube-title-zh="FireParty 短片" aria-label="Play embedded video: FireParty Game Video" data-en-aria="Play embedded video: FireParty Game Video" data-zh-aria="播放内嵌视频：FireParty 短片">
+            <span class="video-thumb">
+              <img src="img/yt-fireparty.webp" alt="FireParty video thumbnail" data-en-alt="FireParty video thumbnail" data-zh-alt="FireParty 短片封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration" data-en="Short" data-zh="短片">Short</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+
+          <button class="video-card reveal" type="button" data-youtube-id="zv8ozg9WCs0" data-youtube-title-en="Brainrot Match" data-youtube-title-zh="Brainrot Match 短片" aria-label="Play embedded video: Brainrot Match" data-en-aria="Play embedded video: Brainrot Match" data-zh-aria="播放内嵌视频：Brainrot Match 短片">
+            <span class="video-thumb">
+              <img src="img/yt-brainrot-match.webp" alt="Brainrot Match video thumbnail" data-en-alt="Brainrot Match video thumbnail" data-zh-alt="Brainrot Match 短片封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration" data-en="Short" data-zh="短片">Short</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+
+          <button class="video-card reveal" type="button" data-youtube-id="fITYoMHPIak" data-youtube-title-en="Well-Made Word Guess Game" data-youtube-title-zh="Well-Made Word Guess 短片" aria-label="Play embedded video: Well-Made Word Guess Game" data-en-aria="Play embedded video: Well-Made Word Guess Game" data-zh-aria="播放内嵌视频：Well-Made Word Guess 短片">
+            <span class="video-thumb">
+              <img src="img/yt-word-guess.webp" alt="Well-Made Word Guess video thumbnail" data-en-alt="Well-Made Word Guess video thumbnail" data-zh-alt="Well-Made Word Guess 短片封面" width="1280" height="720" loading="lazy" decoding="async">
+              <span class="video-duration" data-en="Short" data-zh="短片">Short</span>
+              <span class="video-play" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M7 4.5 16 10l-9 5.5Z" fill="currentColor"/></svg></span>
+            </span>
+          </button>
+
+      </div>
+    </section>
+
+    <section class="outsource" id="commissioned" aria-labelledby="commissioned-title">
+      <div class="page-width">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal" data-en="Commissioned work" data-zh="外包作品">Commissioned work</p>
+            <h2 class="display-title reveal" id="commissioned-title">
+              <span data-en="Art drawn " data-zh="画过的">Art drawn </span><span data-en="for other studios" data-zh="美术设定">for other studios</span>
+            </h2>
+          </div>
+          <p class="outsource-lead reveal" data-en="Concept art, character designs and cutscene frames drawn for partners in 2021 and 2022. Click any image to see it full size." data-zh="2021 至 2022 年为合作方绘制的概念设定、角色立绘与过场画面。点开可看大图。">Concept art, character designs and cutscene frames drawn for partners in 2021 and 2022. Click any image to see it full size.</p>
+        </div>
+
+        <div class="outsource-block">
+          <p class="outsource-label reveal"><span data-en="Concept art" data-zh="概念设定">Concept art</span><span class="outsource-line" aria-hidden="true"></span></p>
+          <div class="outsource-masonry reveal">
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-01.webp" data-title-en="Town outskirts — environment design" data-title-zh="场景设定-城镇外围" aria-label="Open Town outskirts — environment design" data-en-aria="Open Town outskirts — environment design" data-zh-aria="查看 场景设定-城镇外围">
+              <img src="img/outsource/concept-01.webp" alt="Town outskirts — environment design" data-en-alt="Town outskirts — environment design" data-zh-alt="场景设定-城镇外围" width="1400" height="788" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-02.webp" data-title-en="Balazan" data-title-zh="巴拉赞" aria-label="Open Balazan" data-en-aria="Open Balazan" data-zh-aria="查看 巴拉赞">
+              <img src="img/outsource/concept-02.webp" alt="Balazan" data-en-alt="Balazan" data-zh-alt="巴拉赞" width="1400" height="791" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-03.webp" data-title-en="Balazan — stigmata" data-title-zh="巴拉赞圣痕小" aria-label="Open Balazan — stigmata" data-en-aria="Open Balazan — stigmata" data-zh-aria="查看 巴拉赞圣痕小">
+              <img src="img/outsource/concept-03.webp" alt="Balazan — stigmata" data-en-alt="Balazan — stigmata" data-zh-alt="巴拉赞圣痕小" width="768" height="1400" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-04.webp" data-title-en="Battle scene" data-title-zh="战斗" aria-label="Open Battle scene" data-en-aria="Open Battle scene" data-zh-aria="查看 战斗">
+              <img src="img/outsource/concept-04.webp" alt="Battle scene" data-en-alt="Battle scene" data-zh-alt="战斗" width="1400" height="788" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-05.webp" data-title-en="Linla" data-title-zh="林菈" aria-label="Open Linla" data-en-aria="Open Linla" data-zh-aria="查看 林菈">
+              <img src="img/outsource/concept-05.webp" alt="Linla" data-en-alt="Linla" data-zh-alt="林菈" width="1400" height="788" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-06.webp" data-title-en="Concept design 2" data-title-zh="概念设计2" aria-label="Open Concept design 2" data-en-aria="Open Concept design 2" data-zh-aria="查看 概念设计2">
+              <img src="img/outsource/concept-06.webp" alt="Concept design 2" data-en-alt="Concept design 2" data-zh-alt="概念设计2" width="1400" height="788" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-07.webp" data-title-en="Thief" data-title-zh="盗贼" aria-label="Open Thief" data-en-aria="Open Thief" data-zh-aria="查看 盗贼">
+              <img src="img/outsource/concept-07.webp" alt="Thief" data-en-alt="Thief" data-zh-alt="盗贼" width="1400" height="788" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-08.webp" data-title-en="Queen of Holvo — the turning point" data-title-zh="荷尔沃女王人生转折" aria-label="Open Queen of Holvo — the turning point" data-en-aria="Open Queen of Holvo — the turning point" data-zh-aria="查看 荷尔沃女王人生转折">
+              <img src="img/outsource/concept-08.webp" alt="Queen of Holvo — the turning point" data-en-alt="Queen of Holvo — the turning point" data-zh-alt="荷尔沃女王人生转折" width="1400" height="791" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-09.webp" data-title-en="Queen of Holvo — the wedding" data-title-zh="荷尔沃女王大婚" aria-label="Open Queen of Holvo — the wedding" data-en-aria="Open Queen of Holvo — the wedding" data-zh-aria="查看 荷尔沃女王大婚">
+              <img src="img/outsource/concept-09.webp" alt="Queen of Holvo — the wedding" data-en-alt="Queen of Holvo — the wedding" data-zh-alt="荷尔沃女王大婚" width="1400" height="791" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-10.webp" data-title-en="Queen of Holvo — romance" data-title-zh="荷尔沃女王爱情" aria-label="Open Queen of Holvo — romance" data-en-aria="Open Queen of Holvo — romance" data-zh-aria="查看 荷尔沃女王爱情">
+              <img src="img/outsource/concept-10.webp" alt="Queen of Holvo — romance" data-en-alt="Queen of Holvo — romance" data-zh-alt="荷尔沃女王爱情" width="1400" height="791" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-11.webp" data-title-en="Queen of Holvo — design sheet" data-title-zh="荷尔沃女王设定图" aria-label="Open Queen of Holvo — design sheet" data-en-aria="Open Queen of Holvo — design sheet" data-zh-aria="查看 荷尔沃女王设定图">
+              <img src="img/outsource/concept-11.webp" alt="Queen of Holvo — design sheet" data-en-alt="Queen of Holvo — design sheet" data-zh-alt="荷尔沃女王设定图" width="1400" height="791" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-12.webp" data-title-en="Queen of Holvo — youth" data-title-zh="荷尔沃女王青年" aria-label="Open Queen of Holvo — youth" data-en-aria="Open Queen of Holvo — youth" data-zh-aria="查看 荷尔沃女王青年">
+              <img src="img/outsource/concept-12.webp" alt="Queen of Holvo — youth" data-en-alt="Queen of Holvo — youth" data-zh-alt="荷尔沃女王青年" width="1400" height="791" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-13.webp" data-title-en="Holvo harbor — design sheet" data-title-zh="荷尔沃港口设定图" aria-label="Open Holvo harbor — design sheet" data-en-aria="Open Holvo harbor — design sheet" data-zh-aria="查看 荷尔沃港口设定图">
+              <img src="img/outsource/concept-13.webp" alt="Holvo harbor — design sheet" data-en-alt="Holvo harbor — design sheet" data-zh-alt="荷尔沃港口设定图" width="1400" height="791" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-14.webp" data-title-en="Royal house of Holvo, holy line of Soless — design sheet" data-title-zh="荷尔沃王族、索勒斯圣裔圣痕设定图" aria-label="Open Royal house of Holvo, holy line of Soless — design sheet" data-en-aria="Open Royal house of Holvo, holy line of Soless — design sheet" data-zh-aria="查看 荷尔沃王族、索勒斯圣裔圣痕设定图">
+              <img src="img/outsource/concept-14.webp" alt="Royal house of Holvo, holy line of Soless — design sheet" data-en-alt="Royal house of Holvo, holy line of Soless — design sheet" data-zh-alt="荷尔沃王族、索勒斯圣裔圣痕设定图" width="1400" height="791" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-15.webp" data-title-en="Herasino — stigmata" data-title-zh="赫拉希诺圣痕" aria-label="Open Herasino — stigmata" data-en-aria="Open Herasino — stigmata" data-zh-aria="查看 赫拉希诺圣痕">
+              <img src="img/outsource/concept-15.webp" alt="Herasino — stigmata" data-en-alt="Herasino — stigmata" data-zh-alt="赫拉希诺圣痕" width="1400" height="939" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-16.webp" data-title-en="Snow mountain settlers" data-title-zh="雪山遗民" aria-label="Open Snow mountain settlers" data-en-aria="Open Snow mountain settlers" data-zh-aria="查看 雪山遗民">
+              <img src="img/outsource/concept-16.webp" alt="Snow mountain settlers" data-en-alt="Snow mountain settlers" data-zh-alt="雪山遗民" width="788" height="1400" loading="lazy" decoding="async">
+            </button>
+          </figure>
+<figure class="outsource-shot">
+            <button type="button" data-art data-art-group="concept" data-full="img/outsource/concept-17.webp" data-title-en="Snow mountain settlers — stigmata" data-title-zh="雪山遗民圣痕" aria-label="Open Snow mountain settlers — stigmata" data-en-aria="Open Snow mountain settlers — stigmata" data-zh-aria="查看 雪山遗民圣痕">
+              <img src="img/outsource/concept-17.webp" alt="Snow mountain settlers — stigmata" data-en-alt="Snow mountain settlers — stigmata" data-zh-alt="雪山遗民圣痕" width="1400" height="1050" loading="lazy" decoding="async">
+            </button>
+          </figure>
+        </div>
+        </div>
+
+        <div class="outsource-block">
+          <p class="outsource-label reveal"><span data-en="Character art" data-zh="角色立绘">Character art</span><span class="outsource-line" aria-hidden="true"></span></p>
+          <div class="outsource-cast reveal">
+          <figure class="outsource-figure">
+            <button type="button" data-art data-art-group="char" data-full="img/outsource/char-01.webp" data-title-en="Greatsword knight — male" data-title-zh="大剑士男（改）" aria-label="Open Greatsword knight — male" data-en-aria="Open Greatsword knight — male" data-zh-aria="查看 大剑士男（改）">
+              <img src="img/outsource/char-01.webp" alt="Greatsword knight — male" data-en-alt="Greatsword knight — male" data-zh-alt="大剑士男（改）" width="1200" height="1000" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <figure class="outsource-figure">
+            <button type="button" data-art data-art-group="char" data-full="img/outsource/char-02.webp" data-title-en="Prince of Balazan — male" data-title-zh="巴拉赞 亲王 男 修改" aria-label="Open Prince of Balazan — male" data-en-aria="Open Prince of Balazan — male" data-zh-aria="查看 巴拉赞 亲王 男 修改">
+              <img src="img/outsource/char-02.webp" alt="Prince of Balazan — male" data-en-alt="Prince of Balazan — male" data-zh-alt="巴拉赞 亲王 男 修改" width="1200" height="1000" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <figure class="outsource-figure">
+            <button type="button" data-art data-art-group="char" data-full="img/outsource/char-03.webp" data-title-en="Duke of Holvo — male" data-title-zh="荷尔沃公爵男" aria-label="Open Duke of Holvo — male" data-en-aria="Open Duke of Holvo — male" data-zh-aria="查看 荷尔沃公爵男">
+              <img src="img/outsource/char-03.webp" alt="Duke of Holvo — male" data-en-alt="Duke of Holvo — male" data-zh-alt="荷尔沃公爵男" width="1200" height="1000" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <figure class="outsource-figure">
+            <button type="button" data-art data-art-group="char" data-full="img/outsource/char-04.webp" data-title-en="Archer" data-title-zh="弓箭手" aria-label="Open Archer" data-en-aria="Open Archer" data-zh-aria="查看 弓箭手">
+              <img src="img/outsource/char-04.webp" alt="Archer" data-en-alt="Archer" data-zh-alt="弓箭手" width="1200" height="1000" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <figure class="outsource-figure">
+            <button type="button" data-art data-art-group="char" data-full="img/outsource/char-05.webp" data-title-en="Count of Soless — male" data-title-zh="索勒斯伯爵男" aria-label="Open Count of Soless — male" data-en-aria="Open Count of Soless — male" data-zh-aria="查看 索勒斯伯爵男">
+              <img src="img/outsource/char-05.webp" alt="Count of Soless — male" data-en-alt="Count of Soless — male" data-zh-alt="索勒斯伯爵男" width="1200" height="1000" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <figure class="outsource-figure">
+            <button type="button" data-art data-art-group="char" data-full="img/outsource/char-06.webp" data-title-en="Heavy cavalry — male" data-title-zh="重骑兵男 (修改）" aria-label="Open Heavy cavalry — male" data-en-aria="Open Heavy cavalry — male" data-zh-aria="查看 重骑兵男 (修改）">
+              <img src="img/outsource/char-06.webp" alt="Heavy cavalry — male" data-en-alt="Heavy cavalry — male" data-zh-alt="重骑兵男 (修改）" width="1200" height="1000" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <figure class="outsource-figure">
+            <button type="button" data-art data-art-group="char" data-full="img/outsource/char-07.webp" data-title-en="Heavy cavalry — female" data-title-zh="重骑兵女" aria-label="Open Heavy cavalry — female" data-en-aria="Open Heavy cavalry — female" data-zh-aria="查看 重骑兵女">
+              <img src="img/outsource/char-07.webp" alt="Heavy cavalry — female" data-en-alt="Heavy cavalry — female" data-zh-alt="重骑兵女" width="1200" height="1000" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          <figure class="outsource-figure">
+            <button type="button" data-art data-art-group="char" data-full="img/outsource/char-08.webp" data-title-en="Elector of Herasino — male" data-title-zh="赫拉西诺选帝侯男" aria-label="Open Elector of Herasino — male" data-en-aria="Open Elector of Herasino — male" data-zh-aria="查看 赫拉西诺选帝侯男">
+              <img src="img/outsource/char-08.webp" alt="Elector of Herasino — male" data-en-alt="Elector of Herasino — male" data-zh-alt="赫拉西诺选帝侯男" width="1200" height="1000" loading="lazy" decoding="async">
+            </button>
+          </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <img class="contact-bg" src="img/hero-atmosphere.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async">
+      <div class="page-width contact-inner">
+        <h2 class="contact-title reveal" id="contact-title">
+          <span data-en="Work" data-zh="欢迎">Work</span>
+          <span data-en="with us" data-zh="与我们合作">with us</span>
+        </h2>
+        <p class="contact-copy reveal" data-en="Publishing, co-development, custom games — email us." data-zh="发行、联合开发、定制游戏，发邮件给我们">Publishing, co-development, custom games — email us.</p>
+        <div class="contact-actions reveal">
+          <a class="button button-light" href="mailto:cluo85@foxmail.com">
+            <span data-en="cluo85@foxmail.com" data-zh="cluo85@foxmail.com">cluo85@foxmail.com</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="video-dialog" id="videoDialog" aria-labelledby="videoDialogTitle">
+    <div class="video-dialog-head">
+      <div class="video-dialog-heading">
+        <p class="eyebrow"><span data-en="Now playing" data-zh="正在播放">Now playing</span><span class="eyebrow-dot" aria-hidden="true"></span><span>YouTube</span></p>
+        <h3 id="videoDialogTitle">Brainrot Fight</h3>
+      </div>
+      <button class="video-dialog-close" id="videoDialogClose" type="button" aria-label="Close video" data-en-aria="Close video" data-zh-aria="关闭视频">
+        <span data-en="Close" data-zh="关闭">Close</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="video-dialog-frame" id="videoDialogFrame"></div>
+  </dialog>
+
+  <dialog class="art-dialog" id="artDialog" aria-labelledby="artDialogTitle">
+    <div class="video-dialog-head">
+      <div class="video-dialog-heading">
+        <p class="eyebrow"><span data-en="Commissioned work" data-zh="外包作品">Commissioned work</span><span class="eyebrow-dot" aria-hidden="true"></span><span id="artDialogCount">01 / 17</span></p>
+        <h3 id="artDialogTitle" data-en="Concept art" data-zh="概念设定">Concept art</h3>
+      </div>
+      <button class="video-dialog-close" id="artDialogClose" type="button" aria-label="Close image" data-en-aria="Close image" data-zh-aria="关闭大图">
+        <span data-en="Close" data-zh="关闭">Close</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="art-dialog-stage">
+      <img id="artDialogImage" src="img/outsource/concept-01.webp" alt="" decoding="async">
+      <button class="art-dialog-nav art-dialog-prev" id="artDialogPrev" type="button" aria-label="Previous image" data-en-aria="Previous image" data-zh-aria="上一张">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="art-dialog-nav art-dialog-next" id="artDialogNext" type="button" aria-label="Next image" data-en-aria="Next image" data-zh-aria="下一张">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </dialog>
+
+  <footer class="footer">
+    <div class="page-width footer-top">
+      <a class="brand footer-brand" href="#top" aria-label="Back to top" data-en-aria="Back to top" data-zh-aria="回到顶部">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="3.2" fill="currentColor"/>
+          <ellipse cx="16" cy="16" rx="13" ry="5.2" fill="none" stroke="currentColor" stroke-width="1.25" transform="rotate(-28 16 16)"/>
+          <circle cx="27" cy="9.3" r="1.4" fill="currentColor"/>
+        </svg>
+        <span>STAR HALO</span>
+      </a>
+      <p class="footer-note" data-en="Beijing, China" data-zh="中国 · 北京">Beijing, China</p>
+    </div>
+    <div class="page-width footer-bottom">
+      <p>© <span id="year">2026</span> Beijing Star Halo Technology Co., Ltd. · 北京星环漫宇科技有限公司</p>
+      <nav aria-label="Legal" data-en-aria="Legal" data-zh-aria="法律信息">
+        <a href="privacy.html"><span data-en="Privacy" data-zh="隐私政策">Privacy</span></a>
+        <a href="privacycn.html"><span data-en="Privacy (Chinese)" data-zh="隐私政策（中文）">Privacy (Chinese)</span></a>
+        <a href="outsource/"><span data-en="Development services" data-zh="开发服务">Development services</span></a>
+        <a href="http://beian.miit.gov.cn" target="_blank" rel="noopener">京ICP备18040794号-3</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
