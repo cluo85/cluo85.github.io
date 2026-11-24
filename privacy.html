@@ -37,11 +37,8 @@
         <h3>1.4 Purchases and leaderboards</h3>
         <p>In the App Store version, purchases are processed by Apple; we never receive your payment account, card number or password. Leaderboards use Apple Game Center, which displays your Game Center nickname and score.</p>
 
-        <h3>1.5 Service security</h3>
-        <p>We record crash logs and exception information to keep the service stable and to prevent cheating.</p>
-
-        <h3>1.6 What we do not collect</h3>
-        <p>We do not collect your name, phone number, email address, ID number, contacts, messages, call history, photos, videos, microphone or camera content, precise location, or clipboard content.</p>
+        <h3>1.5 Information we do not actively collect</h3>
+        <p>The game does not actively collect your name, phone number, email address, ID number, contacts, messages, call history, photos, videos, microphone or camera content, precise location, or clipboard content. If you email us, we process your email address and message only to respond to your request.</p>
 
         <h2>2. Permissions we request</h2>
         <p>1. We may request or use operating system permissions so that the game works and stays secure.</p>
@@ -63,14 +60,14 @@
                 <tr>
                     <td>Network access</td>
                     <td>To load ads and other network content</td>
-                    <td>Active after install</td>
-                    <td>Yes, in system settings</td>
+                    <td>Normal permission on Android, granted at installation without a runtime prompt</td>
+                    <td>Usually no separate permission toggle</td>
                 </tr>
                 <tr>
                     <td>Network state</td>
                     <td>To detect whether the network is available</td>
-                    <td>Active after install</td>
-                    <td>Yes, in system settings</td>
+                    <td>Normal permission on Android, granted at installation without a runtime prompt</td>
+                    <td>Usually no separate permission toggle</td>
                 </tr>
                 <tr>
                     <td>Advertising identifier and tracking authorization (iOS)<br><span class="note">NSUserTrackingUsageDescription</span></td>
@@ -93,9 +90,10 @@
             </tbody>
         </table>
 
-        <p>We do <strong>not</strong> request location, phone state or device identifiers, installed-application lists, install-package, overlay, external storage, camera, microphone, contacts, calendar, call log, or clipboard permissions, and we do not read the corresponding information.</p>
+        <p>The game does <strong>not</strong> request location, phone-state, installed-application-list, package-installation, overlay, external-storage, camera, microphone, contacts, calendar or call-log permissions, and does not actively read the clipboard.</p>
 
         <h2>3. Third-party SDKs</h2>
+        <p>We use the following third-party SDKs and apply necessary controls to their permission use. Their own privacy policies govern their processing.</p>
 
         <h3>3.1 Google AdMob</h3>
         <div class="sdk-section">
@@ -129,44 +127,34 @@
             <p><strong>Privacy policy:</strong> <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></p>
         </div>
 
-        <h3>3.4 Unity Engine</h3>
-        <div class="sdk-section">
-            <p><strong>SDK:</strong> Unity Engine (game runtime framework)</p>
-            <p><strong>Provider:</strong> Unity Technologies</p>
-            <p><strong>Purpose:</strong> game runtime framework</p>
-            <p><strong>Personal information:</strong> device model, OS version, graphics API information</p>
-            <p><strong>Collection method:</strong> collected by the SDK itself</p>
-            <p><strong>Privacy policy:</strong> <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a></p>
-        </div>
-
-        <p>These SDKs identify devices by randomly generated or system-provided identifiers. We do not link them to your identity and require the same level of protection as this policy.</p>
+        <p>These SDKs may use randomly generated or system-provided device-related identifiers to distinguish devices; see their privacy policies for the specific types. We do not actively link these identifiers to your real-world identity. Such identifiers may still constitute personal information even if they do not display your name.</p>
 
         <h2>4. Sharing, transfer and public disclosure</h2>
-        <p>We share information with the SDKs above only as needed for the purposes described in sections 1 and 3. We do not transfer your personal information to any other company, organization or individual, and we do not publicly disclose it. Leaderboards show your Game Center nickname and score only after you choose to submit a score.</p>
+        <p>The SDKs above process information as described in section 3 when providing their functions. Except for calls necessary to provide those functions, we do not actively provide your personal information to other third parties. We do not actively transfer or publicly disclose it, except where separate consent is obtained or applicable law provides otherwise. If a transfer is required by a merger, division or acquisition, we will identify the recipient and its contact details and require it to continue protecting the information. Leaderboards show your Game Center nickname and score only after you choose to submit a score.</p>
 
         <h2>5. Cross-border transfer</h2>
-        <p>The servers of the SDKs above (Google, Apple) may be located outside your country or region. We transfer data only after informing you and obtaining consent as required by applicable law, and we require recipients to protect it to the same standard as this policy.</p>
+        <p>The servers of the SDKs above (Google, Apple) may be located outside your country or region and may involve cross-border transfers. We will identify overseas recipients, the purposes and methods of processing, the information types and the procedures for exercising rights, and will fulfil separate-consent and other applicable cross-border compliance duties.</p>
 
         <h2>6. Storage</h2>
-        <p>Local data stays on your device and never leaves it. It remains there until you delete it in Settings &gt; Privacy &amp; Data or uninstall the game. Event-level Firebase Analytics data is retained for no longer than 14 months and then deleted automatically by Google; afterwards only aggregate statistics that cannot identify a single device remain. Ad data is handled by Google under its published privacy and retention policies. After the applicable period we delete or anonymize the information, unless the law requires otherwise.</p>
+        <p>Local saves are stored in the app's private storage and are not uploaded to our servers. They remain until you delete them in Settings &gt; Privacy &amp; Data or uninstall the game. Event-level Firebase Analytics data is retained for no longer than 14 months and then deleted automatically by Google; afterwards only aggregate statistics that cannot identify a single device remain. Ad data is handled by Google under its published privacy and retention policies. When information under our control is no longer necessary or its retention period expires, we delete or anonymize it as required by law, unless the law provides otherwise.</p>
 
         <h2>7. How we protect your information</h2>
-        <p>Local saves and settings are stored encrypted and readable only by the game. Access to personal information is limited to the minimum necessary personnel under confidentiality obligations. If a personal information security incident occurs, we will notify you and report to the regulator as required by law.</p>
+        <p>Local saves are stored in the app's private storage directory and protected by integrity checks against tampering. We apply security measures appropriate to the purposes and risks of processing. If a personal information security incident occurs, we will take remedial action and fulfil reporting and notification duties as required by law.</p>
 
         <h2>8. Your rights</h2>
-        <p>You can view this policy, request a copy or correction, delete local data, and withdraw consent in Settings &gt; Privacy &amp; Data; withdrawal takes effect immediately without restarting the game. You can turn off personalized ads, after which we only request non-personalized ads, and you can revoke tracking authorization in iOS system settings. The game has no accounts, so there is no account deletion process and we hold no data that can be linked to your identity. We respond to requests within 15 working days.</p>
+        <p>For information under our control that we can lawfully verify as relating to you, you may contact us under section 11 to request access, a copy, correction or supplementation. You can delete local saves, settings and consent records in Settings &gt; Privacy &amp; Data or by uninstalling the game. This does not directly delete data already lawfully processed by third-party SDKs; you may use the rights channels in their privacy policies or ask us for assistance. You can withdraw consent in Settings &gt; Privacy &amp; Data without restarting; this stops future consent-based collection but does not affect processing lawfully performed before withdrawal. You can turn off personalized ads, after which we only request non-personalized ads, and you can revoke tracking authorization in iOS system settings. The game has no accounts, so there is no account deletion process. We respond within the period required by law or, where none is specified, generally within 15 working days.</p>
 
         <h2>9. Minors</h2>
-        <p>Users under 18 should read this policy and use the game under a guardian's guidance. For children under 14, we require verifiable guardian consent before processing personal information and do not knowingly collect it. Guardians may contact us to have such data deleted. The game has no accounts and no stranger-facing posting, messaging or voice chat.</p>
+        <p>Users under 18 should read this policy with a guardian and use the game with the guardian's consent. Children under 14 should use the game only after obtaining guardian consent. We do not actively collect age information. A guardian who believes a child's information was processed without consent may contact us so we can handle it as required by law. The game has no accounts and no stranger-facing posting, messaging or voice chat.</p>
 
         <h2>10. Updates</h2>
-        <p>When this policy changes we will notify you in-game and ask for your consent again. The current version is always available in Settings &gt; Privacy &amp; Data and at <a href="https://www.starhalobj.com/privacy.html">https://www.starhalobj.com/privacy.html</a>.</p>
+        <p>We will provide reasonable in-game notice when this policy changes. We will ask for consent again where the purposes, methods or types of personal information processing change, or where applicable law otherwise requires renewed consent. The current version is available in Settings &gt; Privacy &amp; Data and at <a href="https://www.starhalobj.com/privacy.html">https://www.starhalobj.com/privacy.html</a>.</p>
 
         <h2>11. Contact</h2>
         <p><strong>Operator:</strong> Beijing Star Halo Technology Co., Ltd</p>
         <p><strong>Registered address:</strong> Room 301, No. 15 Zhixin Road, Haidian District, Beijing, China</p>
         <p><strong>Privacy contact:</strong> cluo85@foxmail.com</p>
-        <p>If you have questions, comments or complaints, contact us at the address above. We respond within 15 working days.</p>
+        <p>If you have questions, comments or complaints, contact us at the address above. We respond within the period required by law or, where none is specified, generally within 15 working days.</p>
     </div>
 </body>
 
