@@ -6,324 +6,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隐私政策</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23050507'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23fff'/%3E%3Cellipse cx='32' cy='32' rx='23' ry='9' fill='none' stroke='%238fadff' stroke-width='2.5' transform='rotate(-28 32 32)'/%3E%3C/svg%3E">
-    <style>
-        /* 基础样式重置和响应式布局 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #f8f9fa;
-            padding: 0;
-            max-width: 1200px;
-            margin: 0 auto;
-            min-height: 100vh;
-        }
-
-        /* 主容器样式 */
-        .privacy-container {
-            background: white;
-            margin: 20px;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        /* 标题样式 */
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #3498db;
-            position: relative;
-        }
-
-        h1::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: #e74c3c;
-        }
-
-        h2 {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin: 50px 0 20px 0;
-            padding: 15px 0;
-            border-bottom: 2px solid #ecf0f1;
-            position: relative;
-        }
-
-        h2::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 60px;
-            height: 2px;
-            background: #3498db;
-        }
-
-        h3 {
-            color: #34495e;
-            font-size: 1.4rem;
-            font-weight: 500;
-            margin: 30px 0 15px 0;
-            padding-left: 15px;
-            border-left: 4px solid #3498db;
-        }
-
-        h4 {
-            color: #2c3e50;
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin: 25px 0 15px 0;
-            padding: 10px 15px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 6px;
-            border-left: 4px solid #e74c3c;
-        }
-
-        /* 段落和文本样式 */
-        p {
-            margin-bottom: 16px;
-            font-size: 1.05rem;
-            color: #555;
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        /* 列表样式 */
-        ul {
-            padding-left: 30px;
-            margin: 15px 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-            padding-left: 10px;
-            position: relative;
-            line-height: 1.6;
-        }
-
-        ul li::before {
-            content: '•';
-            color: #3498db;
-            font-weight: bold;
-            position: absolute;
-            left: -15px;
-            font-size: 1.2rem;
-        }
-
-        /* SDK信息特殊样式 */
-        .sdk-section {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .sdk-section p {
-            margin: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .sdk-section p:first-child {
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 1.1rem;
-            padding-left: 0;
-            margin-bottom: 15px;
-        }
-
-        .sdk-section p:first-child::before {
-            content: none;
-        }
-
-        .sdk-section p:not(:first-child)::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 6px;
-            height: 6px;
-            background: #3498db;
-            border-radius: 50%;
-        }
-
-        /* 强调文本样式 */
-        strong {
-            color: #e74c3c;
-            font-weight: 600;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .privacy-container {
-                margin: 10px;
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 2rem;
-                margin-bottom: 30px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-                margin: 40px 0 15px 0;
-            }
-
-            h3 {
-                font-size: 1.2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            ul {
-                padding-left: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .privacy-container {
-                margin: 5px;
-                padding: 15px;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.3rem;
-            }
-        }
-
-        /* 打印样式 */
-        @media print {
-            body {
-                background: white;
-                margin: 0;
-                padding: 0;
-            }
-
-            .privacy-container {
-                margin: 0;
-                padding: 20px;
-                box-shadow: none;
-                border-radius: 0;
-            }
-
-            h1 {
-                color: black;
-                border-bottom: 2px solid black;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/privacy.css">
 </head>
 
 <body>
     <div class="privacy-container">
         <h1>隐私政策</h1>
-        <h2>一、概述</h2>
-    <p>本隐私政策由【北京星环漫宇科技有限公司】于2024年12月1日发布，最近更新于2026年11月9日，适用于我们提供的游戏（APP）。我们重视用户隐私，尤其是未成年人的个人信息保护。</p>
-    <h2>二、信息收集与使用</h2>
-    <h3>（一）用户主动提供的信息</h3>
-    <ul>
-        <li>注册、获取特定服务或功能、参与活动、向客服咨询时提供的信息。</li>
-        <li>使用服务时自动收集的日志信息、位置信息（特定功能相关），以及经同意收集的其他相关信息（如Android ID、设备传感器信息）。</li>
-    </ul>
-    <h3>（二）第三方平台相关信息收集（含SDK）</h3>
-    <h4>设备标识信息</h4>
-    <p>a) 保障正常使用产品或服务，进行数据统计和分析，提升账号安全性。若拒绝授权，可能影响APP正常使用。例如使用部分品牌手机时，APP会接入厂商联运所需SDK收集手机标识信息（如IMEI）和相关参数。</p>
-    <h4>存储权限</h4>
-    <p>a) 保障APP功能使用和数据保存，拒绝授权可能导致APP使用受限。</p>
-    <h4>地理位置信息</h4>
-    <p>a) 用于丰富APP体验，拒绝提供仅影响位置相关功能。用户可取消授权。</p>
-    <h4>实名身份信息</h4>
-    <p>a) 符合法规要求进行实名认证，拒绝提供可能限制游戏登录或使用。</p>
-    <h4>支付信息</h4>
-    <p>a) 通过第三方支付获取虚拟产品时，第三方可能收集充值、消费记录等，我们不获取支付账号和密码等信息。</p>
-    <h4>特定SDK信息</h4>
-    <div class="sdk-section">
-        <p>a) <strong>Firebase SDK</strong></p>
-        <p>i) 应用场景：数据分析</p>
-        <p>ii) 可能收集的个人信息的类型：用户大致位置信息、设备广告ID</p>
-        <p>iii) 第三方SDK提供方：Google LLC</p>
-    </div>
-    <div class="sdk-section">
-        <p>b) <strong>Admob SDK</strong></p>
-        <p>i) 应用场景：广告服务</p>
-        <p>ii) 可能收集的个人信息的类型：用户大致位置信息、设备广告ID</p>
-        <p>iii) 第三方SDK提供方：Google LLC</p>
-    </div>
-    <div class="sdk-section">
-        <p>c) <strong>穿山甲广告SDK</strong></p>
-        <p>i) 应用场景：广告投放</p>
-        <p>ii) 可能收集的个人信息的类型：设备信息（设备品牌、设备型号、系统版本、IP地址、MAC地址、Android_id）、应用信息、粗略位置信息、Android设备标识符（如IMEI、OAID、IMSI、设备序列号）、传感器信息、应用安装列表</p>
-        <p>iii) 第三方SDK提供方：北京巨量引擎网络技术有限公司</p>
-    </div>
-    <div class="sdk-section">
-        <p>d) <strong>Unity 3D</strong></p>
-        <p>i) 应用场景：框架</p>
-        <p>ii) 可能收集的个人信息的类型：读取设备信息（设备型号、系统名称、系统版本、MAC地址、IMEI、Android_id）、访问相机、应用安装列表、任务列表、网络状态信息、传感器信息、运营商名称</p>
-        <p>iii) 第三方SDK提供方：Unity Technologies</p>
-    </div>
-    <h2>三、特殊情况处理</h2>
-    <h3>（一）例外情况</h3>
-    <p>涉及国家安全、公共安全、犯罪侦查等特殊情况，无需征求用户授权同意即可收集使用相关个人信息。</p>
-    <h3>（二）特殊情况</h3>
-    <p>当功能或服务需获取新权限时，会通过APP弹窗提示用户授权，并更新隐私政策说明。</p>
-    <h2>四、Cookie及同类技术使用</h2>
-    <p>使用Cookie或同类技术用于分析用户使用APP的偏好，以优化体验，不会用于其他目的，并遵守相关法规保障信息安全。</p>
-    <h2>五、信息共享、转让与披露</h2>
-    <h3>（一）共享</h3>
-    <p>严格遵守法规，在合法、正当、必要等前提下，对去标识化处理后的个人信息进行共享，并采取安全防护措施。</p>
-    <h3>（二）转让</h3>
-    <p>需事先获得用户同意或依据法规、法律程序、协议约定等情况进行，并确保新持有方履行责任。</p>
-    <h3>（三）公开披露</h3>
-    <p>根据用户需求在同意后披露指定信息，或依据法规、强制性要求进行披露，并对相关文件加密保护。</p>
-    <h2>六、信息存储</h2>
-    <p>（一）仅在本隐私政策目的所需和法规要求的时限内存储个人信息。</p>
-    <p>（二）部分数据会在中华人民共和国境外的服务器上处理。此类情况下，数据会传输给本政策所列的第三方 SDK 提供方（如 Google LLC），由其按照公开的隐私政策与数据处理条款处理。我们仅在你知悉并取得适用法律要求的同意后才会这样做。</p>
-    <h2>七、信息保护措施</h2>
-    <p>（一）采用严格安全制度、技术和程序保障信息安全，防止丢失、泄露等。</p>
-    <p>（二）采取加密、匿名化、隔离、权限控制、认证技术等手段保护信息。</p>
-    <p>（三）加强员工安全意识，限制人员访问信息，要求保密义务，对违规行为追究责任。</p>
-    <p>（四）发生信息安全事件时，按法规要求及时告知用户相关情况，并采取措施处理。</p>
-    <p>（五）用户通过第三方付款交易时需注意保护个人信息，若发现用户将APP用于欺诈或非法目的，将采取措施处理。</p>
-    <p>（六）本政策所列第三方 SDK（如 Google LLC 提供的 Firebase 与 AdMob）均受其公开隐私政策与数据处理条款约束，对我们向其传输的数据提供与本政策同等的保护。</p>
-    <h2>八、用户信息管理</h2>
-    <p>（一）用户可在APP内或接入的第三方服务中访问、更新和删除个人信息，操作时可能需身份验证。</p>
-    <p>（二）用户可按APP指引或通过指定联系方式申请注销账号，我们将告知注销流程。</p>
-    <p>（三）根据法规，用户更新、删除信息或注销账号时，可能不会立即从备份系统处理，但会在备份更新时操作。</p>
-    <p>（四）保留期限：本地游戏数据保存在您的设备上，直至您在 App 内删除或卸载游戏；通过 Firebase 收集的事件级数据保留不超过 14 个月，之后由 Google 自动删除，不含设备标识的聚合统计可能保留更久；AdMob 处理的广告数据由 Google 按其公布的保留政策处理。</p>
-    <p>（五）撤回同意与删除：您可以在 App 的“设置 - 隐私与数据”中随时撤回同意、删除本地数据。如需行使查阅、更正、删除等权利，可发送邮件至 cluo85@foxmail.com，我们将依法处理。</p>
-    <h2>九、未成年人使用条款</h2>
-    <p>（一）未满18周岁的用户应在监护人监护、指导下阅读本隐私政策并使用APP；未满14周岁的用户，我们会在取得监护人同意后再收集、处理其个人信息，并按适用法律的要求处理该等信息。</p>
-    <p>（二）我们依据法规保护未成年人信息，仅在合法、监护人同意或必要情况下收集等处理未成年人信息，若发现未经同意收集，将尽快删除。</p>
-    <p>（三）未成年人监护人如有信息相关疑问，可通过公示联系方式联系我们。</p>
-    <h2>十、联系我们</h2>
-    <p>若用户对本隐私政策有疑问、意见或建议，可在工作日9:00 - 18:00通过客服邮箱cluo85@foxmail.com联系我们。</p>
+
+        <div class="meta">
+            <p><strong>更新日期：</strong>2026年6月1日</p>
+            <p><strong>生效日期：</strong>2026年6月1日</p>
+            <p><strong>运营者：</strong>北京星环漫宇科技有限公司</p>
+            <p><strong>注册地址：</strong>北京市【请填写营业执照住所】</p>
+            <p><strong>适用范围：</strong>本政策适用于我们在 App Store、Google Play 等渠道发布的版本《星空浪人》（Galaxy Tycoon）。</p>
+        </div>
+
+        <p>北京星环漫宇科技有限公司（以下简称「我们」）是手机游戏《星空浪人》（Galaxy Tycoon）的运营者。我们深知个人信息对你的重要性，会按照适用的个人信息保护法律法规处理你的个人信息。请你在使用本游戏前仔细阅读本政策。</p>
+
+        <h2>一、我们如何收集和使用你的个人信息</h2>
+
+        <h3>（一）提供游戏服务</h3>
+        <p>你的游戏进度、设置项、道具与货币数量保存在设备本地，不会上传到我们的服务器。本游戏不设账号，没有注册、登录、昵称、头像、好友、聊天等功能。</p>
+
+        <h3>（二）展示广告</h3>
+        <p>本游戏通过第三方广告 SDK 展示广告。广告 SDK 会自行采集设备信息与广告标识符，用于广告投放、效果统计与反作弊。在 iOS 上，只有你在系统跟踪授权弹窗中允许跟踪、并同意个性化广告后，才会使用广告标识符（IDFA）；你可以随时在系统设置中关闭跟踪。个性化广告需要你单独同意，你也可以在「设置 - 隐私与数据」中关闭。</p>
+
+        <h3>（三）数据分析</h3>
+        <p>在你同意后，我们通过第三方统计 SDK 记录启动、关卡进度、广告观看、内购等事件，用于了解功能使用情况、排查故障。我们不会将统计数据与你的身份关联。</p>
+
+        <h3>（四）内购与排行榜</h3>
+        <p>在 App Store 版本中，购买由 Apple 处理，我们不会获取你的支付账号、银行卡号或密码。排行榜使用 Apple Game Center，展示的是你在 Game Center 中的昵称与分数。</p>
+
+        <h3>（五）保障服务安全</h3>
+        <p>为保障服务稳定运行、防范作弊，我们会记录崩溃日志与异常信息。</p>
+
+        <h3>（六）我们不会收集的信息</h3>
+        <p>我们不收集：姓名、手机号码、电子邮箱、身份证件号码、通讯录、短信内容、通话记录、照片与视频、麦克风与摄像头内容、精确位置信息、剪切板内容。</p>
+
+        <h2>二、系统权限申请与使用情况说明</h2>
+        <p>1. 为保障本游戏产品功能实现与安全稳定运行之目的，我们可能会申请或使用操作系统的相关权限；</p>
+        <p>2. 为保障你的知情权，我们通过下列列表将本产品可能申请、使用的相关操作系统权限进行展示，你可以根据实际需要对相关权限进行管理；</p>
+        <p>3. 根据产品的升级，申请、使用权限的类型与目的可能会有变动，我们将及时根据这些变动对列表进行调整；</p>
+        <p>4. 我们为业务与产品的功能与安全需要，也可能使用第三方 SDK，这些第三方也可能会申请或使用相关操作系统权限。</p>
+
+        <h3>iOS 与安卓操作系统应用权限列表</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>权限</th>
+                    <th>用途和目的</th>
+                    <th>申请时机</th>
+                    <th>可否关闭</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>网络访问</td>
+                    <td>用于访问网络数据、请求广告素材</td>
+                    <td>安装后即生效</td>
+                    <td>可在系统设置中关闭</td>
+                </tr>
+                <tr>
+                    <td>查看网络状态</td>
+                    <td>用于判断当前网络是否可用</td>
+                    <td>安装后即生效</td>
+                    <td>可在系统设置中关闭</td>
+                </tr>
+                <tr>
+                    <td>广告标识符与跟踪授权（iOS）<br><span class="note">NSUserTrackingUsageDescription</span></td>
+                    <td>仅在你于系统弹窗中允许跟踪、并同意个性化广告后使用，用于广告投放与效果统计</td>
+                    <td>你同意隐私政策并开启个性化广告后</td>
+                    <td>可在系统设置中随时关闭</td>
+                </tr>
+                <tr>
+                    <td>内购（iOS）<br><span class="note">StoreKit</span></td>
+                    <td>仅在你主动购买时由系统处理</td>
+                    <td>你点击购买时</td>
+                    <td>不使用内购即不涉及</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>本产品<strong>不申请</strong>以下权限，也不会读取对应信息：位置信息、读取电话状态与设备标识、读取应用安装列表、安装其他应用、显示悬浮窗、读取与写入外部存储、相机、麦克风、通讯录、日历、通话记录、读取剪切板。</p>
+
+        <h2>三、第三方 SDK 清单</h2>
+        <p>为保障相关功能的实现与应用安全稳定运行，我们接入了由第三方提供的软件开发包（SDK）。我们已对接入的 SDK 进行安全监测，并按下列清单逐一列明。</p>
+
+        <h3>1. Google AdMob</h3>
+        <div class="sdk-section">
+            <p><strong>SDK 名称：</strong>Google Mobile Ads SDK</p>
+            <p><strong>合作方主体：</strong>Google LLC</p>
+            <p><strong>使用目的：</strong>展示广告、广告效果统计</p>
+            <p><strong>使用场景：</strong>展示插屏广告与激励视频广告时</p>
+            <p><strong>收集的个人信息类型：</strong>设备型号、操作系统版本、广告标识符（IDFA 或安卓广告 ID）、IP 地址、大致地区、应用内交互事件</p>
+            <p><strong>采集方式：</strong>SDK 自行采集</p>
+            <p><strong>隐私政策链接：</strong><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+        </div>
+
+        <h3>2. Firebase Analytics</h3>
+        <div class="sdk-section">
+            <p><strong>SDK 名称：</strong>Firebase Analytics</p>
+            <p><strong>合作方主体：</strong>Google LLC</p>
+            <p><strong>使用目的：</strong>统计分析、故障排查</p>
+            <p><strong>使用场景：</strong>你同意隐私政策并开启数据分析后</p>
+            <p><strong>收集的个人信息类型：</strong>设备型号、操作系统版本、应用实例标识、应用内事件、由 IP 推断的国家或地区</p>
+            <p><strong>采集方式：</strong>SDK 自行采集</p>
+            <p><strong>隐私政策链接：</strong><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+        </div>
+
+        <h3>3. Apple StoreKit 与 Game Center</h3>
+        <div class="sdk-section">
+            <p><strong>合作方主体：</strong>Apple Inc.</p>
+            <p><strong>使用目的：</strong>应用内购买、排行榜</p>
+            <p><strong>使用场景：</strong>你主动购买时；查看或提交排行榜分数时</p>
+            <p><strong>收集的个人信息类型：</strong>购买凭据与交易标识、Game Center 昵称与分数</p>
+            <p><strong>采集方式：</strong>由系统组件采集</p>
+            <p><strong>隐私政策链接：</strong><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">https://www.apple.com/legal/privacy/</a></p>
+        </div>
+
+        <h3>4. Unity 引擎</h3>
+        <div class="sdk-section">
+            <p><strong>SDK 名称：</strong>Unity Engine（游戏运行框架）</p>
+            <p><strong>合作方主体：</strong>Unity Technologies</p>
+            <p><strong>使用目的：</strong>游戏运行框架</p>
+            <p><strong>使用场景：</strong>游戏运行期间</p>
+            <p><strong>收集的个人信息类型：</strong>设备型号、操作系统版本、图形接口信息</p>
+            <p><strong>采集方式：</strong>SDK 自行采集</p>
+            <p><strong>隐私政策链接：</strong><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/privacy-policy</a></p>
+        </div>
+
+        <p>上述 SDK 以随机生成或系统提供的设备标识区分设备，我们不将其与你的身份关联，并已要求其按公开的隐私政策与数据处理条款提供不低于本政策的保护水平。</p>
+
+        <h2>四、我们如何共享、转让、公开披露你的个人信息</h2>
+        <p>1. <strong>共享：</strong>我们仅在实现第一、三节所述目的所需的范围内，向上述第三方 SDK 提供必要的信息；除此之外不会与任何第三方共享你的个人信息。</p>
+        <p>2. <strong>转让：</strong>我们不会将你的个人信息转让给任何公司、组织或个人。如因合并、分立、收购等原因需要转让，我们会告知你接收方的名称与联系方式，并要求其继续受本政策约束。</p>
+        <p>3. <strong>公开披露：</strong>我们不会公开披露你的个人信息。排行榜仅在你主动提交分数后展示你的 Game Center 昵称与分数。</p>
+
+        <h2>五、个人信息出境</h2>
+        <p>上述第三方 SDK（Google、Apple）的服务器可能位于你所在国家或地区境外，会涉及个人信息出境。我们仅在你知悉并取得适用法律要求的同意后才会这样做，并要求接收方按本政策同等水平保护你的信息。</p>
+
+        <h2>六、我们如何存储你的个人信息</h2>
+        <p>1. <strong>存储地域：</strong>本地存档保存在你的设备上，不会离开设备。</p>
+        <p>2. <strong>存储期限：</strong>本地数据保存在你的设备上，直至你在「设置 - 隐私与数据」中删除，或卸载本游戏。Firebase Analytics 的事件级数据保留不超过 14 个月，到期后由 Google 自动删除；此后仅保留不含单台设备信息的聚合统计。广告数据由 Google 按其公布的隐私与数据保留政策处理。</p>
+        <p>3. <strong>超期处理：</strong>超过上述期限后，我们会删除你的个人信息或进行匿名化处理；法律法规另有规定的除外。</p>
+
+        <h2>七、我们如何保护你的个人信息</h2>
+        <p>1. 本地存档与设置项使用加密方式保存，仅本游戏可读取。</p>
+        <p>2. 我们对访问个人信息的人员实行最小授权，并要求其履行保密义务。</p>
+        <p>3. 如发生个人信息安全事件，我们会按照法律法规要求及时告知你，并向监管部门报告。</p>
+
+        <h2>八、你的权利</h2>
+        <p>1. <strong>查阅、复制：</strong>你可以在「设置 - 隐私与数据」中随时查看本政策全文；如需获取我们处理的你的个人信息副本，可通过第十一节的方式联系我们。</p>
+        <p>2. <strong>更正、补充：</strong>如你发现我们处理的个人信息有误，可联系我们更正。</p>
+        <p>3. <strong>删除：</strong>你可以在「设置 - 隐私与数据」中点击「删除我的数据」，删除本机存档、游戏设置与隐私同意记录；也可以卸载本游戏删除全部本地数据。</p>
+        <p>4. <strong>撤回同意：</strong>你可以在「设置 - 隐私与数据」中关闭同意并保存，我们会立即停止后续采集，不需要重启游戏。</p>
+        <p>5. <strong>限制处理：</strong>你可以关闭「个性化广告」，我们将只请求非个性化广告；在 iOS 上也可以关闭系统跟踪授权。</p>
+        <p>6. <strong>注销账号：</strong>本游戏不设账号，不存在账号注销流程，也不保存可与你的身份对应的数据。</p>
+        <p>7. 我们承诺在收到你的请求后 15 个工作日内答复。</p>
+
+        <h2>九、未成年人保护</h2>
+        <p>1. 若你是未满 18 周岁的未成年人，请在监护人的陪同下阅读本政策，并在取得监护人同意后使用本游戏。</p>
+        <p>2. 若你是未满 14 周岁的儿童，我们将在取得你的监护人同意后才处理你的个人信息。我们不会主动收集儿童的个人信息；如监护人发现我们在未获同意的情况下收集了儿童的个人信息，可联系我们删除。</p>
+        <p>3. 本游戏不设账号系统与社交功能，不提供面向陌生人的内容发布、私信与语音聊天。</p>
+
+        <h2>十、本政策如何更新</h2>
+        <p>1. 本政策更新后，我们会在游戏内以弹窗方式提示你，并重新征得你的同意。</p>
+        <p>2. 你可以在「设置 - 隐私与数据」中查看最新版本，也可以访问 <a href="https://www.starhalobj.com/privacycn.html">https://www.starhalobj.com/privacycn.html</a> 查看。</p>
+
+        <h2>十一、如何联系我们</h2>
+        <p><strong>运营者：</strong>北京星环漫宇科技有限公司</p>
+        <p><strong>注册地址：</strong>北京市【请填写营业执照住所】</p>
+        <p><strong>个人信息保护负责人联系方式：</strong>cluo85@foxmail.com</p>
+        <p>如你对本政策或个人信息处理有疑问、意见或投诉，可通过上述邮箱联系我们，我们会在 15 个工作日内答复。</p>
     </div>
 </body>
 
