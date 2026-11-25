@@ -11,8 +11,8 @@
     <div class="privacy-container">
         <h1>隐私政策</h1>
         <div class="meta">
-            <p><strong>更新日期：</strong>2026年11月24日</p>
-            <p><strong>生效日期：</strong>2026年11月24日</p>
+            <p><strong>更新日期：</strong>2026年7月30日</p>
+            <p><strong>生效日期：</strong>2026年7月30日</p>
             <p><strong>运营者：</strong>北京星环漫宇科技有限公司</p>
             <p><strong>适用范围：</strong>本政策适用于我们在 TapTap 渠道发布的安卓版本《星空浪人》（Galaxy Tycoon）。</p>
         </div>
@@ -21,9 +21,11 @@
         <h2>一、我们如何收集和使用你的个人信息</h2>
         <h3>（一）提供游戏服务</h3>
         <p>你的游戏进度、设置项、道具与货币数量保存在设备本地，不会上传到我们的服务器。本游戏不设账号，没有注册、登录、昵称、头像、好友、聊天等功能；本渠道版本不提供应用内购买、排行榜或数据分析服务。</p>
-        <h3>（二）展示广告</h3>
+        <h3>（二）启动时机与 App 自身处理的信息</h3>
+        <p>本游戏在玩家同意本政策前只显示原生隐私页，不启动 Unity 引擎运行时，也不初始化穿山甲广告 SDK。同意后，App 自身为识别安装、保障本地存档完整、适配设备与处理基础异常，可能读取或处理 Android ID、OAID（开放匿名设备标识符）、设备厂商与型号、操作系统版本、应用包名与版本、网络状态与 IP 地址。本游戏不上传游戏存档，也不使用这些标识建立用户账号。</p>
+        <h3>（三）展示广告</h3>
         <p>本游戏通过穿山甲广告 SDK 展示插屏广告与激励视频广告。广告 SDK 会按照第三节清单自行处理设备与网络信息，用于广告投放、广告监测归因与反作弊。个性化广告需要你单独同意；你可以随时在「设置 - 隐私与数据」中关闭，关闭后我们只请求非个性化广告。</p>
-        <h3>（三）我们不会主动收集的信息</h3>
+        <h3>（四）我们不会主动收集的信息</h3>
         <p>本游戏不主动收集你的姓名、手机号码、电子邮箱、身份证件号码、通讯录、短信内容、通话记录、照片与视频、麦克风与摄像头内容、精确位置信息或剪切板内容。你主动通过电子邮件联系我们时，我们会处理你的邮箱地址与邮件内容，仅用于答复你的请求。</p>
 
         <h2>二、系统权限申请与使用情况说明</h2>
@@ -41,20 +43,32 @@
         </table>
         <p>本产品<strong>不申请</strong>定位、读取电话状态、读取应用安装列表、安装其他应用、显示悬浮窗、读取与写入外部存储、发送通知、相机、麦克风、通讯录、日历或通话记录权限，也不主动读取剪切板。</p>
 
-        <h2>三、第三方 SDK 清单</h2>
-        <p>本渠道版本仅接入下列第三方业务 SDK。我们对其权限调用进行必要管理，具体个人信息处理规则以其隐私政策为准。</p>
+        <h2>三、第三方组件与 SDK 清单</h2>
+        <p>本渠道版本接入下列第三方组件。Unity 引擎运行时负责运行游戏，穿山甲广告 SDK 负责广告；两者均在玩家同意本政策后才启动。我们对其权限调用进行必要管理，具体个人信息处理规则以其隐私政策为准。</p>
+        <h3>Unity 引擎运行时（Unity 3D）</h3>
+        <div class="sdk-section">
+            <p><strong>组件名称：</strong>Unity 引擎运行时（Unity 3D）</p>
+            <p><strong>提供方：</strong>Unity Technologies</p>
+            <p><strong>使用目的：</strong>运行游戏、加载资源、适配设备与保障基础稳定性</p>
+            <p><strong>启动时机：</strong>玩家同意本政策并进入游戏时</p>
+            <p><strong>处理的个人信息类型：</strong>Android ID、设备厂商与型号、操作系统名称与版本、语言、CPU 与图形能力、屏幕分辨率、应用包名与版本、网络状态与 IP 地址</p>
+            <p><strong>采集方式：</strong>引擎运行时处理</p>
+            <p><strong>隐私政策链接：</strong><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/game-player-and-app-user-privacy-policy</a></p>
+            <p><strong>官网链接：</strong><a href="https://unity.com" target="_blank" rel="noopener">https://unity.com</a></p>
+            <p><strong>补充说明：</strong>本渠道未启用 Unity Ads、Unity Analytics、Unity 账号或支付服务，旧版 Unity Analytics 的启动初始化已关闭。</p>
+        </div>
         <h3>穿山甲广告 SDK</h3>
         <div class="sdk-section">
             <p><strong>SDK 名称：</strong>穿山甲广告 SDK（Android）</p>
             <p><strong>合作方主体：</strong>北京巨量引擎网络技术有限公司</p>
             <p><strong>使用目的：</strong>展示插屏广告与激励视频广告</p>
             <p><strong>使用场景：</strong>关卡与界面切换时展示插屏广告；你主动点击按钮观看激励视频时</p>
-            <p><strong>处理的个人信息类型：</strong>设备品牌、设备型号、操作系统版本、屏幕分辨率、IP 地址、网络接入方式与类型、运营商信息、应用包名与版本号</p>
+            <p><strong>处理的个人信息类型：</strong>设备品牌、设备型号、操作系统版本、屏幕分辨率、IP 地址、网络接入方式与类型、运营商信息、应用包名与版本号、OAID（开放匿名设备标识符）</p>
             <p><strong>采集方式：</strong>SDK 自行采集</p>
             <p><strong>隐私政策链接：</strong><a href="https://www.csjplatform.com/privacy" target="_blank" rel="noopener">https://www.csjplatform.com/privacy</a></p>
             <p><strong>官网链接：</strong><a href="https://www.csjplatform.com" target="_blank" rel="noopener">https://www.csjplatform.com</a></p>
         </div>
-        <p>穿山甲 SDK 可能使用随机生成或系统提供的设备相关标识区分设备，具体类型以其隐私政策为准。我们不主动将这些标识与你的现实身份关联。设备相关标识不直接显示你的姓名，但仍可能属于个人信息。</p>
+        <p>Unity 运行时已确认可能处理 Android ID；穿山甲 SDK 在同意后可能处理 OAID。穿山甲 SDK 的隐私控制器已禁止其主动读取 Android ID、精确位置、电话状态和应用安装列表。我们不主动将这些标识与你的现实身份关联。设备标识不直接显示你的姓名，但仍可能属于个人信息。</p>
 
         <h2>四、我们如何共享、转让、公开披露你的个人信息</h2>
         <p>1. <strong>共享：</strong>上述 SDK 在提供广告服务时按第三节清单自行处理信息。除实现该功能所必需的调用外，我们不主动向其他第三方提供你的个人信息。</p>
@@ -62,7 +76,7 @@
         <p>3. <strong>公开披露：</strong>我们不会公开披露你的个人信息；依法取得单独同意或法律法规另有规定的除外。</p>
 
         <h2>五、个人信息出境</h2>
-        <p>本渠道版本不接入 Firebase 等境外统计分析 SDK，我们自身不向境外接收方提供你的个人信息。如后续因功能变化需要向境外提供个人信息，我们会依法另行告知并履行单独同意等义务。</p>
+        <p>本渠道版本不接入 Firebase 等境外统计分析 SDK，也未启用 Unity Ads、Unity Analytics、Unity 账号或支付服务。Unity 引擎运行时按第三节说明在本机处理游戏运行所需的信息，我们自身不向境外接收方提供你的个人信息。如后续因功能变化需要向境外提供个人信息，我们会依法另行告知并履行单独同意等义务。</p>
 
         <h2>六、我们如何存储你的个人信息</h2>
         <p>1. <strong>存储地域：</strong>本地存档保存在你的设备应用私有存储目录，不会上传到我们的服务器。</p>

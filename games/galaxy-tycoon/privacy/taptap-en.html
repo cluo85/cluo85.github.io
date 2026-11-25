@@ -11,8 +11,8 @@
     <div class="privacy-container">
         <h1>Privacy Policy</h1>
         <div class="meta">
-            <p><strong>Last updated:</strong> November 24, 2026</p>
-            <p><strong>Effective:</strong> November 24, 2026</p>
+            <p><strong>Last updated:</strong> July 30, 2026</p>
+            <p><strong>Effective:</strong> July 30, 2026</p>
             <p><strong>Operator:</strong> Beijing Star Halo Technology Co., Ltd</p>
             <p><strong>Scope:</strong> this policy applies to the Android version of Galaxy Tycoon that we distribute on TapTap.</p>
         </div>
@@ -21,9 +21,11 @@
         <h2>1. Information we collect and how we use it</h2>
         <h3>1.1 Providing the game</h3>
         <p>Your progress, settings, items and currency are stored locally on your device and are never uploaded to our servers. The game has no accounts, registration, login, nickname, avatar, friend list or chat features. This distribution offers no in-app purchases, leaderboards or analytics service.</p>
-        <h3>1.2 Advertising</h3>
+        <h3>1.2 Startup timing and information processed by the app</h3>
+        <p>Before you accept this policy, the game shows a native privacy page and does not start the Unity engine runtime or initialize the Pangle Ads SDK. After consent, the app itself may read or process Android ID, OAID (Open Anonymous Device Identifier), device manufacturer and model, operating-system version, app package name and version, network state and IP address in order to recognize the installation, protect local saves, adapt to the device and handle basic diagnostics. Game saves are not uploaded, and these identifiers are not used to create a user account.</p>
+        <h3>1.3 Advertising</h3>
         <p>The game shows interstitial and rewarded video ads through the Pangle Ads SDK. The SDK processes the device and network information listed in section 3 for ad delivery, measurement, attribution and fraud prevention. Personalized ads require your separate consent; you can turn them off at any time in Settings &gt; Privacy &amp; Data, after which we only request non-personalized ads.</p>
-        <h3>1.3 Information we do not actively collect</h3>
+        <h3>1.4 Information we do not actively collect</h3>
         <p>The game does not actively collect your name, phone number, email address, ID number, contacts, messages, call history, photos, videos, microphone or camera content, precise location, or clipboard content. If you email us, we process your email address and message only to respond to your request.</p>
 
         <h2>2. Permissions we request</h2>
@@ -41,25 +43,37 @@
         </table>
         <p>The game does <strong>not</strong> request location, phone-state, installed-application-list, package-installation, overlay, external-storage, notification, camera, microphone, contacts, calendar or call-log permissions, and does not actively read the clipboard.</p>
 
-        <h2>3. Third-party SDK</h2>
-        <p>This distribution includes only the following third-party business SDK. We apply necessary controls to its permission use; its privacy policy governs its own processing.</p>
+        <h2>3. Third-party components and SDKs</h2>
+        <p>This distribution includes the following third-party components. The Unity engine runtime runs the game and the Pangle Ads SDK provides advertising; both start only after you accept this policy. We apply necessary controls to their permission use, and each provider's privacy policy governs its own processing.</p>
+        <h3>Unity engine runtime (Unity 3D)</h3>
+        <div class="sdk-section">
+            <p><strong>Component:</strong> Unity engine runtime (Unity 3D)</p>
+            <p><strong>Provider:</strong> Unity Technologies</p>
+            <p><strong>Purpose:</strong> running the game, loading resources, device adaptation and basic stability</p>
+            <p><strong>Startup timing:</strong> when you accept this policy and enter the game</p>
+            <p><strong>Personal information:</strong> Android ID, device manufacturer and model, operating-system name and version, language, CPU and graphics capabilities, screen resolution, app package name and version, network state and IP address</p>
+            <p><strong>Collection method:</strong> processed by the engine runtime</p>
+            <p><strong>Privacy policy:</strong> <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">https://unity.com/legal/game-player-and-app-user-privacy-policy</a></p>
+            <p><strong>Website:</strong> <a href="https://unity.com" target="_blank" rel="noopener">https://unity.com</a></p>
+            <p><strong>Note:</strong> Unity Ads, Unity Analytics, Unity accounts and Unity payments are not enabled in this distribution. Startup initialization of legacy Unity Analytics is disabled.</p>
+        </div>
         <h3>Pangle Ads SDK (Android)</h3>
         <div class="sdk-section">
             <p><strong>Provider:</strong> Beijing Bytedance Network Technology Co., Ltd.</p>
             <p><strong>Purpose:</strong> interstitial and rewarded video ads</p>
             <p><strong>Scenarios:</strong> interstitials between screens; rewarded videos you choose to watch</p>
-            <p><strong>Personal information:</strong> device brand, model, OS version, screen resolution, IP address, network type, carrier, app package name and version</p>
+            <p><strong>Personal information:</strong> device brand, model, OS version, screen resolution, IP address, network type, carrier, app package name and version, OAID (Open Anonymous Device Identifier)</p>
             <p><strong>Collection method:</strong> collected by the SDK itself</p>
             <p><strong>Privacy policy:</strong> <a href="https://www.csjplatform.com/privacy" target="_blank" rel="noopener">https://www.csjplatform.com/privacy</a></p>
             <p><strong>Website:</strong> <a href="https://www.csjplatform.com" target="_blank" rel="noopener">https://www.csjplatform.com</a></p>
         </div>
-        <p>Pangle may use randomly generated or system-provided device-related identifiers to distinguish devices; see its privacy policy for the specific types. We do not actively link these identifiers to your real-world identity. Such identifiers may still constitute personal information even if they do not display your name.</p>
+        <p>The Unity runtime may process Android ID, and Pangle may process OAID after consent. Pangle's privacy controller is configured to prohibit its SDK from actively reading Android ID, precise location, phone state or the installed-application list. We do not actively link these identifiers to your real-world identity. Device identifiers may still constitute personal information even if they do not display your name.</p>
 
         <h2>4. Sharing, transfer and public disclosure</h2>
         <p>The SDK above processes information as described in section 3 when providing ads. Except for calls necessary to provide that function, we do not actively provide your personal information to other third parties. We do not actively transfer or publicly disclose it, except where separate consent is obtained or applicable law provides otherwise. If a transfer is required by a merger, division or acquisition, we will identify the recipient and its contact details and require it to continue protecting the information.</p>
 
         <h2>5. Cross-border transfer</h2>
-        <p>This distribution does not include Firebase or other overseas analytics SDKs, and we do not provide your personal information to overseas recipients ourselves. If a future feature requires an overseas transfer, we will provide separate notice and obtain separate consent as required by law.</p>
+        <p>This distribution does not include Firebase or other overseas analytics SDKs, and Unity Ads, Unity Analytics, Unity accounts and Unity payments are not enabled. The Unity engine runtime processes the information described in section 3 on your device for game operation, and we do not provide your personal information to overseas recipients ourselves. If a future feature requires an overseas transfer, we will provide separate notice and obtain separate consent as required by law.</p>
 
         <h2>6. Storage</h2>
         <p>Local saves are stored in the app's private storage and are not uploaded to our servers. They remain until you delete them in Settings &gt; Privacy &amp; Data or uninstall the game. Ad data is retained by the SDK under its own privacy policy. When information under our control is no longer necessary or its retention period expires, we delete or anonymize it as required by law, unless the law provides otherwise.</p>
